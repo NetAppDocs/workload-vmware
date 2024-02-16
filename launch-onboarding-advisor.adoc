@@ -1,0 +1,46 @@
+---
+sidebar: sidebar
+permalink: launch-onboarding-advisor.html
+keywords: overview, concepts, features, use case, workloads, how workload factory works
+summary: Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor.
+---
+
+= Launch the VMware Cloud on AWS onboarding advisor
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor.
+
+.About this task
+
+There are two pages in the onboarding advisor that perform different tasks:
+
+* The Prepare for VMware Cloud onboarding page enables you to identify the types of VMs that you want to import in the tool for possible onboarding/migration based on its current power state.
+
+* The Select VMs page enables you to choose the actual VMs that you want to onboard/migrate from among the VMs returned from the selections you made in the previous page.
+
+.Requirements
+
+* You must have a user name and password to access Workload Factory. If you don't have access, create an account and user now. See the instructions here. (link to Setup/Admin doc maybe?)
+
+* The RVTools .xlsx file or the Onboarding Advisor Data Collector .csv file must be accessible from the system on which you are logging in to Workload Factory.
+
+.Steps
+
+. Log in to the NetApp Workload Factory.
+. In the VMware tile, click Plan and deploy and the Prepare for VMware Cloud onboarding page is displayed.
+
+ADD FIGURE HERE
+
+. Select whether you'll be using a configuration file built using the Onboarding Advisor Data Collector or by RVTools.  The Onboarding Advisor Data Collector is selected by default.
+
+. In the Upload Inventory file field, click the up-arrow button and select the RVTools .xlsx file or the Onboarding Advisor Data Collector .csv file - depending on which tool you used to collect the VM data.
++
+The VM inventory summary section is populated to reflect the VMs in the inventory file.
+
+ADD FIGURE HERE
+
+. Complete the fields on this page. Select the correct tab depending on which tool you used to collect the VM data.
+
+Add tabbed table here....

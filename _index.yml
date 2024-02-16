@@ -1,8 +1,10 @@
 indexpage:
-  lead: # single paragraph, shown on the page
+  title: Workload Factory VMware workloads documentation
+  lead: "Streamline migrations from on-premises vSphere environments to VMware Cloud on AWS and implement customized FSx for ONTAP file systems as external datastores."
+  summary: "Streamline migrations from on-premises vSphere environments to VMware Cloud on AWS and implement customized FSx for ONTAP file systems as external datastores."
+  keywords: VMware, FSx
   tiles:
-    # one or more tile definitions for the page
-  - title: # short string (tile title)
+  - title: Get started
     links:
       # one or more links on the tile
       - title: # short string (link title)

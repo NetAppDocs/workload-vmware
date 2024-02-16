@@ -1,0 +1,21 @@
+---
+sidebar: sidebar
+permalink: whats-new.html
+keywords: what's new, features, new, release notes, enhancements, fixes
+summary: "Learn what's new with the VMware Cloud on AWS onboarding advisor component of Workload Factory."
+---
+
+= What's new
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Learn what's new with the VMware Cloud on AWS onboarding advisor component of Workload Factory.
+
+== 11 April 2024
+
+=== something
+
+This release includes minor improvements, bug fixes, and support for the Connector in the following cloud regions:
+
+* The I

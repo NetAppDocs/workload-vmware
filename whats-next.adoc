@@ -1,0 +1,21 @@
+---
+sidebar: sidebar
+permalink: whats-next.html
+keywords: what you can do
+summary: Now that you've logged in and set up Workload Factory in standard mode, users can create and discover working environments and use Workload Factory services.
+---
+
+= What you can do next
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Now that you've logged in and set up Workload Factory in standard mode, users can create and discover working environments and use Workload Factory data services.
+
+TIP: If you installed a Connector in AWS, Microsoft Azure, or Google Cloud, then Workload Factory automatically discovers information about the Amazon S3 buckets, Azure Blob storage, or Google Cloud Storage buckets in the location where the Connector is installed. A working environment is automatically added to the Workload Factory canvas.
+
+For help, go to the https://docs.netapp.com/us-en/workload-family/[home page for the Workload Factory documentation^] to view the docs for all Workload Factory services.
+
+.Related link
+
+link:operational-modes.html[Workload Factory operationaal modes]

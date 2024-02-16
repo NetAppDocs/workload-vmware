@@ -1,0 +1,81 @@
+---
+sidebar: sidebar
+permalink: capture-vm-configurations.html
+keywords: overview, concepts, features, use case, workloads, how workload factory works
+summary: You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations.
+---
+
+= Capture your current VM configurations
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Use the Onboarding Advisor Data Collector script
+--
+The NetApp Onboarding Advisor Data Collector script gathers VM configuration information from your vCenter similar to what RVTools collects, however, it will capture current VM performance data to provide actual read and write IOPS and throughput statistics.
+
+.Before you begin
+
+* You must have VMware PowerCLI installed. See the following VMware PowerCLI documentation if you need to install PowerCLI. (https://developer.vmware.com/docs/15315/GUID-2DD2454B-2B1E-4A7D-9134-B442254F0681.html)
+
+.Steps
+
+. Log in to the NetApp Workload Factory.
+
+. In the VMware tile, click *Plan and deploy* and the Prepare for VMware Cloud onboarding page is displayed.
+
+. At the top of the page, select the option for *Onboarding advisor data collector*.
+
+. In the Codebox window, click the download link for the Onboarding  Advisor data collector and save the script to the target system.
+
+. Follow these steps to capture the configurations of your current VMs:
+
+.. Log in to the system where you downloaded the data collector; on which PowerShell and PowerCLI are installed.
+.. Connect to your VMware vCenter server by running the following command:
++
+ Connect-VIServer -server <server_IP>
+
+.. Run the data collector script you downloaded and specify the data collection option for “daily” or “hourly” VM statistics.
++
+ .list-vms.ps1 -isLongTermDataCollectionEnabled <true | false>
++
+where true uses “daily” statistics and false uses “hourly” statistics.
+
+.Result
+
+The file “vm_inventory.csv” that contains your results is saved to your working directory.
+--
+
+.Use RVTools software
+--
+RVTools is a Windows application that interacts with VCenter and ESX server 5.x - 8.0 to capture information about your VMware virtual environments. It gathers information about VMs, CPU, memory, disks, clusters, ESX hosts, datastores, and more. You can export this information to an xlsx file to use with the onboarding advisor.
+
+Learn more about RVTools (https://www.robware.net/rvtools/).
+
+.Steps
+
+. Download and install RVTools 4.4.2 or greater (https://www.robware.net/rvtools/download/).
+
+. Launch RVTools and log in to the target VCenter Server.
++
+This will capture information about that VCenter Server.
+
+. Export your VMware information to an xlsx or xls file. 
++
+See the chapter on “commandline parameters” in the RVTools documentation (https://robware.net/download/RVTools.pdf ) for details.
+
+.Result
+
+The xlsx or xls file that contains your results is saved to your working directory.
+--
+
+====
+
+// end tabbed area

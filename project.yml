@@ -1,12 +1,34 @@
 settings:
-  name: "Product Name"
+  name: VMware workloads
+  platform: cloud
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
-
+  rss_page: "whats-new.html"
 sidebar: 
   entries:
-  - title: Legal notices
-    url: /legal-notices.html
+    - title: VMware workload docs
+      url: /index.html
+    - title: Release notes
+      entries:
+        - title: What's new
+          url: /whats-new.html
+        - title: Known limitations
+          url: /limitations.html
+    - title: Get started
+      entries:
+        - title: Getting started workflow
+          url: /quick-start.html
+        - title: Capture your current VM configurations
+          url: /capture-vm-configurations.html
+        - title: Launch the VMware Cloud on AWS onboarding advisor
+          url: /launch-onboarding-advisor.html
+        - title: What you can do next
+          url: /whats-next.html
+    - title: Legal notices
+      url: /legal-notices.html
+product-family:
+  name: Workload Factory
+  repo: workload-family

@@ -29,7 +29,7 @@ There are two pages in the onboarding advisor that perform different tasks:
 .Steps
 
 . Log in to the NetApp Workload Factory.
-. In the VMware tile, click Plan and deploy and the Prepare for VMware Cloud onboarding page is displayed.
+. In the VMware tile, click *Plan and deploy* and the Prepare for VMware Cloud onboarding page is displayed.
 
 ADD FIGURE HERE
 
@@ -41,6 +41,67 @@ The VM inventory summary section is populated to reflect the VMs in the inventor
 
 ADD FIGURE HERE
 
-. Complete the fields on this page. Select the correct tab depending on which tool you used to collect the VM data.
+. Complete the fields on this page. Select the tab that corresponds to the tool you used to collect the VM data.
 
-Add tabbed table here....
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Onboarding Advisor Data Collector script
+--
+.. Consider VMs. Indicate which VMs will be extracted from the csv file based on their operating power state. You can bring in all VMs, or only those that are On, Off, or Suspended.
+.. VM Storage. Select whether the datastores created for each onboarded VM are sized based on their current Used size (recommended) or the Provisioned size. The external datastores are implemented using Amazon FSx for NetApp ONTAP file systems.
+Note that when selecting the recommended smaller Used size that the onboarding advisor adds 20% more space to allow for growth.
+.. VM Memory. Select whether the memory allocated for each onboarded VM is sized based on the current Used size (recommended) or the Provisioned size.
+.. Region. Select the region where the Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
+.. vSAN Fault Tolerance. Select the level of fault tolerance that is required for the VMs. You can choose “Auto” or from among a variety of RAID levels.
+* RAID-1 (FTT 1) - consists of an exact copy (or mirror) of a set of data on 2 or more disks.
+* RAID-5 (FTT 1) - consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
+* RAID-5 (FTT 2) - consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
+* RAID-6 (FTT 2) - extends RAID 5 by adding another parity block; thus, it uses block-level striping with two parity blocks distributed across all member disks. It requires 4 or more drives, and it can survive any two concurrent disk failures.
+.. vSphere cluster host preference. Select the type of ESXi host that will be used in the vSphere cluster for the VMs. See VMware Cloud on AWS Host Types (https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-98FD3BA9-8A1B-4500-99FB-C40DF6B3DA95.html) for more details.
+.. Average data reduction ratio. Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
+--
+
+.RVTools software
+--
+.. Consider VMs. Indicate which VMs will be extracted from the xlsx file based on their operating power state. You can bring in all VMs, or only those that are On, Off, or Suspended.
+.. VM Storage. Select whether the datastores created for each onboarded VM are sized based on their current Used size (recommended) or the Provisioned size. The external datastores are implemented using Amazon FSx for NetApp ONTAP filesystems.
+Note that when selecting the recommended smaller Used size that the onboarding advisor adds 20% more space to allow for growth.
+.. Region. Select the region where the Amazon FSx for NetApp ONTAP filesystems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
+.. VM Performance Requirements. Provide the following per virtual machine average performance parameters that you want to be applied to your new VMs that will be deployed:
+* Average IOPS per VM. 
+Enter the number of IOPS required for your file systems. If you are unsure, you can use the default of 3 IOPS per GiB of SSD storage for Amazon FSx for ONTAP  file systems. For example, if you deploy 2,000 GiB of capacity, this will be translated to 6,000 IOPS. 
+We recommend that you begin with a smaller IOPS setting. You can increase your provisioned SSD IOPS after the file system is created as workloads are migrated or deployed.
+* Average I/O block size. 
+The size of each block containing read or write operations. The default size is 4 KB.
+A larger block size may be better for large sequential read and write workloads. A smaller block size may offer better performance for workloads that perform small random writes to sparse files or to large files.
+* Average write ratio. 
+The percentage of operations that are write operations for your workloads. The default ratio is 30% writes and 70% reads.
+* Average data reduction ratio. 
+Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
+--
+
+====
+
+// end tabbed area
+
+. Click Next and the Select VMs page displays the VMs that meet the criteria you provided in the previous page.
+
+ADD FIGURE HERE
+
+. Select the VMs that you want to onboard/migrate from among the VMs on this page.
+By clicking the checkbox in the heading row you can select all VMs on this page.
+. Click Next and the Datastore deployment plan page displays the total number of VMs and datastores that will be recommended.
+. Click each Datastore listed across the top of the page to see how the datastore will be provisioned. The bottom of the page shows the source VM (or multiple VMs) for which this new VM and datastore will be provisioned.
+
+ADD FIGURE HERE
+
+. Once you understand how your datastores will be deployed, click Next and the estimated monthly cost for all the VMs that you plan to onboard/migrate is displayed in the Review plan page.
+
+ADD FIGURE HERE
+
+. The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP systems.  You can expand each section to view details for “Recommended Amazon FSx for ONTAP configuration”, “Cost breakdown”, “Volume configuration”, “Sizing assumptions”, and technical “Disclaimers”.
+. When you are satisfied with the migration plan, click Download plan to download the migration plan in a csv format so you can use it to create your new cloud-based intelligent data infrastructure.
+

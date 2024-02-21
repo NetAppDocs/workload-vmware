@@ -19,6 +19,8 @@ sidebar:
           url: /limitations.html
     - title: Get started
       entries:
+        - title: Learn about VMware Cloud on AWS onboarding advisor
+          url: /onboarding-advisor-overview.html
         - title: Getting started workflow
           url: /quick-start.html
         - title: Capture your current VM configurations

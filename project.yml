@@ -9,7 +9,7 @@ settings:
   rss_page: "whats-new.html"
 sidebar: 
   entries:
-    - title: VMware workload docs
+    - title: VMware workloads docs
       url: /index.html
     - title: Release notes
       entries:

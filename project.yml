@@ -27,8 +27,18 @@ sidebar:
           url: /capture-vm-configurations.html
         - title: Launch the VMware Cloud on AWS onboarding advisor
           url: /launch-onboarding-advisor.html
+        - title: Deploy the new infrastructure
+          url: /123.html
+        - title: Migrate your data to the new infrastructure
+          url: /123.html
         - title: What you can do next
           url: /whats-next.html
+    - title: Knowledge and support
+      entries:
+        - title: Register for support
+          url: /support-registration.html
+        - title: Get help
+          url: /get-help.html    
     - title: Legal notices
       url: /legal-notices.html
 product-family:

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: whats-next.html
 keywords: what you can do
-summary: Now that you've logged in and set up Workload Factory in standard mode, users can create and discover working environments and use Workload Factory services.
+summary: Now that you've migrated your data to VMware Cloud on AWS and Amazon FSx for NetApp ONTAP external datastores, you can back up and protect the important data on your FSx for ONTAP system to make sure your data is always available.
 ---
 
 = What you can do next
@@ -10,10 +10,6 @@ summary: Now that you've logged in and set up Workload Factory in standard mode,
 :imagesdir: ./media/
 
 [.lead]
-Now that you've logged in and set up Workload Factory in standard mode, users can create and discover working environments and use Workload Factory data services.
+Now that you've migrated your data to VMware Cloud on AWS and Amazon FSx for NetApp ONTAP external datastores, you can back up and protect the important data on your FSx for ONTAP system to make sure your data is always available.
 
-For help, go to the https://docs.netapp.com/us-en/workload-family/[home page for the Workload Factory documentation^] to view the docs for all Workload Factory services.
-
-.Related link
-
-link:operational-modes.html[Workload Factory operationaal modes]
+For more information, go to the https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP documentation] to view the the backup and protection capabilities you can use.

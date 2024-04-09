@@ -23,7 +23,7 @@ The NetApp Onboarding Advisor Data Collector script gathers VM configuration inf
 
 .Before you begin
 
-* You must have VMware PowerCLI installed. See the following VMware PowerCLI documentation if you need to install PowerCLI. (https://developer.vmware.com/docs/15315/GUID-2DD2454B-2B1E-4A7D-9134-B442254F0681.html)
+* You must have VMware PowerCLI installed. See the https://developer.vmware.com/docs/15315/GUID-2DD2454B-2B1E-4A7D-9134-B442254F0681.html[VMware PowerCLI documentation] if you need to install PowerCLI.
 
 .Steps
 
@@ -57,11 +57,11 @@ The file “vm_inventory.csv” that contains your results is saved to your work
 --
 RVTools is a Windows application that interacts with VCenter and ESX server 5.x - 8.0 to capture information about your VMware virtual environments. It gathers information about VMs, CPU, memory, disks, clusters, ESX hosts, datastores, and more. You can export this information to an xlsx file to use with the onboarding advisor.
 
-Learn more about RVTools (https://www.robware.net/rvtools/).
+https://www.robware.net/home[Learn more about RVTools].
 
 .Steps
 
-. Download and install RVTools 4.4.2 or greater (https://www.robware.net/rvtools/download/).
+. Download and install RVTools 4.4.2 or greater from https://www.robware.net/download[here].
 
 . Launch RVTools and log in to the target VCenter Server.
 +
@@ -69,7 +69,7 @@ This will capture information about that VCenter Server.
 
 . Export your VMware information to an xlsx or xls file. 
 +
-See the chapter on “commandline parameters” in the RVTools documentation (https://robware.net/download/RVTools.pdf ) for details.
+See the chapter on “commandline parameters” in the https://www.robware.net/resources/RVTools.pdf[RVTools documentation] for details.
 
 .Result
 

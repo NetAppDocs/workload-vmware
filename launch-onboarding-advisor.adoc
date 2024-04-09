@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: launch-onboarding-advisor.html
 keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor.
+summary: Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor. You'll follow the steps in the wizard to create the deployment plan that is customized for your needs.
 ---
 
 = Launch the VMware Cloud on AWS onboarding advisor
@@ -10,7 +10,7 @@ summary: Log in to the NetApp Workload Factory to access the VMware Cloud on AWS
 :imagesdir: ./media/
 
 [.lead]
-Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor.
+Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor. You'll follow the steps in the wizard to create the deployment plan that is customized for your needs.
 
 .About this task
 
@@ -22,15 +22,32 @@ There are two pages in the onboarding advisor that perform different tasks:
 
 .Requirements
 
-* You must have a user name and password to access Workload Factory. If you don't have access, create an account and user now. See the instructions here. (link to Setup/Admin doc maybe?)
+* You must have a user name and password to access Workload Factory. If you don't have access, create an account and user now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
-* The RVTools .xlsx file or the Onboarding Advisor Data Collector .csv file must be accessible from the system on which you are logging in to Workload Factory.
+* The RVTools .xlsx file or the Onboarding Advisor Data Collector .csv file must be accessible from the system on which you are logging in to Workload Factory. This configuration file must reflect the system you want to migrate.
++
+You can also have a .json file of an existing deployment plan to use as a template.
 
 .Steps
 
-. Log in to the NetApp Workload Factory.
-. In the VMware tile, click *Plan and deploy* and the Prepare for VMware Cloud onboarding page is displayed.
+. Log in to Workload Factory.
 
+. In the VMware tile, click *Plan and deploy* and the "Choose the method to generate your deployment plan" page is displayed.
++
+image:screenshot-choose-method.png[A screenshot of the different methods you can use to capture your current VM configuration information.]
+
+. You can choose from among 3 methods to collect VM information:
++
+* Select *Create a new deployment plan* to collect your current VM configuration information.  You can choose from among two options for collecting VM Information:
+** Use the Onboarding Advisor data collector. This is the recommended method because it gather both VM configuration and performance data for the most accurate plan.
+** Use RVTools to collect your VM data.
+* Select *Import an existing deployment plan* if you have saved an existing deployment plan and you want to use that plan as a template for a new deployment.
+
+. next
+
+
+Prepare for VMware Cloud onboarding page is displayed.
++
 ADD FIGURE HERE
 
 . Select whether you'll be using a configuration file built using the Onboarding Advisor Data Collector or by RVTools.  The Onboarding Advisor Data Collector is selected by default.
@@ -50,36 +67,36 @@ ADD FIGURE HERE
 
 .Onboarding Advisor Data Collector script
 --
-.. Consider VMs. Indicate which VMs will be extracted from the csv file based on their operating power state. You can bring in all VMs, or only those that are On, Off, or Suspended.
-.. VM Storage. Select whether the datastores created for each onboarded VM are sized based on their current Used size (recommended) or the Provisioned size. The external datastores are implemented using Amazon FSx for NetApp ONTAP file systems.
+.. *Consider VMs*. Indicate which VMs will be extracted from the csv file based on their operating power state. You can bring in all VMs, or only those that are On, Off, or Suspended.
+.. *VM Storage*. Select whether the datastores created for each onboarded VM are sized based on their current Used size (recommended) or the Provisioned size. The external datastores are implemented using Amazon FSx for NetApp ONTAP file systems.
 Note that when selecting the recommended smaller Used size that the onboarding advisor adds 20% more space to allow for growth.
-.. VM Memory. Select whether the memory allocated for each onboarded VM is sized based on the current Used size (recommended) or the Provisioned size.
-.. Region. Select the region where the Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
-.. vSAN Fault Tolerance. Select the level of fault tolerance that is required for the VMs. You can choose “Auto” or from among a variety of RAID levels.
+.. *VM Memory*. Select whether the memory allocated for each onboarded VM is sized based on the current Used size (recommended) or the Provisioned size.
+.. *Region*. Select the region where the Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
+.. *vSAN Fault Tolerance*. Select the level of fault tolerance that is required for the VMs. You can choose “Auto” or from among a variety of RAID levels.
 * RAID-1 (FTT 1) - consists of an exact copy (or mirror) of a set of data on 2 or more disks.
 * RAID-5 (FTT 1) - consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
 * RAID-5 (FTT 2) - consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
 * RAID-6 (FTT 2) - extends RAID 5 by adding another parity block; thus, it uses block-level striping with two parity blocks distributed across all member disks. It requires 4 or more drives, and it can survive any two concurrent disk failures.
-.. vSphere cluster host preference. Select the type of ESXi host that will be used in the vSphere cluster for the VMs. See VMware Cloud on AWS Host Types (https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-98FD3BA9-8A1B-4500-99FB-C40DF6B3DA95.html) for more details.
-.. Average data reduction ratio. Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
+.. *vSphere cluster host preference*. Select the type of ESXi host that will be used in the vSphere cluster for the VMs. See https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-98FD3BA9-8A1B-4500-99FB-C40DF6B3DA95.html[VMware Cloud on AWS Host Types] for more details.
+.. *Average data reduction ratio*. Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
 --
 
 .RVTools software
 --
-.. Consider VMs. Indicate which VMs will be extracted from the xlsx file based on their operating power state. You can bring in all VMs, or only those that are On, Off, or Suspended.
-.. VM Storage. Select whether the datastores created for each onboarded VM are sized based on their current Used size (recommended) or the Provisioned size. The external datastores are implemented using Amazon FSx for NetApp ONTAP filesystems.
+.. *Consider VMs*. Indicate which VMs will be extracted from the xlsx file based on their operating power state. You can bring in all VMs, or only those that are On, Off, or Suspended.
+.. *VM Storage*. Select whether the datastores created for each onboarded VM are sized based on their current Used size (recommended) or the Provisioned size. The external datastores are implemented using Amazon FSx for NetApp ONTAP filesystems.
 Note that when selecting the recommended smaller Used size that the onboarding advisor adds 20% more space to allow for growth.
-.. Region. Select the region where the Amazon FSx for NetApp ONTAP filesystems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
-.. VM Performance Requirements. Provide the following per virtual machine average performance parameters that you want to be applied to your new VMs that will be deployed:
-* Average IOPS per VM. 
+.. *Region*. Select the region where the Amazon FSx for NetApp ONTAP filesystems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
+.. *VM Performance Requirements*. Provide the following per virtual machine average performance parameters that you want to be applied to your new VMs that will be deployed:
+* *Average IOPS per VM*. 
 Enter the number of IOPS required for your file systems. If you are unsure, you can use the default of 3 IOPS per GiB of SSD storage for Amazon FSx for ONTAP  file systems. For example, if you deploy 2,000 GiB of capacity, this will be translated to 6,000 IOPS. 
 We recommend that you begin with a smaller IOPS setting. You can increase your provisioned SSD IOPS after the file system is created as workloads are migrated or deployed.
-* Average I/O block size. 
+* *Average I/O block size*. 
 The size of each block containing read or write operations. The default size is 4 KB.
 A larger block size may be better for large sequential read and write workloads. A smaller block size may offer better performance for workloads that perform small random writes to sparse files or to large files.
-* Average write ratio. 
+* *Average write ratio*. 
 The percentage of operations that are write operations for your workloads. The default ratio is 30% writes and 70% reads.
-* Average data reduction ratio. 
+* *Average data reduction ratio*. 
 Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
 --
 
@@ -104,4 +121,3 @@ ADD FIGURE HERE
 
 . The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP systems.  You can expand each section to view details for “Recommended Amazon FSx for ONTAP configuration”, “Cost breakdown”, “Volume configuration”, “Sizing assumptions”, and technical “Disclaimers”.
 . When you are satisfied with the migration plan, click Download plan to download the migration plan in a csv format so you can use it to create your new cloud-based intelligent data infrastructure.
-

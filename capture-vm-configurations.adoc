@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: capture-vm-configurations.html
-keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations.
+keywords: vm workloads, capture vm details
+summary: You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. We recommend that you use the Onboarding Advisor Data Collector script because it gather both VM configuration and performance data for the most accurate plan.
 ---
 
 = Capture your current VM configurations
@@ -10,7 +10,7 @@ summary: You can use the Onboarding Advisor Data Collector script or RVTools to 
 :imagesdir: ./media/
 
 [.lead]
-You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations.
+You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. We recommend that you use the Onboarding Advisor Data Collector script because it gather both VM configuration and performance data for the most accurate plan.
 
 // start tabbed area
 

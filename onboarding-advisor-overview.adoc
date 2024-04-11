@@ -14,7 +14,7 @@ The VMware Cloud on AWS onboarding advisor enables you to analyze your current v
 
 Amazon FSx for NetApp ONTAP is an external NFS datastore built on NetApp's ONTAP file system that can be attached to VMware Cloud on AWS vSphere clusters. There is no need to add more hosts to increase available storage; instead, just use FSx for ONTAP volumes as external datastores to complement vSAN datastores. This provides you with a flexible, high-performance, virtualized storage infrastructure that scales independently of compute resources.
 
-image:diagram-vmware-fsx-overview.png[A diagram showing ]
+image:diagram-vmware-fsx-overview.png[A diagram showing the architecture.]
 
 == Benefits of using the onboarding advisor
 
@@ -42,7 +42,7 @@ The onboarding advisor provides the following functionality:
 
 The onboarding advisor can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to VMware Cloud datastores, which includes supplemental NFS datastores on FSx for ONTAP file systems.
 
-image:diagram-vmware-fsx-old-new.png[A diagram showing ]
+image:diagram-vmware-fsx-old-new.png[A diagram showing an example old architecture and new architecture after migration.]
 
 Note that you can attach up to four (4) FSx for ONTAP volumes to a single vSphere cluster on VMware Cloud on AWS.
 

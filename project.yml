@@ -25,7 +25,7 @@ sidebar:
           url: /quick-start.html
         - title: Capture your current VM configurations
           url: /capture-vm-configurations.html
-        - title: Launch the VMware Cloud on AWS onboarding advisor
+        - title: Create a deployment plan using the onboarding advisor
           url: /launch-onboarding-advisor.html
         - title: Deploy the new infrastructure
           url: /123.html

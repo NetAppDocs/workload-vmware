@@ -12,24 +12,27 @@ summary: Get started with the VMware Cloud on AWS onboarding advisor to migrate 
 [.lead]
 Get started with the VMware Cloud on AWS onboarding advisor to migrate your current infrastructure to VMware Cloud on AWS using Amazon FSx for ONTAP as external NFS datastores.
 
-Before you get started, you should have an understanding of link:workload-factory-accounts.html[Workload Factory accounts], link:connectivity-links.html[connectivity links], and link:operational-modes.html[operational modes].
+Before you get started, you should have an understanding of https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-accounts.html[Workload Factory accounts] and https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes].
+//, link:connectivity-links.html[connectivity links],
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Create an account and user for the NetApp Workload Factory
 
 [role="quick-margin-para"]
 Go to the https://console.workload.netapp.com[Workload Factory console^] and sign up.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] link:capture-vm-configurations.html[Capture your current VM configurations in your vSphere environment]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Capture your current VM configurations in your vSphere environment
 
 [role="quick-margin-para"]
 You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. You can also import an existing deployment plan as a template and then modify required attributes.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Select the VMs that you want to migrate from your existing VMware infrastructure 
+link:capture-vm-configurations.html[See how to capture your current VM configurations].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a deployment plan using the VMware Cloud on AWS onboarding advisor 
 
 [role="quick-margin-para"]
 Launch the VMware Cloud on AWS onboarding advisor and select the VMs that you want to migrate to the new VMware Cloud on AWS infrastructure using an Amazon FSx for ONTAP file system as external NFS datastores.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Download the migration plan
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Download the deployment plan
 
 [role="quick-margin-para"]
 Download the migration plan to a tool that you can use to deploy the new infrastructure. You can download a PDF version of the plan so that it can be reviewed by other members of your organization.
@@ -39,7 +42,7 @@ Download the migration plan to a tool that you can use to deploy the new infrast
 [role="quick-margin-para"]
 Deploy the new infrastructure using an VMware tool or by using an external tool such as XYZ.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Migrate the data from your old systems to your new FSx for ONTAP file systems
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Migrate data from your old systems to your new FSx for ONTAP file systems
 
 [role="quick-margin-para"]
 Use an external tool such as XYZ and 123 to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines.

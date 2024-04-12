@@ -26,7 +26,7 @@ The onboarding advisor can be used to help you migrate your current systems to t
 
 == Migrate an existing on-premises vSphere environment
 
-You can migrate your current virtual machine configurations in on-premises vSphere environments virtual machines in VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+You can migrate your current virtual machine configurations in on-premises vSphere environments to virtual machines in VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 
 .Requirements
 

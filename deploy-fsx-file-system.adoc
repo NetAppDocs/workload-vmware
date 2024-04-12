@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: deploy-fsx-file-system.html
+keywords: vm workloads, deploy fsx, deploy storage for vms
+summary: After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
+---
+
+= Deploy the recommended FSx for ONTAP file system
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
+
+Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the system completely using Workload Factory, or if you have fewer permissions you'll need to use the CloudFormation information from the Codebox.
+
+*more here*
+
+.Requirements
+
+* You must be using VMware Cloud on AWS SDDC version 1.20 or greater to deploy FSx for ONTAP file systems.
+
+.Steps
+
+. At the bottom of the "Review plan" page, click *Deploy* and the Create an FSx for ONTAP file system page is displayed.
++
+Most of the fields that define your FSx for ONTAP system are completed based on the information you provided, but there are a few fields that you need to complete in this page.
++
+You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system-fsx.html[See what these two options offer]. 
+
+. *File system name*. Enter the name that you want to use for this FSx for ONTAP file system.
+
+. *Tags*. Optionally you can add tags to categorize this FSx for ONTAP system.
+
+. *ONTAP credentials*. Enter, and confirm, the ONTAP password.
+
+. Click *Create* to deploy the FSx for ONTAP file system. This process can take up to 2 hours. 
++
+Optionally, in the Codebox window you can click *Redirect to CloudFormation* to create the file system using a CloudFormation stack.
++
+In either case, you can you can monitor the creation progress in CloudFormation.
+
+.Result
+
+The file system   .

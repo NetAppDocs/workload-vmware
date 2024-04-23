@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: capture-vm-configurations.html
 keywords: vm workloads, capture vm details
-summary: You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. We recommend that you use the Onboarding Advisor Data Collector script because it gather both VM configuration and performance data for the most accurate plan.
+summary: You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. We recommend that you use the Onboarding Advisor Data Collector script because it gathers both VM configuration and performance data for the most accurate plan.
 ---
 
 = Capture your current VM configurations
@@ -10,9 +10,9 @@ summary: You can use the Onboarding Advisor Data Collector script or RVTools to 
 :imagesdir: ./media/
 
 [.lead]
-You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. We recommend that you use the Onboarding Advisor Data Collector script because it gather both VM configuration and performance data for the most accurate plan.
+You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. We recommend that you use the Onboarding Advisor Data Collector script because it gathers both VM configuration and performance data for the most accurate plan.
 
-If you plan to deploy a new system based on an existing deployment plan that you have saved locally, you can skip this step.
+If you plan to deploy a new system based on an existing deployment plan that you previously saved locally, you can skip this step and just launch the Onboarding Advisor where you'll be able to select the existing deployment plan.
 
 // start tabbed area
 
@@ -23,19 +23,28 @@ If you plan to deploy a new system based on an existing deployment plan that you
 --
 The NetApp Onboarding Advisor Data Collector script gathers VM configuration information from your vCenter similar to what RVTools collects, however, it will capture current VM performance data to provide actual read and write IOPS and throughput statistics.
 
+You need to start the Onboarding Advisor to copy the Onboarding Advisor Data Collector script from the Codebox window.
+
 .Before you begin
 
-* You must have VMware PowerCLI installed. See the https://developer.vmware.com/docs/15315/GUID-2DD2454B-2B1E-4A7D-9134-B442254F0681.html[VMware PowerCLI documentation] if you need to install PowerCLI.
+The system where you'll be running the collector script must meet the following requirements:
+
+* Microsoft PowerShell 7.0 or greater must be installed. See the https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.4[Microsoft PowerShell documentation] if you need to install PowerShell. 
+* VMware PowerCLI must be installed. See the https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.install.doc/GUID-F02D0C2D-B226-4908-9E5C-2E783D41FE2D.html[VMware PowerCLI documentation] if you need to install PowerCLI.
+* SSL certificate checking must be disabled.
+* PowerShell must allow running unsigned scripts.
 
 .Steps
 
-. Log in to the NetApp Workload Factory.
+. Log in to Workload Factory.
 
-. In the VMware tile, click *Plan and deploy* and the Prepare for VMware Cloud onboarding page is displayed.
+. In the VMware tile, click *Plan and deploy* and the _Choose the method to generate your deployment plan_ page is displayed.
 
-. At the top of the page, select the option for *Onboarding advisor data collector*.
+. Select *Create a new deployment plan*, select the option for *Use the Onboarding advisor data collector*, and click *Next*.
++
+The Prepare for VMware Cloud onboarding page is displayed.
 
-. In the Codebox window, click the download link for the Onboarding  Advisor data collector and save the script to the target system.
+. In the Codebox window, click either the download button to save the Onboarding Advisor data collector script (named "list-vms.ps1") to the target system, or click the copy button to copy the script so you can paste it on the appropriate system.
 
 . Follow these steps to capture the configurations of your current VMs:
 
@@ -43,16 +52,20 @@ The NetApp Onboarding Advisor Data Collector script gathers VM configuration inf
 .. Connect to your VMware vCenter server by running the following command:
 +
  Connect-VIServer -server <server_IP>
-
++
+Replace <server_IP> with the IP address or hostname of your VMware server.
 .. Run the data collector script you downloaded and specify the data collection option for “daily” or “hourly” VM statistics.
 +
  .list-vms.ps1 -isLongTermDataCollectionEnabled <true | false>
 +
-where true uses “daily” statistics and false uses “hourly” statistics.
+where:
++
+** *true* collects IOPS and throughput data for the past 24 hours with 5-minute intervals
+** *daily* collects IOPS and throughput data for the past 1 hour with 20-second intervals.
 
 .Result
 
-The file “vm_inventory.csv” that contains your results is saved to your working directory.
+The script outputs a CSV file named `list-vms-yyyy-MM-dd-HH-mm-ss.csv` in the current working directory. The CSV file contains a list of all VMs and their properties, along with their IOPS and throughput data.
 --
 
 .Use RVTools software

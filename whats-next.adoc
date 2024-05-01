@@ -12,4 +12,4 @@ summary: Now that you've migrated your data to VMware Cloud on AWS and Amazon FS
 [.lead]
 Now that you've migrated your data to VMware Cloud on AWS and Amazon FSx for NetApp ONTAP external datastores, you can back up and protect the important data on your FSx for ONTAP system to make sure your data is always available.
 
-For more information, go to the https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP documentation] to view the the backup and protection capabilities you can use.
+For information about managing your FSx for ONTAP file system, go to the https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP documentation] to view the the backup and protection capabilities you can use.

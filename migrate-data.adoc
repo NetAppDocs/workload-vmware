@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+permalink: migrate-data.html
+keywords: vm workloads, fsx for ontap, migration, data migration
+summary: After the new infrastructure is up and running, you can migrate data from your old systems to your new FSx for ONTAP file systems.
+---
+
+= Migrate your data to the new infrastructure
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+After the new infrastructure is up and running, you can migrate data from your old systems to your new FSx for ONTAP file systems. 
+
+Use an external tool such as XYZ and 123 to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines.

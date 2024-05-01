@@ -23,6 +23,8 @@ sidebar:
           url: /onboarding-advisor-overview.html
         - title: Quick start
           url: /quick-start.html
+    - title: Use the VMware Cloud on AWS onboarding advisor
+      entries:
         - title: Capture your current VM configurations
           url: /capture-vm-configurations.html
         - title: Create a deployment plan using the onboarding advisor
@@ -30,7 +32,7 @@ sidebar:
         - title: Deploy the recommended FSx for ONTAP file system
           url: /deploy-fsx-file-system.html
         - title: Migrate your data to the new infrastructure
-          url: /123.html
+          url: /migrate-data.html
         - title: What you can do next
           url: /whats-next.html
     - title: Knowledge and support

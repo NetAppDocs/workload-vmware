@@ -6,7 +6,7 @@ indexpage:
   tiles:
     - title: Get started
       links:
-        - title: Learn about Workload Factory for VMware workloads
+        - title: Learn about Workload Factory for VMware
           url: onboarding-advisor-overview.html
         - title: Quick start
           url: quick-start.html

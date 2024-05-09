@@ -19,7 +19,7 @@ sidebar:
           url: /limitations.html
     - title: Get started
       entries:
-        - title: Learn about VMware Cloud on AWS onboarding advisor
+        - title: Learn about Workload Factory for VMware
           url: /onboarding-advisor-overview.html
         - title: Quick start
           url: /quick-start.html

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: onboarding-advisor-overview.html
 keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Workload Factory for VMware provides the VMware Cloud on AWS onboarding advisor. This capability enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+summary: Workload Factory for VMware provides tools to move your data from on-premises systems to VMware Cloud on AWS. The VMware Cloud on AWS onboarding advisor enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 ---
 
 = Learn about Workload Factory for VMware 
@@ -10,7 +10,7 @@ summary: Workload Factory for VMware provides the VMware Cloud on AWS onboarding
 :imagesdir: ./media/
 
 [.lead]
-Workload Factory for VMware provides the VMware Cloud on AWS onboarding advisor. This capability enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+Workload Factory for VMware provides tools to move your data from on-premises systems to VMware Cloud on AWS. The VMware Cloud on AWS onboarding advisor enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 
 Amazon FSx for NetApp ONTAP is an external NFS datastore built on NetApp's ONTAP file system that can be attached to VMware Cloud on AWS vSphere clusters. There is no need to add more hosts to increase available storage; instead, just use FSx for ONTAP volumes as external datastores to complement vSAN datastores. This provides you with a flexible, high-performance, virtualized storage infrastructure that scales independently of compute resources.
 

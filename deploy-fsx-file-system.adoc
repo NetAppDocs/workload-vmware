@@ -42,4 +42,4 @@ In either case, you can you can monitor the creation progress in CloudFormation.
 
 .Result
 
-The file system   .
+The FSx for ONTAP file system is deployed.

@@ -15,7 +15,7 @@ Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboardi
 The onboarding advisor can be used to create a deployment plan for the following scenarios:
 
 * <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to the cloud.>>
-* <<Create a deployment plan based on an existing deployment plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
+* <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
 
 Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
@@ -133,12 +133,12 @@ The bottom of the page lists all the VM that will be included in the migration.
 . Once you understand how your datastores will be deployed, click *Next* and the estimated monthly cost for all the VMs that you plan to onboard/migrate is displayed in the Review plan page.
 . The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP systems. You can expand each section to view details for “Recommended Amazon FSx for ONTAP file system configuration”, “Estimated cost breakdown”, “Volume configuration”, “Sizing assumptions”, and technical “Disclaimers”.
 . When you are satisfied with the migration plan, you have a few options:
-* Click *Deploy* to deploy the FSx for ONTAP file systems to support your VMs.
+* Click *Deploy* to deploy the FSx for ONTAP file systems to support your VMs. link:deploy-fsx-file-system.html[See how to deploy an FSx for ONTAP system].
 * Click *Download plan > VM deployment* to download the migration plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
 * Click *Download plan > Plan report* to download the migration plan in a .pdf format so you can distribute the plan for review.
 * Click *Export plan* to save the deployment plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
 
-== Create a deployment plan based on an existing deployment plan
+== Create a deployment plan based on an existing plan
 
 If you are planning a new deployment that is similar to an existing deployment plan that you've used in the past, you can import that plan, make edits, and then save it as a new deployment plan.
 

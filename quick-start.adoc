@@ -62,4 +62,5 @@ link:deploy-fsx-file-system.html[See how to deploy your new FSx for ONTAP file s
 [role="quick-margin-para"]
 Use an external tool such as XYZ and 123 to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines.
 
+[role="quick-margin-para"]
 link:migrate-data.html[Learn more about migrating your data].

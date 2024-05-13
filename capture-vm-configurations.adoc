@@ -12,7 +12,7 @@ summary: You can use the Onboarding Advisor Data Collector script or RVTools to 
 [.lead]
 You can use the Onboarding Advisor Data Collector script or RVTools to capture your current VM configurations. We recommend that you use the Onboarding Advisor Data Collector script because it gathers both VM configuration and performance data for the most accurate plan.
 
-If you plan to deploy a new system based on an existing deployment plan that you previously saved locally, you can skip this step and select the existing deployment plan. link:launch-onboarding-advisor.html[See how to use an existing plan to build a new plan].
+If you plan to deploy a new system based on an existing deployment plan that you previously saved locally, you can skip this step and select the existing deployment plan. link:launch-onboarding-advisor.html#create-a-deployment-plan-based-on-an-existing-plan[See how to use an existing plan to build a new plan].
 
 // start tabbed area
 

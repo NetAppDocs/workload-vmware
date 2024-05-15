@@ -57,10 +57,18 @@ Deploy the new FSx for ONTAP file system that will provide the datastores for yo
 [role="quick-margin-para"]
 link:deploy-fsx-file-system.html[See how to deploy your new FSx for ONTAP file system].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] Migrate data from your old systems to your new FSx for ONTAP file systems
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] Connect your FSx for ONTAP file systems to VMware Cloud on AWS
 
 [role="quick-margin-para"]
-Use an external tool such as XYZ and 123 to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines.
+Your SDDC offers network options for connecting to the FSx for ONTAP file system by using the VPC Peering capability to extend network connectivity to the external NFS storage volumes.
+
+[role="quick-margin-para"]
+link:connect-sddc-to-fsx.html[Learn more about migrating your data].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[Eight] Migrate data from your old systems to your new FSx for ONTAP file systems
+
+[role="quick-margin-para"]
+Use an external tool such as VMware HCX (Hybrid Cloud Extension) to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines.
 
 [role="quick-margin-para"]
 link:migrate-data.html[Learn more about migrating your data].

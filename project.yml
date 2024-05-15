@@ -31,6 +31,8 @@ sidebar:
           url: /launch-onboarding-advisor.html
         - title: Deploy the recommended FSx for ONTAP file system
           url: /deploy-fsx-file-system.html
+        - title: Connect FSx for ONTAP systems to VMware Cloud on AWS
+          url: /connect-sddc-to-fsx.html
         - title: Migrate your data to the new infrastructure
           url: /migrate-data.html
         - title: What you can do next

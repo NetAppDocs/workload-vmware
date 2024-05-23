@@ -10,9 +10,9 @@ summary: After you verify that the recommended FSx for ONTAP file system, or fil
 :imagesdir: ./media/
 
 [.lead]
-After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
+After you verify that the recommended FSx for ONTAP file system, or multiple file systems in some cases, meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
 
-Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the system completely using Workload Factory, or if you have fewer permissions you'll need to use the CloudFormation information from the Codebox.
+Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the FSx for ONTAP system completely using Workload Factory (using Automate mode). If you have fewer permissions (Read mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP system yourself in AWS.
 
 *more here*
 
@@ -28,11 +28,48 @@ Most of the fields that define your FSx for ONTAP system are completed based on 
 +
 You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system-fsx.html[See what these two options offer]. 
 
+. *AWS credentials*. Select, or add, credentials that will give Workload Factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP system yourself in AWS.
+
 . *File system name*. Enter the name that you want to use for this FSx for ONTAP file system.
 
 . *Tags*. Optionally you can add tags to categorize this FSx for ONTAP system.
 
-. *ONTAP credentials*. Enter, and confirm, the ONTAP password.
+. In the "Network & security" section, enter the following information:
+
++
+.. *Region & VPC* Select the Region and the VPC where the FSx for ONTAP system will be deployed.
++
+It should be deployed in a VPC that is different than the VPC where the VMware Cloud on AWS is deployed.
+.. *Security group*. Select the default Security Group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP system. 
++
+You can add an inbound rule so that restricts what other AWS services can access the FSx for ONTAP system. This will block the amount of services that are open. These are the minimum ports and protocols:
++
+[cols="15,10,55",width=80%,options="header"]
+|===
+| Protocols
+| Ports
+| Purpose
+| TCP, UDP | 111 | Portmapper (used to negotiate which ports are used in NFS requests)
+| TCP, UDP | 635 | NFS mountd (receives NFS mount requests)
+| TCP, UDP | 2049 | NFS network traffic
+| TCP, UDP | 4045 | Network Lock Manager (NLM, lockd) - Handles lock requests.
+| TCP, UDP | 4046 | Network Status Monitor (NSM, statd) - Notifies NFS clients about reboots of the server for lock management.
+|===
+
++
+.. *Availability zone*. Select the Availability Zone and the Subnet.
++
+You should select the same availability zone as where your VMware SDDC is deployed if you want to avoid charges for cross-AZ traffic.
+.. *Encryption*. 
+.. *Datastore access control*. 
+
+. When using the Advanced option, you can set these two options as well:
+
++
+.. *ONTAP credentials*. Enter, and confirm, the ONTAP password.
+.. *Storage VM credentials*. Enter, and confirm, the Storage VM password.
+
+. In the "Summary" section you can view the Default configuration that is created by the FSx for ONTAP wizard, and you can view a new section called Plan configuration that is created by the VMware Onboarding Advisor. Inst4ead of having to select the parameters shown in this section, the values are populated from data collected in the VMware Onboarding Advisor.
 
 . Click *Create* to deploy the FSx for ONTAP file system. This process can take up to 2 hours. 
 +

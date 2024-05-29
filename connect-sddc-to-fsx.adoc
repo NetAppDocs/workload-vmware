@@ -13,3 +13,7 @@ summary: After the FSx for ONTAP file system has been deployed, you need to conn
 After the FSx for ONTAP file system has been deployed, you need to connect that system to your VMware Cloud on AWS infrastructure. Your SDDC offers network options for connecting to the FSx for ONTAP file system by using the VPC Peering capability to extend network connectivity to the external NFS storage volumes.
 
 https://vmc.techzone.vmware.com/fsx-guide?check_logged_in=1#amazon-vpc-peering[Review the Amazon VPC Peering documentation for details].
+
+The following diagram shows how to use VPC Peering for connecting single-AZ SDDC clusters to FSx for ONTAP single-AZ deployments.
+
+image:diagram-vpc-connect-vmware-fsx.png[A diagram showing how to use VPC Peering for connecting single-AZ SDDC clusters to FSx for ONTAP single-AZ deployments.]

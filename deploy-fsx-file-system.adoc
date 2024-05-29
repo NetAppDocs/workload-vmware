@@ -19,6 +19,8 @@ Depending on the policy and permissions that you added to your Workload Factory 
 .Requirements
 
 * You must be using VMware Cloud on AWS SDDC version 1.20 or greater to deploy FSx for ONTAP file systems.
+* You must not deploy the FSx for ONTAP file system in the same VPC used during the SDDC deployment. Instead, you must deploy it in a new Amazon VPC that you own to enable VMware Cloud on AWS integration with Amazon FSx for NetApp ONTAP.
+* You must deploy the FSx for ONTAP system within the same AWS Region as your SDDC.
 
 .Steps
 

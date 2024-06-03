@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: onboarding-advisor-overview.html
 keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Workload Factory for VMware provides tools to move your data from on-premises systems to VMware Cloud on AWS. The VMware Cloud on AWS onboarding advisor enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+summary: Workload Factory for VMware provides tools to move your data from on-premises systems to VMware Cloud on AWS. The VMware migration advisor enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 ---
 
 = Learn about Workload Factory for VMware 
@@ -10,13 +10,13 @@ summary: Workload Factory for VMware provides tools to move your data from on-pr
 :imagesdir: ./media/
 
 [.lead]
-Workload Factory for VMware provides tools to move your data from on-premises systems to VMware Cloud on AWS (VMC). The VMware Cloud on AWS onboarding advisor enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+Workload Factory for VMware provides tools to move your data from on-premises systems to VMware Cloud on AWS (VMC). The VMware migration advisor enables you to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 
 Amazon FSx for NetApp ONTAP is an external NFS datastore built on NetApp's ONTAP file system that can be attached to VMware Cloud on AWS vSphere clusters. There is no need to add more hosts to increase available storage; instead, just use FSx for ONTAP volumes as external datastores to complement vSAN datastores. This provides you with a flexible, high-performance, virtualized storage infrastructure that scales independently of compute resources.
 
 image:diagram-vmware-fsx-overview.png[A diagram showing the architecture.]
 
-== Benefits of using the onboarding advisor
+== Benefits of using the migration advisor
 
 Transitioning parts of your current infrastructure to VMware Cloud on AWS using Amazon FSx for ONTAP as external NFS datastores provides multiple benefits, such as: 
 
@@ -28,9 +28,9 @@ Transitioning parts of your current infrastructure to VMware Cloud on AWS using 
 * High availability and multi-AZ support
 * Single-AZ configurations can use VPC peering without requiring a Transit Gateway (TGW) to reduce costs and latencies
 
-== What you can do with the onboarding advisor
+== What you can do with the migration advisor
 
-The onboarding advisor provides the following functionality:
+The migration advisor provides the following functionality:
 
 * Analyze current on-premises VM configurations
 * Determine which VMs to migrate to VMware Cloud on AWS
@@ -38,9 +38,9 @@ The onboarding advisor provides the following functionality:
 * Review resulting report to understand the deployment steps
 * Perform the actual deployment
 
-== How the VMware Cloud on AWS onboarding advisor works
+== How the VMware migration advisor works
 
-The onboarding advisor can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to VMware Cloud datastores, which includes supplemental NFS datastores on FSx for ONTAP file systems.
+The migration advisor can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to VMware Cloud datastores, which includes supplemental NFS datastores on FSx for ONTAP file systems.
 
 image:diagram-vmware-fsx-old-new.png[A diagram showing an example old architecture and new architecture after migration.]
 
@@ -48,10 +48,10 @@ Note that you can attach up to four (4) FSx for ONTAP volumes to a single vSpher
 
 == Cost
 
-There is no cost for using the VMware Cloud on AWS onboarding advisor.
+There is no cost for using the VMware migration advisor.
 
 You'll need to pay for AWS resources that you deploy based on the recommendations from the onboarding advisor.
 
 == Licensing
 
-No special licenses are needed from NetApp to use the onboarding advisor.
+No special licenses are needed from NetApp to use the migration advisor.

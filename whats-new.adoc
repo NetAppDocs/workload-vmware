@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: whats-new.html
 keywords: what's new, features, new, release notes, enhancements, fixes
-summary: "Learn what's new with the VMware Cloud on AWS onboarding advisor component of Workload Factory."
+summary: "Learn what's new with the VMware migration advisor component of Workload Factory."
 ---
 
 = What's new
@@ -10,10 +10,10 @@ summary: "Learn what's new with the VMware Cloud on AWS onboarding advisor compo
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new with the VMware Cloud on AWS onboarding advisor component of Workload Factory.
+Learn what's new with the VMware Cloud migration advisor component of Workload Factory.
 
 == 6 June 2024
 
 === Initial release of the VMware workloads component of Workload Factory
 
-The initial release includes the capability to use the VMware Cloud on AWS onboarding advisor to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+The initial release includes the capability to use the VMware migration advisor to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.

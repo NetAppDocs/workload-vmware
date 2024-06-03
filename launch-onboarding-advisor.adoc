@@ -2,52 +2,52 @@
 sidebar: sidebar
 permalink: launch-onboarding-advisor.html
 keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+summary: Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
-= Create a deployment plan using the onboarding advisor
+= Create a deployment plan using the migration advisor
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Log in to the NetApp Workload Factory to access the VMware Cloud on AWS onboarding advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
-The onboarding advisor can be used to create a deployment plan for the following scenarios:
+The migration advisor can be used to create a deployment plan for the following scenarios:
 
-* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to the cloud.>>
-* <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
+* <<Create a migration plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to the cloud.>>
+* <<Create a migration plan based on an existing plan,To deploy a system in the cloud based on an existing migration plan that has similar requirements.>>
 
 Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
-== Create a deployment plan based on an on-premises vSphere environment
+== Create a migration plan based on an on-premises vSphere environment
 
 You can migrate your current virtual machine configurations in on-premises vSphere environments to virtual machines in VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 
 .Requirements
 
-* You must have created the inventory file from your existing systems by using the Onboarding Advisor Data Collector (.csv file) or by using RVTools (.xlsx file).
+* You must have created the inventory file from your existing systems by using the Migration advisor VM collector (.csv file) or by using RVTools (.xlsx file).
 * You must have access to the inventory file from the system on which you are logging in to Workload Factory.
 
 .Steps
 
 . Log in to Workload Factory.
 
-. From the VMware workloads tile, click *Plan and deploy* and the VMware onboarding advisor main page is displayed.
+. From the VMware workloads tile, click *Plan and deploy* and the VMware migration advisor main page is displayed.
 +
 image:screenshot-choose-method-create.png[A screenshot of the different methods you can use to load your current VM configuration information.]
 
-. Select *Create a new deployment plan*.
+. Select *Create a new migration plan*.
 
 . Select the type of inventory file you'll be using to populate Workload Factory with your current VM configuration and click *Next*.
 +
-* Select *Use the Onboarding Advisor data collector* to use the .csv file that you created using the Onboarding Advisor data collector.
+* Select *Use the Migration advisor VM collector* to use the .csv file that you created using the Migration advisor VM collector.
 * Select *Use RVTools* to use the .xlsx file that you created using RVTools.
 
 +
 The "Prepare for VMware Cloud onboarding" page is displayed.
 . In the _Upload VM configuration_ section, click image:button-upload-file.png[the upload button] and select the file that you want to use. 
 +
-* Select the .csv file when using the Onboarding Advisor data collector.
+* Select the .csv file when using the Migration advisor VM collector.
 * Select the .xlsx file when using RVTools.
 
 +
@@ -69,7 +69,7 @@ For optimal performance and cost efficiency, this is typically the same region a
 * RAID-5 (FTT 1) - consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
 * RAID-5 (FTT 2) - consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
 * RAID-6 (FTT 2) - extends RAID 5 by adding another parity block; thus, it uses block-level striping with two parity blocks distributed across all member disks. It requires 4 or more drives, and it can survive any two concurrent disk failures.
-.. *VM estimated performance requirements*. This option is available only when using RVTools - the Onboarding Advisor data collector captures this information from your environment. Provide the following per virtual machine average performance parameters that you want to be applied to your new VMs that will be deployed:
+.. *VM estimated performance requirements*. This option is available only when using RVTools - the Migration advisor VM collector captures this information from your environment. Provide the following per virtual machine average performance parameters that you want to be applied to your new VMs that will be deployed:
 * *Average IOPS per VM*. 
 Enter the number of IOPS required for your file systems. If you are unsure, you can use the default of 3 IOPS per GiB of SSD storage for Amazon FSx for ONTAP  file systems. For example, if you deploy 2,000 GiB of capacity, this will be translated to 6,000 IOPS. 
 We recommend that you begin with a smaller IOPS setting. You can increase your provisioned SSD IOPS after the file system is created as workloads are migrated or deployed.
@@ -116,9 +116,9 @@ The "Recommended deployment" section will be updated if you make any changes. No
 * Click *Deploy* to deploy the FSx for ONTAP file systems to support your VMs. link:create-file-system.html[See how to deploy an FSx for ONTAP system].
 * Click *Download plan > VM deployment* to download the migration plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
 * Click *Download plan > Plan report* to download the migration plan in a .pdf format so you can distribute the plan for review.
-* Click *Export plan* to save the deployment plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
+* Click *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
 
-== Create a deployment plan based on an existing plan
+== Create a migration plan based on an existing plan
 
 If you are planning a new deployment that is similar to an existing deployment plan that you've used in the past, you can import that plan, make edits, and then save it as a new deployment plan.
 
@@ -130,13 +130,13 @@ If you are planning a new deployment that is similar to an existing deployment p
 
 . Log in to Workload Factory.
 
-. From the VMware workloads tile, click *Plan and deploy* and the VMware onboarding advisor main page is displayed.
+. From the VMware workloads tile, click *Plan and deploy* and the VMware migration advisor main page is displayed.
 +
 image:screenshot-choose-method-import.png[A screenshot of the different methods you can use to load your current VM configuration information.]
 
 . Select *Import an existing deployment plan*.
 
-. Click image:button-upload-file.png[the upload button] and select the existing plan file that you want to import in the onboarding advisor.
+. Click image:button-upload-file.png[the upload button] and select the existing plan file that you want to import in the migration advisor.
 
 . Click *Next* and the Review plan page is displayed.
 

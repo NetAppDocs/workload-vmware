@@ -84,8 +84,8 @@ The percentage of operations that are write operations for your workloads. The d
 +
 Note that if you select an amount less than 20% that you won't be able to create volume snapshots for protection and long-term backups.
 
-. Click *Next* and the "Choose nodes" page is displayed. This page enables you to define the VMware cloud on AWS cluster configuration.
-*Being added in the May or June sprint - can save costs - if they have resources*
+. Click *Next* and the "VMware cloud on AWS node configuration" page is displayed. This page enables you to define the VMware cloud on AWS cluster configuration.
+*Being added in the May or June sprint*
 *Picks a default, and user can change if they want*
 *Choose just FSx, just vSAN and no FSx, and other options*
 

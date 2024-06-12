@@ -12,7 +12,7 @@ summary: "Learn what's new with the VMware migration advisor component of Worklo
 [.lead]
 Learn what's new with the VMware Cloud migration advisor component of Workload Factory.
 
-== 6 June 2024
+== 7 July 2024
 
 === Initial release of the VMware workloads component of Workload Factory
 

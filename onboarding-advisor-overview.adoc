@@ -23,10 +23,10 @@ Transitioning parts of your current infrastructure to VMware Cloud on AWS using 
 * Cost optimization due to host and storage decoupling and advanced data efficiency
 * Ability to grow the storage capacity as needed without the need to purchase additional host instances
 * Enables NetApp ONTAP data management capabilities in the cloud, such as space efficient snapshots, cloning, compression, deduplication, compaction, and replication
-* Avoid management/administration of hardware refreshes
+* Avoid management of hardware refreshes
 * Ability to change data throughput, IOPS, and the size of the file system in addition to increase or decrease the size of volumes
-* High availability and multi-AZ support
-* Single-AZ configurations can use VPC peering without requiring a Transit Gateway (TGW) to reduce costs and latencies
+* High availability and support for multiple Availability Zones (AZ)
+* Single-AZ configurations can use VPC peering without requiring a Transit Gateway to reduce costs and latencies
 
 == What you can do with the migration advisor
 
@@ -50,7 +50,7 @@ Note that you can attach up to four (4) FSx for ONTAP volumes to a single vSpher
 
 There is no cost for using the VMware migration advisor.
 
-You'll need to pay for AWS resources that you deploy based on the recommendations from the onboarding advisor.
+You'll need to pay for AWS resources that you deploy based on the recommendations from the migration advisor.
 
 == Licensing
 

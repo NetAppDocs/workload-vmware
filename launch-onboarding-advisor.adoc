@@ -19,7 +19,7 @@ The migration advisor can be used to create a deployment plan for the following 
 
 Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
-== Create a migration plan based on an on-premises vSphere environment
+== Create a deployment plan based on an on-premises vSphere environment
 
 You can migrate your current virtual machine configurations in on-premises vSphere environments to virtual machines in VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 
@@ -121,7 +121,7 @@ The top of the page describes the monthly cost for all deployed VMs and FSx for 
 * Click *Download plan > Plan report* to download the migration plan in a .pdf format so you can distribute the plan for review.
 * Click *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
 
-== Create a migration plan based on an existing plan
+== Create a deployment plan based on an existing plan
 
 If you are planning a new deployment that is similar to an existing deployment plan that you've used in the past, you can import that plan, make edits, and then save it as a new deployment plan.
 

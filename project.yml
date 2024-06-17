@@ -27,7 +27,7 @@ sidebar:
       entries:
         - title: Capture your current VM configurations
           url: /capture-vm-configurations.html
-        - title: Create a migration plan using the migration advisor
+        - title: Create a deployment plan using the migration advisor
           url: /launch-onboarding-advisor.html
         - title: Deploy the recommended FSx for ONTAP file system
           url: /deploy-fsx-file-system.html

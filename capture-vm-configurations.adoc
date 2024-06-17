@@ -44,9 +44,9 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 +
 image:screenshot-choose-method.png[A screenshot of the different methods you can use to collect your current VM configuration information.]
 
-. Select *Create a new deployment plan*, select the option for *Use the Migration advisor VM collector*, and click *Next*.
+. Select *Create a new deployment plan*, select the option for *Use the migration advisor VMware data collector*, and click *Next*.
 +
-The Prepare for VMware Cloud onboarding page is displayed.
+The *Prepare for VMware Cloud on AWS migration* page is displayed.
 
 . In the Codebox window, click either image:button-download-codebox.png[the download button] to save the Migration advisor VM collector script (named "list-vms.ps1") to the target system, or click image:button-copy-codebox.png[the copy button] to copy the script so you can paste it on the appropriate system.
 
@@ -74,7 +74,7 @@ The script outputs a CSV file named `list-vms-yyyy-MM-dd-HH-mm-ss.csv` in the cu
 
 .Use RVTools software
 --
-RVTools is a Windows application that interacts with VCenter and ESX server (5.x to 8.0) to capture information about your VMware virtual environments. It gathers information about VMs, CPU, memory, disks, clusters, ESX hosts, datastores, and more. You can export this information to an xlsx file to use with the onboarding advisor.
+RVTools is a Windows application that interacts with VCenter and ESX server (5.x to 8.0) to capture information about your VMware virtual environments. It gathers information about VMs, CPU, memory, disks, clusters, ESX hosts, datastores, and more. You can export this information to an xlsx file to use with the migration advisor.
 
 https://www.robware.net/home[Learn more about RVTools].
 

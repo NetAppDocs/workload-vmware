@@ -30,17 +30,15 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 .Steps
 
-. Log in to Workload Factory.
-
 . From the VMware workloads tile, click *Plan and deploy* and the VMware migration advisor main page is displayed.
 +
 image:screenshot-choose-method-create.png[A screenshot of the different methods you can use to load your current VM configuration information.]
 
-. Select *Create a new migration plan*.
+. Select *Create a new deployment plan*.
 
 . Select the type of inventory file you'll be using to populate Workload Factory with your current VM configuration and click *Next*.
 +
-* Select *Use the Migration advisor VM collector* to use the .csv file that you created using the Migration advisor VM collector.
+* Select *Use the migration advisor VMware data collector* to use the .csv file that you created using the VMware data collector.
 * Select *Use RVTools* to use the .xlsx file that you created using RVTools.
 
 +

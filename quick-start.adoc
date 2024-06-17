@@ -26,7 +26,7 @@ Go to the https://console.workloads.netapp.com[Workload Factory console^] and si
 You can use Workload Factory in _Basic_ mode without adding credentials to access your AWS account. Adding AWS credentials to Workload Factory in either _Read_ or _Automate_ mode gives your Workload Factory account the permissions needed to create and manage FSx for ONTAP file systems, and to deploy and manage workloads within VMware Cloud.
 
 [role="quick-margin-para"]
-https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[See how to add credentials and permissions].
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Capture your current VM configurations in your vSphere environment
 
@@ -34,7 +34,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[See how 
 You can use the Migration advisor VM collector script or RVTools to capture your current VM configurations in order to create a deployment plan. You can also import an existing deployment plan as a template and then modify any required attributes.
 
 [role="quick-margin-para"]
-link:capture-vm-configurations.html[See how to capture your current VM configurations].
+link:capture-vm-configurations.html[Learn how to capture your current VM configurations].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Create a deployment plan using the VMware migration advisor 
 
@@ -42,7 +42,7 @@ link:capture-vm-configurations.html[See how to capture your current VM configura
 Launch the VMware migration advisor and select the VMs that you want to migrate to the new VMware Cloud on AWS infrastructure using an Amazon FSx for ONTAP file system as external NFS datastores. You can make some modifications before you save the plan.
 
 [role="quick-margin-para"]
-link:launch-onboarding-advisor.html[See how to use the VMware migration advisor to create a deployment plan].
+link:launch-onboarding-advisor.html[Learn how to use the VMware migration advisor to create a deployment plan].
 
 //.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Download the deployment plan
 //
@@ -55,7 +55,7 @@ link:launch-onboarding-advisor.html[See how to use the VMware migration advisor 
 Deploy the new FSx for ONTAP file system that will provide the datastores for your VMs in your VMware Cloud on AWS infrastructure.
 
 [role="quick-margin-para"]
-link:deploy-fsx-file-system.html[See how to deploy your new FSx for ONTAP file system].
+link:deploy-fsx-file-system.html[Learn how to deploy your new FSx for ONTAP file system].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Connect your FSx for ONTAP file systems to VMware Cloud on AWS
 

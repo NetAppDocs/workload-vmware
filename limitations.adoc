@@ -12,7 +12,7 @@ summary: Known limitations identify functions that are not supported by this rel
 [.lead]
 Known limitations identify functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
-These limitations are specific to the VMware Cloud on AWS onboarding advisor component of Workload Factory.
+These limitations are specific to the VMware Cloud on AWS migration advisor component of Workload Factory.
 
 == something limitations
 

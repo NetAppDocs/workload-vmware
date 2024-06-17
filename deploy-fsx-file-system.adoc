@@ -22,7 +22,7 @@ Depending on the policy and permissions that you added to your Workload Factory 
 
 .Steps
 
-. At the bottom of the *Review plan* page, click *Deploy* and the Create an FSx for ONTAP file system page is displayed.
+. At the bottom of the *Review plan* page, select *Deploy* and the Create an FSx for ONTAP file system page is displayed.
 +
 Most of the fields that define your FSx for ONTAP system are completed based on the information you provided, but there are a few fields that you need to complete in this page.
 +
@@ -71,9 +71,9 @@ You should select the same availability zone as where your VMware SDDC is deploy
 
 . In the *Summary* section, you can view the FSx for ONTAP file system and datastore configuration that the VMware migration advisor has designed based on your information.
 
-. Click *Create* to deploy the FSx for ONTAP file system. This process can take up to 2 hours. 
+. Select *Create* to deploy the FSx for ONTAP file system. This process can take up to 2 hours. 
 +
-Optionally, in the Codebox window you can click *Redirect to CloudFormation* to create the file system using a CloudFormation stack.
+Optionally, in the Codebox window you can select *Redirect to CloudFormation* to create the file system using a CloudFormation stack.
 +
 In either case, you can you can monitor the creation progress in CloudFormation.
 

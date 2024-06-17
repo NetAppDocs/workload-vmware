@@ -12,37 +12,37 @@ summary: After you verify that the recommended FSx for ONTAP file system, or fil
 [.lead]
 After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
 
-Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the FSx for ONTAP system completely using Workload Factory (using Automate mode). If you have fewer permissions (Read mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP system yourself in AWS.
+Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the FSx for ONTAP file system completely using Workload Factory (using Automate mode). If you have fewer permissions (Read mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
 .Requirements
 
 * You must be using VMware Cloud on AWS Software-Defined Data Center (SDDC) version 1.20 or greater to deploy FSx for ONTAP file systems.
 * You must not deploy the FSx for ONTAP file system in the same VPC used during the SDDC deployment. Instead, you must deploy it in a new Amazon VPC that you own to enable VMware Cloud on AWS integration with Amazon FSx for NetApp ONTAP.
-* You must deploy the FSx for ONTAP system within the same AWS region as your SDDC.
+* You must deploy the FSx for ONTAP file system within the same AWS region as your SDDC.
 
 .Steps
 
 . At the bottom of the *Review plan* page, select *Deploy* and the Create an FSx for ONTAP file system page is displayed.
 +
-Most of the fields that define your FSx for ONTAP system are completed based on the information you provided, but there are a few fields that you need to complete in this page.
+Most of the fields that define your FSx for ONTAP file system are completed based on the information you provided, but there are a few fields that you need to complete in this page.
 +
 You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[See what these two options offer]. 
 
-. *AWS credentials*: Select or add credentials that will give Workload Factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP system yourself in AWS.
+. *AWS credentials*: Select or add credentials that will give Workload Factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
 . *File system name*: Enter the name that you want to use for this FSx for ONTAP file system.
 
-. *Tags*: Optionally you can add tags to categorize this FSx for ONTAP system.
+. *Tags*: Optionally you can add tags to categorize this FSx for ONTAP file system.
 
 . In the "Network & security" section, enter the following information:
 
 +
-.. *Region & VPC*: Select the Region and the VPC where the FSx for ONTAP system will be deployed.
+.. *Region & VPC*: Select the Region and the VPC where the FSx for ONTAP file system will be deployed.
 +
 It should be deployed in a VPC that is different than the VPC where the VMware Cloud on AWS is deployed.
-.. *Security group*: When using the *Advanced create* option, you can select the default security group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP system. 
+.. *Security group*: When using the *Advanced create* option, you can select the default security group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP file system. 
 +
-You can add an inbound rule that restricts what other AWS services can access the FSx for ONTAP system. This will block the amount of services that are open. These are the minimum ports and protocols:
+You can add an inbound rule that restricts what other AWS services can access the FSx for ONTAP file system. This will block the amount of services that are open. These are the minimum ports and protocols:
 +
 [cols="15,10,55",width=80%,options="header"]
 |===

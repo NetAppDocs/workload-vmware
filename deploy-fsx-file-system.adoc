@@ -63,11 +63,11 @@ You should select the same availability zone as where your VMware SDDC is deploy
 .. *Encryption*: When using the *Advanced create* option, you can select the AWS encryption key name from the dropdown.
 .. *Datastore access control*: When using the *Advanced create* option, you can select whether all hosts can access the datastores or whether only certain vSphere cluster nodes on a specific subnet can access the datastores.
 
-. When using the Advanced option, you can set these two options as well:
+. In the "File system details" section, enter the following information:
 
 +
 .. *ONTAP credentials*: Enter and confirm the ONTAP password.
-.. *Storage VM credentials*: Enter and confirm the storage VM password. The password can be specific to this file system, or you can use the same password entered for ONTAP credentials.
+.. *Storage VM credentials* (Advanced create only): Enter and confirm the storage VM password. The password can be specific to this file system, or you can use the same password entered for ONTAP credentials.
 
 . In the *Summary* section, you can view the FSx for ONTAP file system and datastore configuration that the VMware migration advisor has designed based on your information.
 

@@ -56,17 +56,12 @@ The VMs summary section is populated from the inventory file to reflect the numb
 +
 The external datastores will be implemented using Amazon FSx for NetApp ONTAP file system volumes.
 .. *VM Memory to consider*: Select whether the memory allocated for each onboarded VM is sized based on their currently utilized size (recommended) or their provisioned size.
+
 . In the _VMware Cloud on AWS deployment configuration_ section, enter details about the required VMware Cloud on AWS configuration.
 .. *Region*: Select the region where the VMs and Amazon FSx for NetApp ONTAP file systems will be deployed. 
 +
 For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
-.. *vSphere cluster host preference*: Select the type of ESXi host that will be used in the vSphere cluster for the VMs. See https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-98FD3BA9-8A1B-4500-99FB-C40DF6B3DA95.html[VMware Cloud on AWS Host Types] for more details.
-.. *vSAN architecture*: Select whether you want to use vSAN Express Storage Architecture (ESA) or vSAN Original Storage Architecture (OSA) architecture.
-.. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose “Auto”, which is recommended, or from among a variety of RAID levels.
-* RAID-1 (FTT 1): consists of an exact copy (or mirror) of a set of data on 2 or more disks.
-* RAID-5 (FTT 1): consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
-* RAID-5 (FTT 2): consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
-* RAID-6 (FTT 2): extends RAID 5 by adding another parity block; thus, it uses block-level striping with two parity blocks distributed across all member disks. It requires 4 or more drives, and it can survive any two concurrent disk failures.
+
 .. *VM estimated performance requirements*: This option is available only when using RVTools. The Migration advisor VM collector captures this information from your environment. Provide the following per virtual machine average performance parameters that you want to be applied to your new VMs that will be deployed:
 * *Average IOPS per VM*: 
 Enter the number of IOPS required for your file systems. If you are unsure, you can use the default of 3 IOPS per GiB of SSD storage for Amazon FSx for ONTAP  file systems. For example, if you deploy 2,000 GiB of capacity, this will be translated to 6,000 IOPS. 
@@ -76,6 +71,7 @@ The size of each block containing read or write operations. The default size is 
 A larger block size may be better for large sequential read and write workloads. A smaller block size may offer better performance for workloads that perform small random writes to sparse files or to large files.
 * *Average write ratio*: 
 The percentage of operations that are write operations for your workloads. The default ratio is 30% writes and 70% reads.
+
 . In the _VM storage capacity considerations_ section, select from a few storage options.
 .. *Average data reduction ratio*: Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
 .. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems. 
@@ -84,17 +80,23 @@ Note that if you select an amount less than 20% that you won't be able to create
 
 . Select *Next* and the "VMware cloud on AWS node configuration" page is displayed. 
 +
-This page enables you to define the VMware cloud on AWS cluster configuration.
-*Being added in the May or June sprint*
-*Picks a default, and user can change if they want*
-*Choose just FSx, just vSAN and no FSx, and other options*
+This page enables you to define the VMware cloud on AWS cluster configuration using an estimated savings analysis and the recommended node type. You can configure the following:
++
+.. *vSAN architecture*: Select whether you want to use vSAN Express Storage Architecture (ESA) or vSAN Original Storage Architecture (OSA) architecture.
+.. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose “Auto”, which is recommended, or from among a variety of RAID levels.
+* RAID-1 (FTT 1): consists of an exact copy (or mirror) of a set of data on 2 or more disks.
+* RAID-5 (FTT 1): consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
+* RAID-5 (FTT 2): consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
+* RAID-6 (FTT 2): extends RAID 5 by adding another parity block; thus, it uses block-level striping with two parity blocks distributed across all member disks. It requires 4 or more drives, and it can survive any two concurrent disk failures.
+.. *Nodes configuration selection list*: Select an EC2 instance type for the nodes.
 
 . Select *Next* and the "Select virtual machines" page displays the VMs that match the criteria you provided in the previous page.
+
 .. In the _Selection criteria_ section, select the criteria for the VMs that you plan to deploy:
 +
-* Based on the lowest cost
+* Based on cost and performance optimization
 * Based on the ability to easily restore your data with local snapshots for recovery scenarios
-* Based on both sets of criteria; lowest cost while still providing good recovery options
+* Based on both sets of criteria: the lowest cost while still providing good recovery options
 
 .. In the _Virtual machines_ section, the VMs that matched the criteria you provided in the previous page are selected (checked). Select or deselect VMs if you want to onboard/migrate fewer or more VMs on this page. 
 +
@@ -110,7 +112,7 @@ The bottom of the page shows the source VM (or multiple VMs) for which this new 
 
 .. Once you understand how your datastores will be deployed, select *Next*.
 
-. On the *Review plan* page, review the estimated monthly cost for all the VMs that you plan to migrate.
+. On the *Review deployment plan* page, review the estimated monthly cost for all the VMs that you plan to migrate.
 +
 The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP file systems. You can expand each section to view details for “Recommended Amazon FSx for ONTAP file system configuration”, “Estimated cost breakdown”, “Volume configuration”, “Sizing assumptions”, and technical “Disclaimers”.
 

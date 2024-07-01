@@ -38,9 +38,11 @@ The migration advisor provides the following functionality:
 * Review resulting report to understand the deployment steps
 * Perform the actual deployment
 
+The migration advisor supports configuration planning for a single VMware Cloud on AWS cluster connected to a single FSx for ONTAP file system.
+
 == How the VMware migration advisor works
 
-The migration advisor can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to VMware Cloud datastores, which includes supplemental NFS datastores on FSx for ONTAP file systems.
+The migration advisor can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to VMware Cloud datastores, which includes supplemental NFS datastores on an FSx for ONTAP file system.
 
 image:diagram-vmware-fsx-old-new.png[A diagram showing an example old architecture and new architecture after migration.]
 

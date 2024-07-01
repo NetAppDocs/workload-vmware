@@ -15,8 +15,6 @@ sidebar:
       entries:
         - title: What's new
           url: /whats-new.html
-        - title: Known limitations
-          url: /limitations.html
     - title: Get started
       entries:
         - title: Learn about Workload Factory for VMware

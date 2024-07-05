@@ -18,7 +18,7 @@ sidebar:
     - title: Get started
       entries:
         - title: Learn about Workload Factory for VMware
-          url: /onboarding-advisor-overview.html
+          url: /learn-about-vmware-workloads.html
         - title: Quick start
           url: /quick-start.html
     - title: Use the VMware migration advisor
@@ -33,8 +33,6 @@ sidebar:
           url: /connect-sddc-to-fsx.html
         - title: Migrate your data to the new infrastructure
           url: /migrate-data.html
-        - title: What you can do next
-          url: /whats-next.html
     - title: Knowledge and support
       entries:
         - title: Register for support

@@ -25,7 +25,7 @@ Go to the https://console.workloads.netapp.com[Workload Factory console^] and si
 You can use Workload Factory in _Basic_ mode without adding credentials to access your AWS account. Adding AWS credentials to Workload Factory in either _Read_ or _Automate_ mode gives your Workload Factory account the permissions needed to create and manage FSx for ONTAP file systems, and to deploy and manage workloads within VMware Cloud.
 
 [role="quick-margin-para"]
-https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions].
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions^]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Capture your current VM configurations in your vSphere environment
 
@@ -42,11 +42,6 @@ Launch the VMware migration advisor and select the VMs that you want to migrate 
 
 [role="quick-margin-para"]
 link:launch-onboarding-advisor.html[Learn how to use the VMware migration advisor to create a deployment plan].
-
-//.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Download the deployment plan
-//
-//[role="quick-margin-para"]
-//Download the deployment plan so that you can deploy the new infrastructure. You can download a PDF version of the plan first so that it can be reviewed by other members of your organization.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Deploy the recommended FSx for ONTAP file system
 

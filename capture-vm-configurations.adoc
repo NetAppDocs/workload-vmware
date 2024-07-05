@@ -98,3 +98,7 @@ The xlsx or xls file that contains your results is saved to your working directo
 ====
 
 // end tabbed area
+
+.What's next?
+
+link:launch-onboarding-advisor.html[Create a deployment plan using the migration advisor].

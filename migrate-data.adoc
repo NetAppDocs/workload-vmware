@@ -1,0 +1,21 @@
+---
+sidebar: sidebar
+permalink: migrate-data.html
+keywords: vm workloads, fsx for ontap, migration, data migration, vmware hcx
+summary: Use a tool such as VMware Hybrid Cloud Extension to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines. VMware HCX core functionality enables you to migrate workloads from your on-premises data center to your SDDC transparently.
+---
+
+= Migrate your data to the new infrastructure
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Use a tool such as VMware Hybrid Cloud Extension (HCX) to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines. VMware HCX core functionality enables you to migrate workloads from your on-premises data center to your Software-Defined Data Center (SDDC) transparently.
+
+https://docs.vmware.com/en/VMware-Cloud-on-AWS/services/com.vmware.vmc-aws-operations/GUID-E8671FC6-F64B-4D41-8F01-B6120B0E3675.html[Review the VMware HCX documentation for details^]
+
+.What's next?
+
+Now that you've migrated your data to VMware Cloud on AWS and Amazon FSx for NetApp ONTAP external datastores, you can back up and protect the important data on your FSx for ONTAP file system to make sure your data is always available.
+
+For information about managing your FSx for ONTAP file system, go to the https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP documentation] to view the the backup and protection capabilities you can use.

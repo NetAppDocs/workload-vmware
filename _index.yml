@@ -1,9 +1,24 @@
 indexpage:
-  lead: # single paragraph, shown on the page
+  title: Workload Factory for VMware documentation
+  lead: "Streamline migrations from on-premises vSphere environments to VMware Cloud on AWS and implement customized FSx for ONTAP file systems as external datastores."
+  summary: "Streamline migrations from on-premises vSphere environments to VMware Cloud on AWS and implement customized FSx for ONTAP file systems as external datastores."
+  keywords: VMware, FSx, VMs, VMC, VMware Cloud on AWS, FSx for ONTAP
   tiles:
-    # one or more tile definitions for the page
-  - title: # short string (tile title)
-    links:
-      # one or more links on the tile
-      - title: # short string (link title)
-        url: # single file name or external URL
+    - title: Get started
+      links:
+        - title: Learn about Workload Factory for VMware
+          url: learn-about-vmware-workloads.html
+        - title: Quick start
+          url: quick-start.html
+    - title: Use the VMware migration advisor
+      links:
+        - title: Capture your current VM configurations
+          url: capture-vm-configurations.html
+        - title: Create a deployment plan using the migration advisor
+          url: launch-onboarding-advisor.html
+        - title: Deploy the recommended FSx for ONTAP file system
+          url: deploy-fsx-file-system.html
+        - title: Connect FSx for ONTAP file systems to VMware Cloud on AWS
+          url: connect-sddc-to-fsx.html
+        - title: Migrate your data to the new infrastructure
+          url: migrate-data.html    

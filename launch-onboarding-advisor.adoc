@@ -25,12 +25,12 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 .Requirements
 
-* You must have created the inventory file from your existing systems by using the Migration advisor VM collector (.csv file) or by using RVTools (.xlsx file).
+* You must have created the inventory file from your existing systems by using the migration advisor VM collector (.csv file) or by using RVTools (.xlsx file).
 * You must have access to the inventory file from the system on which you are logging in to Workload Factory.
 
 .Steps
 
-. From the VMware workloads tile, select *Plan and deploy* and the VMware migration advisor main page is displayed.
+. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*. The VMware migration advisor main page is displayed.
 +
 image:screenshot-choose-method-create.png[A screenshot of the different methods you can use to load your current VM configuration information.]
 

@@ -12,6 +12,10 @@ summary: "Learn what's new with the VMware migration advisor component of Worklo
 [.lead]
 Learn what's new with the VMware Cloud migration advisor component of Workload Factory.
 
+== 1 September 2024
+
+Workload Factory for VMware now supports migration to Amazon EC2 using the VMware migration advisor.
+
 == 7 July 2024
 
 === Initial release of Workload Factory for VMware

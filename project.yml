@@ -19,14 +19,18 @@ sidebar:
       entries:
         - title: Learn about Workload Factory for VMware
           url: /learn-about-vmware-workloads.html
-        - title: Quick start
+        - title: Quick start for migrating to VMware Cloud
           url: /quick-start.html
+        - title: Quick start for migrating to Amazon EC2
+          url: /quick-start-native.html
     - title: Use the VMware migration advisor
       entries:
         - title: Capture your current VM configurations
           url: /capture-vm-configurations.html
-        - title: Create a deployment plan using the migration advisor
+        - title: Create a deployment plan for VMware Cloud using the migration advisor
           url: /launch-onboarding-advisor.html
+        - title: Create a deployment plan for Amazon EC2 using the migration advisor
+          url: /launch-onboarding-advisor-native.html
         - title: Deploy the recommended FSx for ONTAP file system
           url: /deploy-fsx-file-system.html
         - title: Connect FSx for ONTAP to VMware Cloud on AWS

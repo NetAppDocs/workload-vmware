@@ -5,16 +5,16 @@ keywords: overview, concepts, features, use case, workloads, how workload factor
 summary: Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
-= Create a deployment plan using the migration advisor
+= Create a deployment plan for VMware Cloud using the migration advisor
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
 Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
-The migration advisor can be used to create a deployment plan for the following scenarios:
+When migrating to VMware Cloud, you can use the migration advisor to create a deployment plan for the following scenarios:
 
-* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to the cloud.>>
+* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to VMWare cloud.>>
 * <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
 
 Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
@@ -31,8 +31,6 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 .Steps
 
 . From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*. The VMware migration advisor main page is displayed.
-+
-image:screenshot-choose-method-create.png[A screenshot of the different methods you can use to load your current VM configuration information.]
 
 . Select *Create a new deployment plan*.
 
@@ -135,9 +133,7 @@ You must have access to the .json file for the existing deployment plan from the
 
 . Log in to Workload Factory.
 
-. From the VMware workloads tile, select *Plan and deploy* and the VMware migration advisor main page is displayed.
-+
-image:screenshot-choose-method-import.png[A screenshot of the different methods you can use to load your current VM configuration information.]
+. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*. The VMware migration advisor main page is displayed.
 
 . Select *Import an existing deployment plan*.
 

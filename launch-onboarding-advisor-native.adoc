@@ -12,20 +12,20 @@ summary: Log in to the NetApp Workload Factory to access the VMware migration ad
 [.lead]
 Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
-When migrating to Amazon EC2, you can use the migration advisor to create a deployment plan for the following scenarios:
+//When migrating to Amazon EC2, you can use the migration advisor to create a deployment plan for the following scenarios:
 
-* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to VMWare cloud.>>
-* <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
+//* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to Amazon EC2.>>
+//* <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
 
 Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
 == Create a deployment plan based on an on-premises vSphere environment
 
-You can migrate your current virtual machine configurations in on-premises vSphere environments to virtual machines in VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+You can migrate your current virtual machine configurations in on-premises vSphere environments to virtual machines in Amazon EC2 and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 
 .Requirements
 
-* You must have created the inventory file from your existing systems by using the migration advisor VM collector (.csv file) or by using RVTools (.xlsx file).
+* You must have created the inventory file from your existing systems by using the migration advisor VM collector (.zip file) or by using RVTools (.xlsx file).
 * You must have access to the inventory file from the system on which you are logging in to Workload Factory.
 
 .Steps
@@ -36,15 +36,15 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 . Select the type of inventory file you'll be using to populate Workload Factory with your current VM configuration and select *Next*.
 +
-* Select *Use the migration advisor VMware data collector* to use the .csv file that you created using the VMware data collector.
+* Select *Use the migration advisor VMware data collector* to use the file that you created using the VMware data collector.
 * Select *Use RVTools* to use the .xlsx file that you created using RVTools.
 
 +
-The "Prepare for VMware Cloud onboarding" page is displayed.
-. In the _Upload VM configuration_ section, select image:button-upload-file.png[the upload button] and select the file that you want to use. 
-+
-* Select the .csv file when using the Migration advisor VM collector.
-* Select the .xlsx file when using RVTools.
+The "Prepare for AWS Cloud onboarding" page is displayed.
+. In the _Upload VM configuration_ section, select image:button-upload-file.png[the upload button] and select the inventory file that you want to use. 
+//+
+//* Select the .csv file when using the Migration advisor VM collector.
+//* Select the .xlsx file when using RVTools.
 
 +
 The VMs summary section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
@@ -53,12 +53,12 @@ The VMs summary section is populated from the inventory file to reflect the numb
 .. *VM Storage to consider*: Select whether the datastores created for each onboarded VM are sized based on their currently utilized size (recommended) or their provisioned size. 
 +
 The external datastores will be implemented using Amazon FSx for NetApp ONTAP file system volumes.
-.. *VM Memory to consider*: Select whether the memory allocated for each onboarded VM is sized based on their currently utilized size (recommended) or their provisioned size.
+//.. *VM Memory to consider*: Select whether the memory allocated for each onboarded VM is sized based on their currently utilized size (recommended) or their provisioned size.
 
-. In the _VMware Cloud on AWS deployment configuration_ section, enter details about the required VMware Cloud on AWS configuration.
-.. *Region*: Select the region where the VMs and Amazon FSx for NetApp ONTAP file systems will be deployed. 
+. In the _Cloud deployment configuration_ section, enter details about the required Amazon EC2 configuration.
+.. *Region*: Select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. 
 +
-For optimal performance and cost efficiency, this is typically the same region as where your existing VMware Cloud on AWS SDDC is deployed.
+For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
 
 .. *VM estimated performance requirements*: This option is available only when using RVTools. The Migration advisor VM collector captures this information from your environment. Provide the following per virtual machine average performance parameters that you want to be applied to your new VMs that will be deployed:
 * *Average IOPS per VM*: 
@@ -70,16 +70,18 @@ A larger block size may be better for large sequential read and write workloads.
 * *Average write ratio*: 
 The percentage of operations that are write operations for your workloads. The default ratio is 30% writes and 70% reads.
 
-. In the _VM storage capacity considerations_ section, select from a few storage options.
+. In the _Target capacity and protection considerations_ section, select from a few storage options.
 .. *Average data reduction ratio*: Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
-.. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems. 
+.. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems.
 +
-Note that if you select an amount less than 20% that you won't be able to create volume snapshots for protection and long-term backups.
-
-. Select *Next* and the "VMware cloud on AWS node configuration" page is displayed. 
-+
-This page enables you to define the VMware cloud on AWS cluster configuration using an estimated savings analysis and the recommended node type. You can configure the following:
-+
+Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.
+.. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
+. Select *Next*. 
+////
+// and the "VMware cloud on AWS node configuration" page is displayed. 
+//+
+//This page enables you to define the VMware cloud on AWS cluster configuration using an estimated savings analysis and the recommended node type. You can configure the following:
+//+
 .. *vSAN architecture*: Select whether you want to use vSAN Express Storage Architecture (ESA) or vSAN Original Storage Architecture (OSA) architecture.
 .. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose “Auto”, which is recommended, or from among a variety of RAID levels.
 * RAID-1 (FTT 1): consists of an exact copy (or mirror) of a set of data on 2 or more disks.
@@ -109,7 +111,10 @@ The *Recommended deployment* section will be updated if you make any changes. No
 The bottom of the page shows the source VM (or multiple VMs) for which this new VM and datastore will be provisioned.
 
 .. Once you understand how your datastores will be deployed, select *Next*.
-
+////
+. On the *Review EC2 volumes* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment.
+. Select *Next*.
+. On the *Review instance storage* page, review the 
 . On the *Review deployment plan* page, review the estimated monthly cost for all the VMs that you plan to migrate.
 +
 The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP file systems. You can expand each section to view details for “Recommended Amazon FSx for ONTAP file system configuration”, “Estimated cost breakdown”, “Volume configuration”, “Sizing assumptions”, and technical “Disclaimers”.
@@ -121,6 +126,7 @@ The top of the page describes the monthly cost for all deployed VMs and FSx for 
 * Select *Download plan > Plan report* to download the migration plan in a .pdf format so you can distribute the plan for review.
 * Select *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
 
+////
 == Create a deployment plan based on an existing plan
 
 If you are planning a new deployment that is similar to an existing deployment plan that you've used in the past, you can import that plan, make edits, and then save it as a new deployment plan.
@@ -144,3 +150,4 @@ You must have access to the .json file for the existing deployment plan from the
 . You can select *Previous* to access the _Prepare for VMware Cloud onboarding_ page and the _Select VMs_ page to modify the settings for the plan as described in the previous section.
 
 . After you have customized the plan to your requirements, you can save the plan or begin the deployment process for your datastores on FSx for ONTAP file systems.
+////

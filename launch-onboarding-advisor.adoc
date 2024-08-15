@@ -71,7 +71,7 @@ A larger block size may be better for large sequential read and write workloads.
 The percentage of operations that are write operations for your workloads. The default ratio is 30% writes and 70% reads.
 
 . In the _VM storage capacity considerations_ section, select from a few storage options.
-.. *Average data reduction ratio*: Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
+.. *Average data reduction ratio*: Choose from among the three common data reduction selection values. Select "1:1 - No reduction", "1:1.25 - 20% reduction", or "1:1.5 - 33% reduction".
 .. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems. 
 +
 Note that if you select an amount less than 20% that you won't be able to create volume snapshots for protection and long-term backups.
@@ -81,7 +81,7 @@ Note that if you select an amount less than 20% that you won't be able to create
 This page enables you to define the VMware cloud on AWS cluster configuration using an estimated savings analysis and the recommended node type. You can configure the following:
 +
 .. *vSAN architecture*: Select whether you want to use vSAN Express Storage Architecture (ESA) or vSAN Original Storage Architecture (OSA) architecture.
-.. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose “Auto”, which is recommended, or from among a variety of RAID levels.
+.. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose "Auto", which is recommended, or from among a variety of RAID levels.
 * RAID-1 (FTT 1): consists of an exact copy (or mirror) of a set of data on 2 or more disks.
 * RAID-5 (FTT 1): consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
 * RAID-5 (FTT 2): consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
@@ -112,7 +112,7 @@ The bottom of the page shows the source VM (or multiple VMs) for which this new 
 
 . On the *Review deployment plan* page, review the estimated monthly cost for all the VMs that you plan to migrate.
 +
-The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP file systems. You can expand each section to view details for “Recommended Amazon FSx for ONTAP file system configuration”, “Estimated cost breakdown”, “Volume configuration”, “Sizing assumptions”, and technical “Disclaimers”.
+The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP file systems. You can expand each section to view details for "Recommended Amazon FSx for ONTAP file system configuration", "Estimated cost breakdown", "Volume configuration", "Sizing assumptions", and technical "Disclaimers".
 
 . When you are satisfied with the migration plan, you have a few options:
 

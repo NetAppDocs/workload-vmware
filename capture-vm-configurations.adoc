@@ -58,7 +58,7 @@ The *Prepare for VMware Cloud on AWS migration* page is displayed.
  Connect-VIServer -server <server_IP>
 +
 Replace <server_IP> with the IP address or hostname of your VMware server.
-.. Run the data collector script you downloaded and specify the data collection option for “daily” or “hourly” VM statistics.
+.. Run the data collector script you downloaded and specify the data collection option for "daily" or "hourly" VM statistics.
 +
  .list-vms.ps1 -isLongTermDataCollectionEnabled <true | false>
 +
@@ -88,7 +88,7 @@ This will capture information about that VCenter Server.
 
 . Export your VMware information to an xlsx or xls file. 
 +
-See the chapter on “commandline parameters” in the https://resources.robware.net/resources/prod/RVTools.pdf[RVTools documentation^] for details.
+See the chapter on "commandline parameters" in the https://resources.robware.net/resources/prod/RVTools.pdf[RVTools documentation^] for details.
 
 .Result
 

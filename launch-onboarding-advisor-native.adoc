@@ -42,14 +42,14 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 +
 The "Prepare for AWS Cloud onboarding" page is displayed.
 . In the _Upload VM configuration_ section, select image:button-upload-file.png[the upload button] and select the inventory file that you want to use. 
-//+
-//* Select the .csv file when using the Migration advisor VM collector.
-//* Select the .xlsx file when using RVTools.
++
+* Select the .zip file when using the Migration advisor VM collector.
+* Select the .xlsx file when using RVTools.
 
 +
-The VMs summary section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
+The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the options to filter the list of VMs that you want to migrate.
-.. *Consider VMs*: Indicate which VMs will be extracted from the .csv file based on their operating power state. You can bring in all VMs, or only those that are On, Off, or Suspended.
+.. *Consider VMs*: Indicate which VMs will be extracted from the inventory file based on their operating power state. You can bring in all VMs, or only those that are on, off, or suspended.
 .. *VM Storage to consider*: Select whether the datastores created for each onboarded VM are sized based on their currently utilized size (recommended) or their provisioned size. 
 +
 The external datastores will be implemented using Amazon FSx for NetApp ONTAP file system volumes.
@@ -66,12 +66,12 @@ Enter the number of IOPS required for your file systems. If you are unsure, you 
 We recommend that you begin with a smaller IOPS setting. You can increase your provisioned SSD IOPS after the file system is created as workloads are migrated or deployed.
 * *Average I/O block size*: 
 The size of each block containing read or write operations. The default size is 4 KB.
-A larger block size may be better for large sequential read and write workloads. A smaller block size may offer better performance for workloads that perform small random writes to sparse files or to large files.
+A larger block size might be better for large sequential read and write workloads. A smaller block size might offer better performance for workloads that perform small random writes to sparse files or to large files.
 * *Average write ratio*: 
 The percentage of operations that are write operations for your workloads. The default ratio is 30% writes and 70% reads.
 
 . In the _Target capacity and protection considerations_ section, select from a few storage options.
-.. *Average data reduction ratio*: Choose from among the three common data reduction selection values. Select “1:1 - No reduction”, “1:1.25 - 20% reduction”, or “1:1.5 - 33% reduction”.
+.. *Average data reduction ratio*: Choose from among the three common data reduction ratios. Select "1:1 - No reduction", "1:1.25 - 20% reduction", or "1:1.5 - 33% reduction".
 .. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems.
 +
 Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.
@@ -83,7 +83,7 @@ Note that if you select an amount less than 20% you won't be able to create volu
 //This page enables you to define the VMware cloud on AWS cluster configuration using an estimated savings analysis and the recommended node type. You can configure the following:
 //+
 .. *vSAN architecture*: Select whether you want to use vSAN Express Storage Architecture (ESA) or vSAN Original Storage Architecture (OSA) architecture.
-.. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose “Auto”, which is recommended, or from among a variety of RAID levels.
+.. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose "Auto", which is recommended, or from among a variety of RAID levels.
 * RAID-1 (FTT 1): consists of an exact copy (or mirror) of a set of data on 2 or more disks.
 * RAID-5 (FTT 1): consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
 * RAID-5 (FTT 2): consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
@@ -114,10 +114,10 @@ The bottom of the page shows the source VM (or multiple VMs) for which this new 
 ////
 . On the *Review EC2 volumes* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment.
 . Select *Next*.
-. On the *Review instance storage* page, review the 
+. On the *Review instance storage* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters.
 . On the *Review deployment plan* page, review the estimated monthly cost for all the VMs that you plan to migrate.
 +
-The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP file systems. You can expand each section to view details for “Recommended Amazon FSx for ONTAP file system configuration”, “Estimated cost breakdown”, “Volume configuration”, “Sizing assumptions”, and technical “Disclaimers”.
+The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP file systems. You can expand each section to view details for "Recommended Amazon FSx for ONTAP file system configuration", "Estimated cost breakdown", "Volume configuration", "Sizing assumptions", and technical "Disclaimers".
 
 . When you are satisfied with the migration plan, you have a few options:
 

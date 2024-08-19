@@ -30,7 +30,9 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 .Steps
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*. The VMware migration advisor main page is displayed.
+. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*.
++
+The VMware migration advisor main page is displayed.
 
 . Select *Create a new deployment plan*.
 

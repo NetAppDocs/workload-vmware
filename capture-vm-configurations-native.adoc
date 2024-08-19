@@ -1,18 +1,18 @@
 ---
 sidebar: sidebar
-permalink: capture-vm-configurations.html
+permalink: capture-vm-configurations-native.html
 keywords: vm workloads, capture vm details
 summary: You can use the Migration advisor VM collector script or RVTools to capture your current VM configurations. We recommend that you use the Migration advisor VM collector script because it gathers both VM configuration and performance data for the most accurate plan.
 ---
 
-= Capture your current VM configurations before migrating to VMware Cloud
+= Capture your current VM configurations before migrating to Amazon EC2
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
 You can use the Migration advisor VM collector script or RVTools to capture your current VM configurations. We recommend that you use the Migration advisor VM collector script because it gathers both VM configuration and performance data for the most accurate plan.
 
-If you plan to deploy a new system based on an existing deployment plan that you previously saved locally, you can skip this step and select the existing deployment plan. link:launch-onboarding-advisor.html#create-a-deployment-plan-based-on-an-existing-plan[Learn how to use an existing plan to build a new plan].
+//If you plan to deploy a new system based on an existing deployment plan that you previously saved locally, you can skip this step and select the existing deployment plan. link:launch-onboarding-advisor.html#create-a-deployment-plan-based-on-an-existing-plan[Learn how to use an existing plan to build a new plan].
 
 // start tabbed area
 
@@ -40,9 +40,7 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 . Log in to Workload Factory.
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*.
-+
-The VMware migration advisor main page is displayed.
+. In the VMware tile, select *Access and plan*.
 //+
 //image:screenshot-choose-method.png[A screenshot of the different methods you can use to collect your current VM configuration information.]
 
@@ -71,7 +69,7 @@ where:
 
 .Result
 
-The script outputs a CSV file named `list-vms-yyyy-MM-dd-HH-mm-ss.csv` in the current working directory. The CSV file contains a list of all VMs and their properties, along with their IOPS and throughput data.
+The script outputs a compressed file with a timestamp in the name in the current working directory. The .zip file contains a list of all VMs and their properties, along with their IOPS and throughput data.
 --
 
 .Use RVTools software
@@ -103,4 +101,4 @@ The xlsx or xls file that contains your results is saved to your working directo
 
 .What's next?
 
-link:launch-onboarding-advisor.html[Create a VMware Cloud on AWS deployment plan using the migration advisor].
+link:launch-onboarding-advisor-native.html[Create an Amazon EC2 deployment plan using the migration advisor].

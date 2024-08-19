@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: migrate-data-native.html
+keywords: vm workloads, fsx for ontap, migration, data migration, vmware hcx
+summary: Use a tool such as AWS Application Migration Service (MGN) to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines. 
+---
+
+= Migrate your data to the new infrastructure
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Use a tool such as AWS Application Migration Service (MGN) to move your data from your old virtual machine storage to the FSx for NetApp ONTAP volumes connected to your new virtual machines. 
+
+AWS MGN enables you to migrate your applications to the FSx for NetApp ONTAP volumes in Amazon EC2.
+
+https://docs.aws.amazon.com/mgn/latest/ug/what-is-application-migration-service.html[Review the AWS Application Migration Service documentation for details^].
+
+.What's next?
+
+Now that you've migrated your data to AWS and Amazon FSx for NetApp ONTAP external datastores, you can back up and protect the important data on your FSx for ONTAP file system to make sure your data is always available.
+
+For information about managing your FSx for ONTAP file system, go to the https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Amazon FSx for NetApp ONTAP documentation] to view the the backup and protection capabilities you can use.

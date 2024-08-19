@@ -14,11 +14,15 @@ After you verify that the recommended FSx for ONTAP file system (or multiple fil
 
 Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the FSx for ONTAP file system completely using Workload Factory (using Automate mode). If you have fewer permissions (Read mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
-.Requirements
+.Requirements for deployments to VMware Cloud on AWS
 
 * You must be using VMware Cloud on AWS Software-Defined Data Center (SDDC) version 1.20 or greater to deploy FSx for ONTAP file systems.
 * You must not deploy the FSx for ONTAP file system in the same VPC used during the SDDC deployment. Instead, you must deploy it in a new Amazon VPC that you own to enable VMware Cloud on AWS integration with Amazon FSx for NetApp ONTAP.
 * You must deploy the FSx for ONTAP file system within the same AWS region as your SDDC.
+
+.Requirements for deployments to Amazon EC2
+
+* The root volume of the FSx for ONTAP file system must be created as an EBS volume.
 
 .Steps
 
@@ -39,7 +43,7 @@ You can use the Quick create or Advanced create option. Advanced create offers a
 +
 .. *Region & VPC*: Select the Region and the VPC where the FSx for ONTAP file system will be deployed.
 +
-It should be deployed in a VPC that is different than the VPC where the VMware Cloud on AWS is deployed.
+If you are deploying to VMware Cloud on AWS, ensure you deploy it in a VPC that is different than the VPC where the VMware Cloud on AWS is deployed.
 .. *Security group*: When using the *Advanced create* option, you can select the default security group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP file system. 
 +
 You can add an inbound rule that restricts what other AWS services can access the FSx for ONTAP file system. This will block the amount of services that are open. These are the minimum ports and protocols:

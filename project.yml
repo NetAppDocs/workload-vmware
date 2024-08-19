@@ -19,7 +19,7 @@ sidebar:
       entries:
         - title: Learn about Workload Factory for VMware
           url: /learn-about-vmware-workloads.html
-        - title: Quick start for migrating to VMware Cloud
+        - title: Quick start for migrating to VMware Cloud on AWS
           url: /quick-start.html
         - title: Quick start for migrating to Amazon EC2
           url: /quick-start-native.html

@@ -8,9 +8,9 @@ indexpage:
       links:
         - title: Learn about Workload Factory for VMware
           url: learn-about-vmware-workloads.html
-        - title: Quick start for migrating to VMware Cloud on AWS using the VMware migration advisor
+        - title: "Quick start: Migrate to VMware Cloud on AWS"
           url: quick-start.html
-        - title: Quick start for migrating to Amazon EC2 using the VMware migration advisor
+        - title: "Quick start: Migrate to Amazon EC2"
           url: quick-start-native.html
     - title: Use the VMware migration advisor to migrate to VMware Cloud on AWS
       links:

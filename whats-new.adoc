@@ -12,8 +12,10 @@ summary: "Learn what's new with the VMware migration advisor component of Worklo
 [.lead]
 Learn what's new with the VMware Cloud migration advisor component of Workload Factory.
 
+== 1 September 2024
+
+include::_whatsnew/2024-09-01.adoc[]
+
 == 7 July 2024
 
-=== Initial release of Workload Factory for VMware
-
-The initial release includes the capability to use the VMware migration advisor to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+include::_whatsnew/2024-07-07.adoc[]

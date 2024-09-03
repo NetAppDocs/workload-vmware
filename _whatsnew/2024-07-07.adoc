@@ -1,0 +1,4 @@
+=== Initial release of Workload Factory for VMware
+
+The initial release includes the capability to use the VMware migration advisor to analyze your current virtual machine configurations in on-premises vSphere environments and generate a plan to deploy recommended VM layouts to VMware Cloud on AWS and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+// Use absolute links in these files

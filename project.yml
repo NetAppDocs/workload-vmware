@@ -21,20 +21,36 @@ sidebar:
       entries:
         - title: Learn about Workload Factory for VMware
           url: /learn-about-vmware-workloads.html
-        - title: Quick start
+        - title: Quick start for migrating to VMware Cloud on AWS
           url: /quick-start.html
+        - title: Quick start for migrating to Amazon EC2
+          url: /quick-start-native.html
     - title: Use the VMware migration advisor
       entries:
-        - title: Capture your current VM configurations
-          url: /capture-vm-configurations.html
-        - title: Create a deployment plan using the migration advisor
-          url: /launch-onboarding-advisor.html
-        - title: Deploy the recommended FSx for ONTAP file system
-          url: /deploy-fsx-file-system.html
-        - title: Connect FSx for ONTAP to VMware Cloud on AWS
-          url: /connect-sddc-to-fsx.html
-        - title: Migrate your data to the new infrastructure
-          url: /migrate-data.html
+        - title: Migrate to VMware Cloud on AWS
+          entries:
+          - title: Capture your current VM configurations
+            url: /capture-vm-configurations.html
+          - title: Create a deployment plan using the migration advisor
+            url: /launch-onboarding-advisor.html
+          - title: Deploy the recommended FSx for ONTAP file system
+            url: /deploy-fsx-file-system.html
+          - title: Connect FSx for ONTAP to VMware Cloud on AWS
+            url: /connect-sddc-to-fsx.html
+          - title: Migrate your data to the new infrastructure
+            url: /migrate-data.html
+        - title: Migrate to Amazon EC2
+          entries:
+          - title: Capture your current VM configurations
+            url: /capture-vm-configurations-native.html
+          - title: Create a deployment plan using the migration advisor
+            url: /launch-onboarding-advisor-native.html
+          - title: Deploy the recommended FSx for ONTAP file system
+            url: /deploy-fsx-file-system.html
+#          - title: Connect FSx for ONTAP to VMware Cloud on AWS
+#            url: /connect-sddc-to-fsx.html
+          - title: Migrate your data to the new infrastructure
+            url: /migrate-data-native.html
     - title: Knowledge and support
       entries:
         - title: Register for support

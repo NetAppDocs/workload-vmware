@@ -30,7 +30,10 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 .Steps
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. The VMware migration advisor main page is displayed.
+. From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
++
+Review the information to learn about the benefits of the migration advisor.
+. When ready, select *Let's start*.
 
 . Select *Create a new deployment plan*.
 
@@ -112,18 +115,18 @@ The bottom of the page shows the source VM (or multiple VMs) for which this new 
 
 .. Once you understand how your datastores will be deployed, select *Next*.
 ////
-. On the *Review EC2 volumes* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment.
+. On the *Review EC2 volume assignment* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment.
 . Select *Next*.
-. On the *Review instance storage* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters.
-. On the *Review deployment plan* page, review the estimated monthly cost for all the VMs that you plan to migrate.
+. On the *Review instance storage assignment* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters.
+. On the *Review your migration plan* page, review the estimated monthly cost for all the VMs that you plan to migrate.
 +
-The top of the page describes the monthly cost for all deployed VMs and FSx for ONTAP file systems. You can expand each section to view details for "Recommended Amazon FSx for ONTAP file system configuration", "Estimated cost breakdown", "Volume configuration", "Sizing assumptions", and technical "Disclaimers".
+The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
 
 . When you are satisfied with the migration plan, you have a few options:
 
-* Select *Deploy* to deploy the FSx for ONTAP file systems to support your VMs. link:deploy-fsx-file-system.html[Learn how to deploy an FSx for ONTAP file system].
-* Select *Download plan > VM deployment* to download the migration plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
-* Select *Download plan > Plan report* to download the migration plan in a .pdf format so you can distribute the plan for review.
+//* Select *Deploy* to deploy the FSx for ONTAP file systems to support your VMs. link:deploy-fsx-file-system.html[Learn how to deploy an FSx for ONTAP file system].
+* Select *Download plan > Instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
+* Select *Download plan > Plan report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
 * Select *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
 
 ////

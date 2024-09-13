@@ -127,7 +127,11 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 //* Select *Deploy* to deploy the FSx for ONTAP file systems to support your VMs. link:deploy-fsx-file-system.html[Learn how to deploy an FSx for ONTAP file system].
 * Select *Download plan > Instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
 * Select *Download plan > Plan report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
+<<<<<<< HEAD
 * Select *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
+=======
+//* Select *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
+>>>>>>> b3a3bf39b01e88a688a44ebe5172be7c3deaf7b9
 
 ////
 == Create a deployment plan based on an existing plan

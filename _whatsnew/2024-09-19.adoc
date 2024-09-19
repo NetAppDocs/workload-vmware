@@ -1,0 +1,6 @@
+=== Bugfixes and VMware migration advisor improvements
+
+This release of Workload Factory for VMware features bug fixes as well as the ability to import and export migration plans when using the VMware migration advisor.
+
+https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]
+// Use absolute links in these files

@@ -1,0 +1,6 @@
+=== VMware migration advisor data reduction assistance
+
+This release of Workload Factory for VMware features a data reduction assistant that you can use when preparing for AWS cloud onboarding. The data reduction assistant feature helps you decide the average data reduction ratio.  
+
+https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]
+// Use absolute links in these files

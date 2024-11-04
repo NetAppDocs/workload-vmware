@@ -75,8 +75,10 @@ A larger block size might be better for large sequential read and write workload
 * *Average write ratio*: 
 The percentage of operations that are write operations for your workloads. The default ratio is 30% writes and 70% reads.
 
-. In the _Target capacity and protection considerations_ section, select from a few storage options.
-.. *Average data reduction ratio*: Choose from among the three common data reduction ratios. Select "1:1 - No reduction", "1:1.25 - 20% reduction", or "1:1.5 - 33% reduction".
+. In the _Target capacity and protection considerations_ section, select from a few storage options. 
+.. *Average data reduction ratio*: Choose from among the three common data reduction ratios. Select "1:1 - No reduction", "1:1.25 - 20% reduction", or "1:1.5 - 33% reduction". 
++
+Select *Help me decide* if you're unsure which ratio to choose. The _Data reduction ratio assistant_ dialog appears. Select any statements that apply to your VM inventory and storage estate. The assistant will recommend an appropriate data reduction rate. Select *Apply* to use the recommended ratio.  
 .. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems.
 +
 Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.

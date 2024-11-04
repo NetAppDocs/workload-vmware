@@ -19,7 +19,7 @@ sidebar:
           url: /whats-new.html
     - title: Get started
       entries:
-        - title: Learn about Workload Factory for VMware
+        - title: Learn about workload factory for VMware
           url: /learn-about-vmware-workloads.html
         - title: Quick start for migrating to VMware Cloud on AWS
           url: /quick-start.html
@@ -60,5 +60,5 @@ sidebar:
     - title: Legal notices
       url: /legal-notices.html
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory for AWS
   repo: workload-family

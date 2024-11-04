@@ -38,7 +38,7 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 .Steps
 
-. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . In the VMware tile, select *Access and plan*.
 //+

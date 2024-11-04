@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: launch-onboarding-advisor-native.html
 keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+summary: Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
 = Create a deployment plan for Amazon EC2 using the migration advisor
@@ -10,14 +10,14 @@ summary: Log in to the NetApp Workload Factory to access the VMware migration ad
 :imagesdir: ./media/
 
 [.lead]
-Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
 //When migrating to Amazon EC2, you can use the migration advisor to create a deployment plan for the following scenarios:
 
 //* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to Amazon EC2.>>
 //* <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
 
-Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
+Note that you must have a user name and password to access workload factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
 == Create a deployment plan based on an on-premises vSphere environment
 
@@ -26,11 +26,11 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 .Requirements
 
 * You must have created the inventory file from your existing systems by using the migration advisor VM collector (.zip file) or by using RVTools (.xlsx file).
-* You must have access to the inventory file from the system on which you are logging in to Workload Factory.
+* You must have access to the inventory file from the system on which you are logging in to workload factory.
 
 .Steps
 
-. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
 +
@@ -39,7 +39,7 @@ Review the information to learn about the benefits of the migration advisor.
 
 . Select *Create a new deployment plan*.
 
-. Select the type of inventory file you'll be using to populate Workload Factory with your current VM configuration and select *Next*.
+. Select the type of inventory file you'll be using to populate workload factory with your current VM configuration and select *Next*.
 +
 * Select *Use the migration advisor VMware data collector* to use the file that you created using the VMware data collector.
 * Select *Use RVTools* to use the .xlsx file that you created using RVTools.
@@ -139,11 +139,11 @@ If you are planning a new deployment that is similar to an existing deployment p
 
 .Requirements
 
-You must have access to the .json file for the existing deployment plan from the system on which you are logging in to Workload Factory.
+You must have access to the .json file for the existing deployment plan from the system on which you are logging in to workload factory.
 
 .Steps
 
-. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. 
 

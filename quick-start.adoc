@@ -14,19 +14,19 @@ Get started with the VMware migration advisor to move your current infrastructur
 
 Before you get started, you should have an understanding of https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] link:requirements.html[Set up an account with Workload Factory]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] link:requirements.html[Set up an account with workload factory]
 
-You'll need to https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with Workload Factory^] and log in using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+You'll need to https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with workload factory^] and log in using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Sign up and create an account for Workload Factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Sign up and create an account for workload factory
 
 [role="quick-margin-para"]
-Go to the https://console.workloads.netapp.com[Workload Factory console^] and sign up. https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[Learn more about creating accounts].
+Go to the https://console.workloads.netapp.com[workload factory console^] and sign up. https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[Learn more about creating accounts].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add AWS credentials and permissions to your account
 
 [role="quick-margin-para"]
-You can use Workload Factory in _Basic_ mode without adding credentials to access your AWS account. Adding AWS credentials to Workload Factory in either _Read_ or _Automate_ mode gives your Workload Factory account the permissions needed to create and manage FSx for ONTAP file systems, and to deploy and manage workloads within VMware Cloud.
+You can use workload factory in _Basic_ mode without adding credentials to access your AWS account. Adding AWS credentials to workload factory in either _Read_ or _Automate_ mode gives your workload factory account the permissions needed to create and manage FSx for ONTAP file systems, and to deploy and manage workloads within VMware Cloud.
 
 [role="quick-margin-para"]
 https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions^]

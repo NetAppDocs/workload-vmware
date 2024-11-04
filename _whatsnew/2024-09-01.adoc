@@ -1,5 +1,5 @@
 === Migrate to Amazon EC2
 
-Workload Factory for VMware now supports migration to Amazon EC2 using the VMware migration advisor.
+Workload factory for VMware now supports migration to Amazon EC2 using the VMware migration advisor.
 
 // Use absolute links

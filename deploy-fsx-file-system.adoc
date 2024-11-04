@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: deploy-fsx-file-system.html
 keywords: vm workloads, deploy fsx, deploy storage for vms
-summary: After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
+summary: After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
 ---
 
 = Deploy the recommended FSx for ONTAP file system
@@ -10,9 +10,9 @@ summary: After you verify that the recommended FSx for ONTAP file system, or fil
 :imagesdir: ./media/
 
 [.lead]
-After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
+After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
 
-Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the FSx for ONTAP file system completely using Workload Factory (using Automate mode). If you have fewer permissions (Read mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using Automate mode). If you have fewer permissions (Read mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
 .Requirements for deployments to VMware Cloud on AWS
 
@@ -32,7 +32,7 @@ Most of the fields that define your FSx for ONTAP file system are completed base
 +
 You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[See what these two options offer]. 
 
-. *AWS credentials*: Select or add credentials that will give Workload Factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+. *AWS credentials*: Select or add credentials that will give workload factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
 . *File system name*: Enter the name that you want to use for this FSx for ONTAP file system.
 

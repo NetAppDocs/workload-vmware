@@ -56,7 +56,7 @@ link:deploy-fsx-file-system.html[Learn how to deploy your new FSx for ONTAP file
 Your Software-Defined Data Center (SDDC) offers network options for connecting to the FSx for ONTAP file system by using the VPC Peering capability to extend network connectivity to the external NFS storage volumes.
 
 [role="quick-margin-para"]
-link:connect-sddc-to-fsx.html[Learn more about migrating your data].
+link:connect-sddc-to-fsx.html[Learn how to connect your FSx for ONTAP file systems].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] Migrate data from your old systems to your new FSx for ONTAP file systems
 

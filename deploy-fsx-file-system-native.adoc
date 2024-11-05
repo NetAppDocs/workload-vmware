@@ -14,11 +14,9 @@ After you verify that the recommended FSx for ONTAP file system (or multiple fil
 
 Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using Automate mode). If you have fewer permissions (Read mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
-.Requirements for deployments to VMware Cloud on AWS
+.Requirements for deployments to Amazon EC2
 
-* You must be using VMware Cloud on AWS Software-Defined Data Center (SDDC) version 1.20 or greater to deploy FSx for ONTAP file systems.
-* You must not deploy the FSx for ONTAP file system in the same VPC used during the SDDC deployment. Instead, you must deploy it in a new Amazon VPC that you own to enable VMware Cloud on AWS integration with Amazon FSx for NetApp ONTAP.
-* You must deploy the FSx for ONTAP file system within the same AWS region as your SDDC.
+* The root volume of the FSx for ONTAP file system must be created as an EBS volume.
 
 .Steps
 

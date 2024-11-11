@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: whats-new.html
 keywords: what's new, features, new, release notes, enhancements, fixes
-summary: "Learn what's new with the VMware migration advisor component of Workload Factory."
+summary: "Learn what's new with the VMware migration advisor component of workload factory."
 ---
 
 = What's new
@@ -10,8 +10,10 @@ summary: "Learn what's new with the VMware migration advisor component of Worklo
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new with the VMware Cloud migration advisor component of Workload Factory.
+Learn what's new with the VMware Cloud migration advisor component of workload factory.
 
+
+//tag::whats-new[]
 == 3 November 2024
 
 include::_whatsnew/2024-11-03.adoc[]
@@ -27,3 +29,4 @@ include::_whatsnew/2024-09-01.adoc[]
 == 7 July 2024
 
 include::_whatsnew/2024-07-07.adoc[]
+//end::whats-new[]

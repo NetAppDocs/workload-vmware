@@ -12,20 +12,19 @@ summary: Get started with the VMware migration advisor to move your current infr
 [.lead]
 Get started with the VMware migration advisor to move your current infrastructure to VMware Cloud on AWS using Amazon FSx for ONTAP as external NFS datastores.
 
-Before you get started, you should have an understanding of https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^]
+Before you get started, you should have an understanding of https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Sign up and create an account for Workload Factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to workload factory
 
-[role="quick-margin-para"]
-Go to the https://console.workloads.netapp.com[Workload Factory console^] and sign up. https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[Learn more about creating accounts].
+You'll need to https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with workload factory^] and log in using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add AWS credentials and permissions to your account
 
 [role="quick-margin-para"]
-You can use Workload Factory in _Basic_ mode without adding credentials to access your AWS account. Adding AWS credentials to Workload Factory in either _Read_ or _Automate_ mode gives your Workload Factory account the permissions needed to create and manage FSx for ONTAP file systems, and to deploy and manage workloads within VMware Cloud.
+You can use workload factory in _Basic_ mode without adding credentials to access your AWS account. Adding AWS credentials to workload factory in either _Read_ or _Automate_ mode gives your workload factory account the permissions needed to create and manage FSx for ONTAP file systems, and to deploy and manage workloads within VMware Cloud.
 
 [role="quick-margin-para"]
-https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions^]
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Capture your current VM configurations in your vSphere environment
 
@@ -57,7 +56,7 @@ link:deploy-fsx-file-system.html[Learn how to deploy your new FSx for ONTAP file
 Your Software-Defined Data Center (SDDC) offers network options for connecting to the FSx for ONTAP file system by using the VPC Peering capability to extend network connectivity to the external NFS storage volumes.
 
 [role="quick-margin-para"]
-link:connect-sddc-to-fsx.html[Learn more about migrating your data].
+link:connect-sddc-to-fsx.html[Learn how to connect your FSx for ONTAP file systems].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] Migrate data from your old systems to your new FSx for ONTAP file systems
 

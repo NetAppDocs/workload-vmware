@@ -37,7 +37,7 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 Review the information to learn about the benefits of the migration advisor.
 . When ready, select *Let's start*.
 
-. Choose the level of detail and method you prefer during the process of collecting VM information:
+. Choose the level of detail and method you prefer during the process of creating a deployment plan:
 +
 * *Quick assessment*: This option uses an RVtools inventory file to retrieve information about your VMs during an accelerated process, resulting in a design blueprint for your cloud migration.
 * *Detailed planning*: Use the migration advisor data collector inventory file to collect detailed information, resulting in a deployment-ready design.
@@ -93,8 +93,8 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 [start=5]
 . Select the *Detailed planning* tile and select *Next*.
 +
-The "Prepare for AWS Cloud onboarding" page is displayed.
-. In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the Migration advisor VM collector.
+The *Prepare for AWS Cloud onboarding* page is displayed.
+. In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the migration advisor data collector.
 +
 The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.

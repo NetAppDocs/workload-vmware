@@ -40,15 +40,16 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. In the VMware tile, select *Access and plan*.
-//+
-//image:screenshot-choose-method.png[A screenshot of the different methods you can use to collect your current VM configuration information.]
+. From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
++
+Review the information to learn about the benefits of the migration advisor.
+. When ready, select *Let's start*.
 
-. Select *Create a new deployment plan*, select the option for *Use the migration advisor VMware data collector*, and select *Next*.
+. Select *Detailed planning*, and select *Next*.
 +
 The *Prepare for VMware Cloud on AWS migration* page is displayed.
 
-. In the Codebox window, select either image:button-download-codebox.png[the download button] to save the Migration advisor VM collector script (named "list-vms.ps1") to the target system, or select image:button-copy-codebox.png[the copy button] to copy the script so you can paste it on the appropriate system.
+. In the Codebox window, select either image:button-download-codebox.png[the download button] to save the Migration advisor data collector script (named "list-vms.ps1") to the target system, or select image:button-copy-codebox.png[the copy button] to copy the script so you can paste it on the appropriate system.
 
 . Follow these steps to capture the configurations of your current VMs:
 

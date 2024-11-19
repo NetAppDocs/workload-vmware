@@ -88,7 +88,7 @@ Note that if you select an amount less than 20% you won't be able to create volu
 . On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
 +
 The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
-. Select Done.
+
 --
 
 .Detailed planning
@@ -97,6 +97,7 @@ Use the migration advisor data collector inventory file to collect detailed info
 
 .Steps
 
+[start=5]
 . Select the *Detailed planning* tile and select *Next*.
 +
 The "Prepare for AWS Cloud onboarding" page is displayed.
@@ -104,6 +105,28 @@ The "Prepare for AWS Cloud onboarding" page is displayed.
 +
 The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the options to filter the list of VMs that you want to migrate.
+.. *Region*: Select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
+. In the _Target capacity and protection considerations_ section, select from a few storage options.
+.. *VM Storage to consider*: Select whether the datastores created for each onboarded VM are sized based on their currently utilized size (recommended) or their provisioned size. 
++
+The external datastores will be implemented using Amazon FSx for NetApp ONTAP file system volumes.
+.. *Average data reduction ratio*: Choose from among the three common data reduction ratios. Select "1:1 - No reduction", "1:1.25 - 20% reduction", or "1:1.5 - 33% reduction".
++
+Select *Help me decide* if you're unsure which ratio to choose. The _Data reduction ratio assistant_ dialog appears. Select any statements that apply to your VM inventory and storage estate. The assistant will recommend an appropriate data reduction rate. Select *Apply* to use the recommended ratio.  
+.. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems.
++
+Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.
+.. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
+. Select *Next*. 
+. On the *Scope* page, select the VMs from the list that you want to include in the AWS cloud migration.
+. Select *Next*.
+. On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment.
+. Select *Next*.
+. On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters.
+. Select *Next*.
+. On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
++
+The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
 
 --
 

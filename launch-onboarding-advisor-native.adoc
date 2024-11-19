@@ -97,8 +97,7 @@ The "Prepare for AWS Cloud onboarding" page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the Migration advisor VM collector.
 +
 The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
-. In the _VM inventory considerations_ section, select the options to filter the list of VMs that you want to migrate.
-.. *Region*: Select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
+. In the _VM inventory considerations_ section, select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
 . In the _Target capacity and protection considerations_ section, select from a few storage options.
 .. *VM Storage to consider*: Select whether the datastores created for each onboarded VM are sized based on their currently utilized size (recommended) or their provisioned size. 
 +

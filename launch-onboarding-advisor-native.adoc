@@ -194,7 +194,7 @@ You must have access to the .json file for the existing deployment plan from the
 
 . Select *Next*.
 +
-The Review plan page is displayed.
+The *Review plan* page is displayed.
 
 . You can select *Previous* to access previous pages and modify the settings for the plan as described in the previous section.
 

@@ -53,9 +53,10 @@ This option uses an RVtools inventory file to retrieve information about your VM
 
 .Steps
 
+[start=5]
 . Select the *Quick assessment* tile and select *Next*.
 +
-The "Prepare for AWS Cloud onboarding" page is displayed.
+The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .xlsx file created by RVTools.
 +
 The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
@@ -104,26 +105,19 @@ The "Prepare for AWS Cloud onboarding" page is displayed.
 The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the options to filter the list of VMs that you want to migrate.
 
-
 --
 
 ====
 
 // end tabbed area
 
-
-
-
-
-
-
-
-. When you are satisfied with the migration plan, you have a few options:
+When you are satisfied with the migration plan, you have a few options:
 +
 * Select *Download plan > Instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
 * Select *Download plan > Plan report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
 * Select *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
-. Select *Done* to return to the VMware migration advisors page.
+
+You can select *Done* to return to the VMware migration advisors page.
 
 ////
 

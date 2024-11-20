@@ -191,11 +191,9 @@ You must have access to the .json file for the existing deployment plan from the
 . Select *Import plan*.
 
 . Select the existing .json plan file that you want to import in the migration advisor, and then select *Open*.
-
-. Select *Next*.
 +
 The *Review plan* page is displayed.
 
-. You can select *Previous* to access previous pages and modify the settings for the plan as described in the previous section.
+. You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
 
 . After you have customized the plan to your requirements, you can save the plan or download the plan report as a PDF file.

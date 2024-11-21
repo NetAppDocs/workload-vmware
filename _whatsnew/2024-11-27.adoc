@@ -1,6 +1,7 @@
 === Amazon EC2 migration advisor improvements
 
 This release of Workload Factory for VMware features several improvements to the migration advisor experience:
+
 * Data collection: the ability to collect data for a specific time period when you use the migration advisor.
 * VM selection: Workload factory for VMware now supports selecting VMs that you want to include in your migration deployment.
 * Quick vs. Advanced experience: You can choose a quick migration advisor experience, using RVtools, or the more in depth advanced experience, which uses the migration advisor data collector.

@@ -1,6 +1,9 @@
-=== VMware migration advisor data reduction ratio help
+=== Amazon EC2 migration improvements
 
-This release of Workload Factory for VMware features a data reduction ratio assistant. The data reduction ratio assistant helps you decide which ratio is best for your VMware inventory and storage estate when preparing for AWS cloud onboarding.  
+This release of Workload Factory for VMware features several improvements to the migration advisor experience:
+* Data collection: the ability to collect data for a specific time period when you use the migration advisor.
+* VM selection: Workload factory for VMware now supports selecting VMs that you want to include in your migration deployment.
+* Quick vs. Advanced experience: You can choose a quick migration advisor experience, using RVtools, or the more in depth advanced experience, which uses the migration advisor data collector.
 
 https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]
 // Use absolute links in these files

@@ -1,4 +1,4 @@
-=== Amazon EC2 migration improvements
+=== Amazon EC2 migration advisor improvements
 
 This release of Workload Factory for VMware features several improvements to the migration advisor experience:
 * Data collection: the ability to collect data for a specific time period when you use the migration advisor.

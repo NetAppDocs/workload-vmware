@@ -1,0 +1,10 @@
+=== Amazon EC2 migration advisor improvements
+
+This release of BlueXP workload factory for VMware features several improvements to the migration advisor experience:
+
+* *Data collection*: BlueXP workload factory for VMware supports the ability to collect data for a specific time period when you use the migration advisor.
+* *VM selection*: BlueXP workload factory for VMware now supports selecting VMs that you want to include in your migration deployment.
+* *Quick vs. Advanced experience*: When you use the migration advisor, you can now choose a quick migration experience, using RVtools, or the advanced experience, which uses the migration advisor data collector.
+
+https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]
+// Use absolute links in these files

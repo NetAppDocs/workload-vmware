@@ -7,7 +7,7 @@ summary: NetApp provides support for workload factory in a variety of ways. Exte
 
 = Get help
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/get-help.adoc[]

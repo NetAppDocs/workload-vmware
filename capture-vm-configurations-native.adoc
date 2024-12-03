@@ -5,7 +5,7 @@ keywords: vm workloads, capture vm details
 summary: You can use the Migration advisor VM collector script or RVTools to capture your current VM configurations. We recommend that you use the Migration advisor VM collector script because it gathers both VM configuration and performance data for the most accurate plan.
 ---
 
-= Capture your current VM configurations before migrating to Amazon EC2
+= Capture your VM configurations before migrating to Amazon EC2 with VMware workloads
 :icons: font
 :imagesdir: ./media/
 

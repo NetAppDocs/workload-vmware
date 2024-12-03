@@ -5,7 +5,7 @@ keywords: overview, concepts, features, use case, workloads, how workload factor
 summary: Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
-= Create a deployment plan for Amazon EC2 using the migration advisor
+= Create a deployment plan for Amazon EC2 using the VMware workloads migration advisor
 :icons: font
 :imagesdir: ./media/
 

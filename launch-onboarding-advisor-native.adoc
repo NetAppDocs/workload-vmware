@@ -58,6 +58,7 @@ The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .xlsx file created by RVTools.
 +
 The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. This data is used to create a more effective migration plan and more accurate savings estimates.
++
 The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the options to filter the list of VMs that you want to migrate.
 .. *Region*: Select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
@@ -99,6 +100,7 @@ The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the migration advisor data collector.
 +
 The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. This data is used to create a more effective migration plan and more accurate savings estimates.
++
 The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
 . In the _Target capacity and protection considerations_ section, select from a few storage options.
@@ -199,12 +201,9 @@ You must have access to the .json file for the existing deployment plan from the
 * Select *Load saved plan*.
 .. From the list, select the plan you want to import.
 .. Select *Load*.
-+
-The *Review plan* page is displayed.
-.. You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
 * Select *From my computer*.
 .. Select the existing .json plan file that you want to import in the migration advisor, and then select *Open*.
 +
 The *Review plan* page is displayed.
-.. You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
+. You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
 . After you have customized the plan to your requirements, you can save the plan or download the plan report as a PDF file.

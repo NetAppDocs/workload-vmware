@@ -14,6 +14,10 @@ Learn what's new with the VMware Cloud migration advisor component of workload f
 
 
 //tag::whats-new[]
+== 5 January 2025
+
+include::_whatsnew/2024-01-05.adoc[]
+
 == 1 December 2024
 
 include::_whatsnew/2024-12-01.adoc[]

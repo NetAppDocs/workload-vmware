@@ -116,6 +116,8 @@ Note that if you select an amount less than 20% you won't be able to create volu
 .. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
 . Select *Next*. 
 . On the *Scope* page, select the VMs from the list that you want to include in the AWS migration. You can filter the list by the power state of each VM, and which data center and cluster the VM resides in.
++
+In the VM list, you can select which types of VM information to display as columns.
 . Select *Next*.
 . On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
 . On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters, and then select *Next*.

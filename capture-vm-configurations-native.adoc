@@ -21,7 +21,9 @@ You can use the Migration advisor VM collector script or RVTools to capture your
 
 .Use the Migration advisor VM collector script
 --
-The NetApp Migration advisor VM collector script gathers VM configuration information from your vCenter similar to what RVTools collects, however, it captures current VM performance data to provide actual read and write IOPS and throughput statistics.
+The NetApp Migration advisor VM collector script gathers VM configuration information from your vCenter similar to what RVTools collects, however, it captures current VM performance data to provide actual read and write IOPS and throughput statistics. You can use the script in one of two modes:
+* Short term data collection
+* Long term data collection
 
 You need to start the Migration advisor to copy the Migration advisor VM collector script from the Codebox window.
 
@@ -65,7 +67,8 @@ Replace <server_IP> with the IP address or hostname of your VMware server.
 +
 where:
 +
-** *true* collects IOPS and throughput data for the past 24 hours with 5-minute intervals
+//** *true* collects IOPS and throughput data for the past 24 hours with 5-minute intervals
+** *true* collects IOPS and throughput data for a custom time period in 1-hour intervals.
 ** *false* collects IOPS and throughput data for the past 1 hour with 20-second intervals.
 
 .Result

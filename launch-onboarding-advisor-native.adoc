@@ -57,7 +57,7 @@ Review the information to learn about the benefits of the migration advisor.
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .xlsx file created by RVTools.
 +
-The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. This data is used to create a more effective migration plan and more accurate savings estimates.
+The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. 
 +
 The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the options to filter the list of VMs that you want to migrate.
@@ -99,7 +99,7 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the migration advisor data collector.
 +
-The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. This data is used to create a more effective migration plan and more accurate savings estimates.
+The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. 
 +
 The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.

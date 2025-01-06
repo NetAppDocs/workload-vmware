@@ -57,7 +57,9 @@ Review the information to learn about the benefits of the migration advisor.
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .xlsx file created by RVTools.
 +
-The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
+The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. 
++
+The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the options to filter the list of VMs that you want to migrate.
 .. *Region*: Select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
 .. Choose a predicted performance level for the VMs in this region. We recommend that you begin with a smaller IOPS setting. You can increase your provisioned SSD IOPS after the file system is created as workloads are migrated or deployed:
@@ -77,7 +79,8 @@ Select *Help me decide* if you're unsure which ratio to choose. The _Data reduct
 Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.
 .. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
 . Select *Next*. 
-. On the *Scope* page, select the VMs from the list that you want to include in the AWS cloud migration, and select *Next*.
+. On the *Scope* page, select the VMs from the list that you want to include in the AWS migration. You can filter the list by the power state of each VM, and which data center and cluster the VM resides in.
+. Select *Next*.
 . On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
 . On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters, and then select *Next*.
 . On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
@@ -96,7 +99,9 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the migration advisor data collector.
 +
-The *VMs summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
+The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. 
++
+The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 . In the _VM inventory considerations_ section, select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
 . In the _Target capacity and protection considerations_ section, select from a few storage options.
 .. *VM Storage to consider*: Select whether the datastores created for each onboarded VM are sized based on their currently utilized size (recommended) or their provisioned size. 
@@ -110,7 +115,10 @@ Select *Help me decide* if you're unsure which ratio to choose. The _Data reduct
 Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.
 .. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
 . Select *Next*. 
-. On the *Scope* page, select the VMs from the list that you want to include in the AWS cloud migration, and select *Next*.
+. On the *Scope* page, select the VMs from the list that you want to include in the AWS migration. You can filter the list by the power state of each VM, and which data center and cluster the VM resides in.
++
+In the VM list, you can select which types of VM information to display as columns.
+. Select *Next*.
 . On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
 . On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters, and then select *Next*.
 . On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
@@ -125,9 +133,10 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 
 When you are satisfied with the migration plan, you have a few options:
 
-* Select *Download plan > Instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
-* Select *Download plan > Plan report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
-* Select *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
+* Select *Manage plan > Save a plan* to save the deployment plan data to your account, enabling you to import the plan at a later time to use as a template when deploying systems with similar requirements. You can name the plan before you save it.
+* Select *Manage plan > Export a plan* to save the migration plan as a template in a .json format on your computer. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
+* Select *Manage plan > Download a report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
+* Select *Manage plan > Download instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
 
 You can select *Done* to return to the VMware migration advisors page.
 
@@ -189,11 +198,14 @@ You must have access to the .json file for the existing deployment plan from the
 . From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. 
 
 . Select *Import plan*.
-
-. Select the existing .json plan file that you want to import in the migration advisor, and then select *Open*.
+. Do one of the following:
 +
+* Select *Load saved plan*.
+.. From the list, select the plan you want to import.
+.. Select *Load*.
+* Select *From my computer*.
+.. Select the existing .json plan file that you want to import in the migration advisor, and then select *Open*.
+
 The *Review plan* page is displayed.
-
 . You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
-
 . After you have customized the plan to your requirements, you can save the plan or download the plan report as a PDF file.

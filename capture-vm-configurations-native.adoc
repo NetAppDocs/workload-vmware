@@ -42,7 +42,7 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
+. From the VMware workloads tile, select *Assess and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
 +
 Review the information to learn about the benefits of the migration advisor.
 . When ready, select *Let's start*.

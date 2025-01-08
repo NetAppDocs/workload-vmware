@@ -40,7 +40,7 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*.
+. From the VMware workloads tile, select *Assess and plan* and then select *Migration to VMware Cloud on AWS*.
 +
 The VMware migration advisor main page is displayed.
 //+

@@ -32,7 +32,7 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
+. From the VMware workloads tile, select *Assess and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
 +
 Review the information to learn about the benefits of the migration advisor.
 . When ready, select *Let's start*.
@@ -133,7 +133,7 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 
 When you are satisfied with the migration plan, you have a few options:
 
-* Select *Manage plan > Save a plan* to save the deployment plan data to your account, enabling you to import the plan at a later time to use as a template when deploying systems with similar requirements. You can name the plan before you save it.
+* Select *Manage plan > Save a plan* to save the deployment plan data to your account, enabling you to import the plan at a later time to use as a template when deploying systems with similar requirements. You can name the plan before you save it (the username and timestamp are added to the name you provide).
 * Select *Manage plan > Export a plan* to save the migration plan as a template in a .json format on your computer. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
 * Select *Manage plan > Download a report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
 * Select *Manage plan > Download instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
@@ -195,7 +195,7 @@ You must have access to the .json file for the existing deployment plan from the
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to AWS native compute*. 
+. From the VMware workloads tile, select *Assess and plan* and then select *Migration to AWS native compute*. 
 
 . Select *Import plan*.
 . Do one of the following:
@@ -205,7 +205,7 @@ You must have access to the .json file for the existing deployment plan from the
 .. Select *Load*.
 * Select *From my computer*.
 .. Select the existing .json plan file that you want to import in the migration advisor, and then select *Open*.
-
++
 The *Review plan* page is displayed.
 . You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
 . After you have customized the plan to your requirements, you can save the plan or download the plan report as a PDF file.

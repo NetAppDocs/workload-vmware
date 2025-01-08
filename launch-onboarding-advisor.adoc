@@ -32,7 +32,7 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*.
+. From the VMware workloads tile, select *Assess and plan* and then select *Migration to VMware Cloud on AWS*.
 +
 The VMware migration advisor main page is displayed.
 
@@ -137,7 +137,7 @@ You must have access to the .json file for the existing deployment plan from the
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Access and plan* and then select *Migration to VMware Cloud on AWS*. The VMware migration advisor main page is displayed.
+. From the VMware workloads tile, select *Assess and plan* and then select *Migration to VMware Cloud on AWS*. The VMware migration advisor main page is displayed.
 
 . Select *Import an existing deployment plan*.
 

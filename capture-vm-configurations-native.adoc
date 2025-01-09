@@ -58,18 +58,27 @@ The Codebox window appears on the right side of the page.
 .. Log in to the system where you downloaded the data collector, on which PowerShell and PowerCLI are installed.
 .. Connect to your VMware vCenter server by running the following command:
 +
- Connect-VIServer -server <server_IP>
+[source,console]
+----
+Connect-VIServer -server <server_IP>
+----
 +
 Replace <server_IP> with the IP address or hostname of your VMware server.
-.. Run the data collector script you downloaded and specify the data collection option for "daily" or "hourly" VM statistics.
+.. Run the data collector script you downloaded and specify the data collection option for "hourly" or "daily" VM statistics.
 +
- .list-vms.ps1 -isLongTermDataCollectionEnabled <true | false>
+[source,console]
+----
+./list-vms.ps1 -PerformanceStatisticsTimePeriod <LastHour | LastDay>
+----
 +
 where:
 +
-//** *true* collects IOPS and throughput data for the past 24 hours with 5-minute intervals
-** *true* collects IOPS and throughput data for a custom time period in 1-hour intervals.
-** *false* collects IOPS and throughput data for the past 1 hour with 20-second intervals.
+** *LastHour* collects IOPS and throughput data for the past 1 hour with 20-second intervals.
+** *LastDay* collects IOPS and throughput data for the past 24 hours with 5-minute intervals.
+
++
+Optionally, you can run the data collector script without specifying any options; this enables you to select the data collection period from the interactive menu.
+
 
 .Result
 

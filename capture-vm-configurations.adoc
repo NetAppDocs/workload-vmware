@@ -57,12 +57,18 @@ The *Prepare for VMware Cloud on AWS migration* page is displayed.
 .. Log in to the system where you downloaded the data collector, on which PowerShell and PowerCLI are installed.
 .. Connect to your VMware vCenter server by running the following command:
 +
- Connect-VIServer -server <server_IP>
+[source,console]
+----
+Connect-VIServer -server <server_IP>
+----
 +
 Replace <server_IP> with the IP address or hostname of your VMware server.
 .. Run the data collector script you downloaded and specify the data collection option for "daily" or "hourly" VM statistics.
 +
- .list-vms.ps1 -isLongTermDataCollectionEnabled <true | false>
+[source,console]
+----
+./list-vms.ps1 -isLongTermDataCollectionEnabled <true | false>
+----
 +
 where:
 +

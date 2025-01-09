@@ -22,6 +22,7 @@ You can use the Migration advisor VM collector script or RVTools to capture your
 .Use the Migration advisor VM collector script
 --
 The NetApp Migration advisor VM collector script gathers VM configuration information from your vCenter similar to what RVTools collects, however, it captures current VM performance data to provide actual read and write IOPS and throughput statistics. You can use the script in one of two modes:
+
 * Short term data collection
 * Long term data collection
 

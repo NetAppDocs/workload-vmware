@@ -58,12 +58,18 @@ The Codebox window appears on the right side of the page.
 .. Log in to the system where you downloaded the data collector, on which PowerShell and PowerCLI are installed.
 .. Connect to your VMware vCenter server by running the following command:
 +
- Connect-VIServer -server <server_IP>
+[source,console]
+----
+Connect-VIServer -server <server_IP>
+----
 +
 Replace <server_IP> with the IP address or hostname of your VMware server.
 .. Run the data collector script you downloaded and specify the data collection option for "hourly" or "daily" VM statistics.
 +
- .list-vms.ps1 -PerformanceStatisticsTimePeriod <LastHour | LastDay>
+[source,console]
+----
+./list-vms.ps1 -PerformanceStatisticsTimePeriod <LastHour | LastDay>
+----
 +
 where:
 +

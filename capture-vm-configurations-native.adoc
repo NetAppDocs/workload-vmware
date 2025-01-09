@@ -73,9 +73,11 @@ Replace <server_IP> with the IP address or hostname of your VMware server.
 +
 where:
 +
+--
 ** *LastHour* collects IOPS and throughput data for the past 1 hour with 20-second intervals.
 ** *LastDay* collects IOPS and throughput data for the past 24 hours with 5-minute intervals.
-
+--
++
 Optionally, you can run the data collector script without specifying any options; this enables you to select the data collection period from the interactive menu.
 
 

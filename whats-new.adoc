@@ -10,10 +10,13 @@ summary: "Learn what's new with the VMware migration advisor component of worklo
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new with the VMware Cloud migration advisor component of workload factory.
-
+Learn what's new with the VMware migration advisor component of workload factory.
 
 //tag::whats-new[]
+== 2 March 2025
+
+include::_whatsnew/2025-03-02.adoc[]
+
 == 5 January 2025
 
 include::_whatsnew/2025-01-05.adoc[]
@@ -21,11 +24,11 @@ include::_whatsnew/2025-01-05.adoc[]
 == 1 December 2024
 
 include::_whatsnew/2024-12-01.adoc[]
-
+//end::whats-new[]
 == 3 November 2024
 
 include::_whatsnew/2024-11-03.adoc[]
-//end::whats-new[]
+
 == 19 September 2024
 
 include::_whatsnew/2024-09-19.adoc[]

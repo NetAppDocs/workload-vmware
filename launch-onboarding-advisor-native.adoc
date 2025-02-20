@@ -80,8 +80,12 @@ Note that if you select an amount less than 20% you won't be able to create volu
 .. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
 . Select *Next*. 
 . On the *Scope* page, select the VMs from the list that you want to include in the AWS migration. You can filter the list by the power state of each VM, and which data center and cluster the VM resides in.
++
+In the VM list, you can select which types of VM information to display as columns. For example, selecting _Estimated instance type_ displays a column with the estimated Amazon EC2 instance type for each VM, based on the VM resource requirements.
 . Select *Next*.
 . On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
++
+NOTE: If a volume has capacity or performance requirements that exceed the capabilities of an Amazon FSx for NetApp ONTAP filesystem in a specific region, migration advisor recommends that the volume be deployed on an Amazon EBS filesystem.
 . On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters, and then select *Next*.
 . On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
 +
@@ -117,9 +121,11 @@ Note that if you select an amount less than 20% you won't be able to create volu
 . Select *Next*. 
 . On the *Scope* page, select the VMs from the list that you want to include in the AWS migration. You can filter the list by the power state of each VM, and which data center and cluster the VM resides in.
 +
-In the VM list, you can select which types of VM information to display as columns.
+In the VM list, you can select which types of VM information to display as columns. For example, selecting _Estimated instance type_ displays a column with the estimated Amazon EC2 instance type for each VM, based on the VM resource requirements.
 . Select *Next*.
 . On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
++
+NOTE: If a volume has capacity or performance requirements that exceed the capabilities of an Amazon FSx for NetApp ONTAP filesystem in a specific region, migration advisor recommends that the volume be deployed on an Amazon EBS filesystem.
 . On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters, and then select *Next*.
 . On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
 +

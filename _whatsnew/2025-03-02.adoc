@@ -1,0 +1,10 @@
+=== Amazon EC2 migration advisor improvements
+
+This release of BlueXP workload factory for VMware features several improvements to the Amazon EC2 migration advisor experience:
+
+* *Estimated instance type*: Migration advisor can now examine requirements of your environment and provide an estimated Amazon EC2 instance type for each VM. You can choose to include the estimated instance type for each VM during the Scope step of the migration advisor.
+* *Ability to recommend Amazon EBS volumes*: The migration advisor can now recommend migrating data volumes to Amazon Elastic Block Store (EBS) instead of Amazon FSx for NetApp ONTAP due to specific capacity or performance needs of a certain region.
+* *Enhanced filesystem auto assignment*: Amazon FSx for NetApp ONTAP filesystem assignment has been improved to better optimize cost and minimize throughput.
+
+https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]
+// Use absolute links in these files

@@ -13,6 +13,10 @@ summary: "Learn what's new with the VMware migration advisor component of worklo
 Learn what's new with the VMware migration advisor component of workload factory.
 
 //tag::whats-new[]
+== 30 March 2025
+
+include::_whatsnew/2025-03-30.adoc[]
+
 == 2 March 2025
 
 include::_whatsnew/2025-03-02.adoc[]
@@ -20,11 +24,11 @@ include::_whatsnew/2025-03-02.adoc[]
 == 5 January 2025
 
 include::_whatsnew/2025-01-05.adoc[]
-
+//end::whats-new[]
 == 1 December 2024
 
 include::_whatsnew/2024-12-01.adoc[]
-//end::whats-new[]
+
 == 3 November 2024
 
 include::_whatsnew/2024-11-03.adoc[]

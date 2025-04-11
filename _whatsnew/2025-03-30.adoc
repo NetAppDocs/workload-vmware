@@ -1,0 +1,9 @@
+=== Amazon EC2 migration advisor improvements
+
+This release of BlueXP workload factory for VMware features several improvements to the Amazon EC2 migration advisor experience:
+
+* *Enhanced volume assignment guidance*: The volume assignment information in the EC2 migration advisor "Classify" and "Package" steps features enhanced readability and usability. More useful information is displayed about each volume, enabling you to better identify volumes and determine how to assign them.
+* *Data collector script efficiency improvements*: The EC2 migration advisor data collector script optimizes CPU usage when collecting data for smaller VM deployments.
+
+https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]
+// Use absolute links in these files

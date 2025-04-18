@@ -128,7 +128,7 @@ https://docs.netapp.com/us-en/data-infrastructure-insights/[Learn more about Dat
 * Assets
 * Data Collection
 . Under *Permissions* select *Read Only*.
-. Under *Token expires in*, choose the length of time that you need the token to be valid.   
+. Under *Token expires in*, choose the length of time that you need the API token to be valid.   
 . Uncheck *Automatically rotate tokens for Kubernetes*. 
 . Select *Save*.
 . Select *Copy API Access Token*.

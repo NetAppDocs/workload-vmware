@@ -111,28 +111,28 @@ The xlsx or xls file that contains your results is saved to your working directo
 
 .Use NetApp Data Infrastructure Insights
 --
-NetApp Data Infrastructure Insights (formerly Cloud Insights) is a cloud infrastructure monitoring tool that gives you visibility into your complete infrastructure. After you enable API access to Data Infrastructure Insights, the migration advisor communicates directly with Data Infrastructure Insights to gather information about your VMware infrastructure.
+NetApp Data Infrastructure Insights is a cloud infrastructure monitoring tool that gives you visibility into your complete infrastructure. You need to enable enable temporary API communication between the migration advisor and Data Infrastructure Insights so that the migration advisor can gather information about your VMware infrastructure.
 
 https://docs.netapp.com/us-en/data-infrastructure-insights/[Learn more about Data Infrastructure Insights^]
 
 .Steps
 
-. Log in to your Data Infrastructure insights account
-. On the right panel menu click on "Admin"
-. From the expanded admin menu items select "API Access"
-. Make sure that the top category selector is set for "API Access Tokens" and click on the "+API Token" button
-. Provide a name and description to your new API token
-. Under "What type of APIs will this token be used to call?" select the following:
+. Log in to your Data Infrastructure Insights account.
+. In the menu, select *Admin*.
+. In the resulting menu, select *API Access*.
+. Ensure that *API Access Tokens* is enabled and select *Add API Token*.
+. Provide a name and description for the API token.
+. Under *What type of APIs will this token be used to call* select the following:
 +
 * Acquisition Unit
 * Assets
 * Data Collection
-. Under "Permissions" select "Read Only"
-. Workload Factory uses the access token for a one time information retrival. Under "Token expires in" you can either select the lowest fixed value which is "1 Week" or use a custom value to reduce token validity as low a 1 day.   
+. Under *Permissions* select *Read Only*.
+. Under *Token expires in*, choose the length of time that you need the token to be valid.   
 . Uncheck *Automatically rotate tokens for Kubernetes*. 
 . Select *Save*.
-. Select "Copy API Access Token".
-. Save this token in preparation to use in the migration advisor.
+. Select *Copy API Access Token*.
+. Save this token in preparation to use with the migration advisor.
 
 --
 

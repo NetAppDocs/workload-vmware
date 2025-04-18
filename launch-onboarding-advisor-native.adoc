@@ -12,10 +12,6 @@ summary: Log in to the NetApp workload factory to access the VMware migration ad
 [.lead]
 Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
-//When migrating to Amazon EC2, you can use the migration advisor to create a deployment plan for the following scenarios:
-
-//* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to Amazon EC2.>>
-//* <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
 
 Note that you must have a user name and password to access workload factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
@@ -47,12 +43,12 @@ Review the information to learn about the benefits of the migration advisor.
 [role="tabbed-block"]
 ====
 
-.Quick assessment
+.RVTools
 --
 .Steps
 
 [start=5]
-. Select the *Quick assessment* tile and select *Next*.
+. Select the *RVTools* tile and select *Next*.
 +
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .xlsx file created by RVTools.
@@ -93,12 +89,12 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 
 --
 
-.Detailed planning
+.Migration advisor data collector
 --
 .Steps
 
 [start=5]
-. Select the *Detailed planning* tile and select *Next*.
+. Select the *Migration advisor data collector* tile and select *Next*.
 +
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the migration advisor data collector.
@@ -130,6 +126,19 @@ NOTE: If a volume has capacity or performance requirements that exceed the capab
 . On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
 +
 The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
+
+--
+
+.NetApp Data Infrastructure Insights
+--
+.Steps
+
+[start=5]
+. Select the *NetApp Data Infrastructure Insights* tile and select *Next*.
++
+The *Prepare for AWS Cloud onboarding* page is displayed.
+. In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the migration advisor data collector.
+
 
 --
 

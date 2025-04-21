@@ -118,11 +118,13 @@ https://docs.netapp.com/us-en/data-infrastructure-insights/[Learn more about Dat
 .Steps
 
 . Log in to your Data Infrastructure Insights account.
-. In the menu, select *Admin*.
+. In the side navigation menu, select *Admin*.
 . In the resulting menu, select *API Access*.
-. Ensure that *API Access Tokens* is enabled and select *Add API Token*.
+. In the *API Access Tokens* tab, select *+ API Access Token*.
++
+The Create an API Access Token dialog appears.
 . Provide a name and description for the API token.
-. Under *What type of APIs will this token be used to call* select the following:
+. Under *What type of APIs will this token be used to call* select one of the following:
 +
 * Acquisition Unit
 * Assets
@@ -132,10 +134,8 @@ https://docs.netapp.com/us-en/data-infrastructure-insights/[Learn more about Dat
 . Uncheck *Automatically rotate tokens for Kubernetes*. 
 . Select *Save*.
 . Select *Copy API Access Token*.
-. Save this token in preparation to use with the migration advisor.
-
+. Save this token in preparation to use with the workload factory migration advisor.
 --
-
 ====
 
 // end tabbed area

@@ -137,7 +137,9 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 . Select the *NetApp Data Infrastructure Insights* tile and select *Next*.
 +
 The *Prepare for AWS Cloud onboarding* page is displayed.
-. In the _NetApp Data Infrastructure Insights connection configuration_ section, enter the tenant hostname for Data Infrastructure Insights.
+. In the _NetApp Data Infrastructure Insights connection configuration_ section, enter the tenant endpoint for Data Infrastructure Insights.
++
+This should be the URL you use to access Data Infrastructure Insights.
 . If you have not yet generated an API access token for Data Infrastructure Insights, follow the instructions on the page to create one. Otherwise, paste your API access token in the *Enter API Access Token* text box.
 . Select *Connect*.
 +

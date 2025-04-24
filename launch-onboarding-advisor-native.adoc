@@ -36,14 +36,14 @@ Review the information to learn about the benefits of the migration advisor.
 . Choose the level of detail and method you prefer during the process of creating a deployment plan:
 +
 * *Quick assessment*: This option uses an RVtools inventory file to retrieve information about your VMs during an accelerated process, resulting in a design blueprint for your cloud migration.
-* *Detailed planning*: Use the migration advisor data collector inventory file or direct API access to NetApp Data Infrastructure Insights to collect detailed information, resulting in a deployment-ready design.
+* *Detailed planning*: These options use either the migration advisor data collector inventory file or direct API access to NetApp Data Infrastructure Insights to collect detailed information, resulting in a deployment-ready design.
 
 // start tabbed area
 
 [role="tabbed-block"]
 ====
 
-.RVTools
+.RVTools (quick assessment)
 --
 .Steps
 
@@ -89,7 +89,7 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 
 --
 
-.Migration advisor data collector
+.Migration advisor data collector (detailed planning)
 --
 .Steps
 
@@ -129,7 +129,7 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 
 --
 
-.NetApp Data Infrastructure Insights
+.NetApp Data Infrastructure Insights (detailed planning)
 --
 .Steps
 

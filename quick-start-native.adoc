@@ -30,7 +30,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn ho
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Capture your current VM configurations in your vSphere environment
 
 [role="quick-margin-para"]
-You can use the Migration advisor VM collector script or RVTools to capture your current VM configurations in order to create a deployment plan. You can also import an existing deployment plan as a template and then modify any required attributes.
+You can use the Migration advisor VM collector script, RVTools, or NetApp Data Infrastructure Insights to capture your current VM configurations before creating a deployment plan. You can also import an existing deployment plan as a template and then modify any required attributes.
 
 [role="quick-margin-para"]
 link:capture-vm-configurations-native.html[Learn how to capture your current VM configurations].

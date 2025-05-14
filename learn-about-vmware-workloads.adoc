@@ -56,7 +56,7 @@ Transitioning parts of your current infrastructure to Amazon EC2 or VMware Cloud
 * Cost and latency reduction from single-AZ configurations that use VPC peering without requiring a Transit Gateway
 
 //Cross-repo include for Tools section
-https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
+include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
 == Cost
 

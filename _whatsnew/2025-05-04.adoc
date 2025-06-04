@@ -7,6 +7,6 @@ This release of BlueXP workload factory for VMware features the following improv
 https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]
 
 === Updated permissions terminology
-The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
+The workload factory user interface and documentation now use "read-only" to refer to read permissions and "read/write" to refer to automate permissions.
 
 // Use absolute links in these files

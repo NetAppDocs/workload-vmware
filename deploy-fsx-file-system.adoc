@@ -12,7 +12,7 @@ summary: After you verify that the recommended FSx for ONTAP file system, or fil
 [.lead]
 After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
 
-Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using Read/Write mode). If you have fewer permissions (Read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using read/write mode). If you have fewer permissions (read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation information from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
 .Requirements for deployments to VMware Cloud on AWS
 

@@ -34,7 +34,7 @@ You can use the Quick create or Advanced create option. Advanced create offers a
 
 .. *File system name*: Enter the name that you want to use for this FSx for ONTAP file system.
 
-.. *Tags*: Optionally you can add tags to categorize this FSx for ONTAP file system.
+.. *Tags*: Optionally, you can add tags to categorize this FSx for ONTAP file system.
 
 . In the "Network & security" section, enter the following information:
 
@@ -42,9 +42,9 @@ You can use the Quick create or Advanced create option. Advanced create offers a
 .. *Region & VPC*: Select the region and the VPC where the FSx for ONTAP file system will be deployed.
 .. *Security group* (Advanced create only): When using the *Advanced create* option, you can select the default security group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP file system. You can either create a new security group or select an existing one.
 +
-If you enable the *Adjust security group configuration to EVS NFS datastores* option, workload factory configures the security group according to the specified settings for EVS NFS datastores.
+If you enable the *Adjust security group configuration to EVS NFS datastores* option, workload factory configures the security group according to the settings for EVS NFS datastores.
 +
-You can add an inbound rule that restricts what other AWS services can access the FSx for ONTAP file system. This will block the amount of services that are open. These are the minimum ports and protocols:
+You can add an inbound rule to the security group that restricts what other AWS services can access the FSx for ONTAP file system. This will reduce the number of services that are open. These are the minimum ports and protocols:
 +
 [cols="15,10,55",width=80%,options="header"]
 |===
@@ -75,7 +75,7 @@ You should select the same availability zone as where your VMware SDDC is deploy
 
 . Select *Create* to deploy the FSx for ONTAP file system. This process can take up to 2 hours. 
 +
-Optionally, in the Codebox window you can select *Redirect to CloudFormation* to create the file system using a CloudFormation stack.
+Optionally, in the Codebox window you can select *Redirect to CloudFormation* to create the file system and recommended VM configuration using a CloudFormation stack.
 +
 In either case, you can you can monitor the creation progress in CloudFormation.
 

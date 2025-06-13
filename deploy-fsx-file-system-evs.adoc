@@ -12,14 +12,13 @@ summary: After you verify that the recommended FSx for ONTAP file system, or fil
 [.lead]
 After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
 
-//Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using read/write mode). If you have fewer permissions (read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation template from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
-After you configure the FSx for ONTAP file system, you can deploy it using the CloudFormation template from the Codebox.
+Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using read/write mode). If you have fewer permissions (read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation template from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+//After you configure the FSx for ONTAP file system, you can deploy it using the CloudFormation template from the Codebox.
 
-.Requirements for deployments to VMware Cloud on AWS
+.Requirements for deployments to Amazon Elastic VMware Service
 
-* You must be using VMware Cloud on AWS Software-Defined Data Center (SDDC) version 1.20 or greater to deploy FSx for ONTAP file systems.
-* You must not deploy the FSx for ONTAP file system in the same VPC used during the SDDC deployment. Instead, you must deploy it in a new Amazon VPC that you own to enable VMware Cloud on AWS integration with Amazon FSx for NetApp ONTAP.
-* You must deploy the FSx for ONTAP file system within the same AWS region as your SDDC.
+* You must have an Amazon Elastic VMware Service subscription.
+* You must have the necessary permissions to create an FSx for ONTAP file system in your AWS account.
 
 .Steps
 
@@ -40,9 +39,7 @@ You can use the Quick create or Advanced create option. Advanced create offers a
 . In the "Network & security" section, enter the following information:
 
 +
-.. *Region & VPC*: Select the Region and the VPC where the FSx for ONTAP file system will be deployed.
-+
-If you are deploying to VMware Cloud on AWS, ensure you deploy it in a VPC that is different than the VPC where the VMware Cloud on AWS is deployed.
+.. *Region & VPC*: Select the region and the VPC where the FSx for ONTAP file system will be deployed.
 .. *Security group* (Advanced create only): When using the *Advanced create* option, you can select the default security group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP file system. You can either create a new security group or select an existing one.
 +
 If you enable the *Adjust security group configuration to EVS NFS datastores* option, workload factory configures the security group according to the specified settings for EVS NFS datastores.
@@ -84,4 +81,4 @@ In either case, you can you can monitor the creation progress in CloudFormation.
 
 .Result
 
-The FSx for ONTAP file system is deployed.
+The FSx for ONTAP file system is deployed. You can now use the AWS CloudFormation template in the Codebox to deploy the recommended VM configuration to your Amazon Elastic VMware Service environment.

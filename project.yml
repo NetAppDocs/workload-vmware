@@ -27,6 +27,12 @@ sidebar:
           url: /quick-start-native.html
     - title: Use the VMware migration advisor
       entries:
+        - title: Migrate to Amazon Elastic VMware Service
+          entries:
+          - title: Calculate potential savings
+            url: /calculate-evs-savings.html
+          - title: Create a deployment plan using the migration advisor
+            url: /launch-migration-advisor-evs-manual.html
         - title: Migrate to Amazon EC2
           entries:
           - title: Capture your current VM configurations

@@ -5,7 +5,7 @@ keywords: vm workloads, deploy fsx, deploy storage for vms, evs, elastic vmware 
 summary: After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
 ---
 
-= Deploy the VMware workloads recommended FSx for ONTAP file system
+= Deploy the recommended FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 

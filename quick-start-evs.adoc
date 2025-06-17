@@ -1,0 +1,52 @@
+---
+sidebar: sidebar
+permalink: quick-start-evs.html
+keywords: quick start
+summary: Get started with the VMware migration advisor to move your current infrastructure to Amazon EVS using Amazon FSx for ONTAP as external NFS datastores.
+---
+
+= Quick start for migrating to Amazon EVS using the VMware workloads migration advisor
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Get started with the VMware migration advisor to move your current infrastructure to Amazon EVS using Amazon FSx for ONTAP as external NFS datastores.
+
+Before you get started, you should have an understanding of https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to workload factory
+
+[role="quick-margin-para"]
+You'll need to https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with workload factory^] and log in using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add AWS credentials and permissions to your account
+
+[role="quick-margin-para"]
+You can use workload factory in _Basic_ mode without adding credentials to access your AWS account. Adding AWS credentials to workload factory in either _read-only_ or _read/write_ mode gives your workload factory account the permissions needed to create and manage FSx for ONTAP file systems, and to deploy and manage workloads within Amazon EC2.
+
+[role="quick-margin-para"]
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions^].
+
+//.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Capture your current VM configurations in your vSphere environment
+
+//[role="quick-margin-para"]
+//You can use the Migration advisor VM collector script, RVTools, or NetApp Data Infrastructure Insights to capture your current VM configurations before creating a deployment plan. You can also import an existing deployment plan as a template and then modify any required attributes.
+
+//[role="quick-margin-para"]
+//link:capture-vm-configurations-native.html[Learn how to capture your current VM configurations].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a deployment plan using the VMware migration advisor 
+
+[role="quick-margin-para"]
+Launch the VMware migration advisor and manually configure the VM environment you want to create on Amazon Elastic VMWare Service infrastructure using an Amazon FSx for ONTAP file system as external NFS datastores.
+
+[role="quick-margin-para"]
+link:launch-onboarding-advisor-evs.html[Learn how to use the VMware migration advisor to create a deployment plan].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Deploy the recommended FSx for ONTAP file system
+
+[role="quick-margin-para"]
+Deploy the new FSx for ONTAP file system that will provide the datastores for your VMs in your Amazon EC2 infrastructure.
+
+[role="quick-margin-para"]
+link:deploy-fsx-file-system-evs.html[Learn how to deploy your new FSx for ONTAP file system].

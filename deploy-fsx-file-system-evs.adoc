@@ -1,0 +1,84 @@
+---
+sidebar: sidebar
+permalink: deploy-fsx-file-system-evs.html
+keywords: vm workloads, deploy fsx, deploy storage for vms, evs, elastic vmware service
+summary: After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
+---
+
+= Deploy the recommended FSx for ONTAP file system
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
+
+Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using read/write mode). If you have fewer permissions (read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation template from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+//After you configure the FSx for ONTAP file system, you can deploy it using the CloudFormation template from the Codebox.
+
+.Requirements for deployments to Amazon Elastic VMware Service
+
+* You must have an Amazon Elastic VMware Service subscription.
+* You must have the necessary permissions to create an FSx for ONTAP file system in your AWS account.
+
+.Steps
+
+. At the bottom of the *Review plan* page, select *Deploy* and the Create an FSx for ONTAP file system page is displayed.
++
+Most of the fields that define your FSx for ONTAP file system are completed based on the information you provided, but there are a few fields that you need to complete in this page.
++
+You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[See what these two options offer]. 
+
+. In the "File system general configuration" section, enter the following information:
+
+.. *AWS credentials*: Select or add credentials that will give workload factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+
+.. *File system name*: Enter the name that you want to use for this FSx for ONTAP file system.
+
+.. *Tags*: Optionally, you can add tags to categorize this FSx for ONTAP file system.
+
+. In the "Network & security" section, enter the following information:
+
++
+.. *Region & VPC*: Select the region and the VPC where the FSx for ONTAP file system will be deployed.
+.. *Security group* (Advanced create only): When using the *Advanced create* option, you can select the default security group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP file system. You can either create a new security group or select an existing one.
++
+If you enable the *Adjust security group configuration to EVS NFS datastores* option, workload factory configures the security group according to the settings for EVS NFS datastores.
++
+You can add an inbound rule to the security group that restricts what other AWS services can access the FSx for ONTAP file system. This will reduce the number of services that are open. These are the minimum ports and protocols:
++
+[cols="15,10,55",width=80%,options="header"]
+|===
+| Protocols
+| Ports
+| Purpose
+| TCP, UDP | 111 | Portmapper (used to negotiate which ports are used in NFS requests)
+| TCP, UDP | 635 | NFS mountd (receives NFS mount requests)
+| TCP, UDP | 2049 | NFS network traffic
+| TCP, UDP | 4045 | Network Lock Manager (NLM, lockd) - Handles lock requests.
+| TCP, UDP | 4046 | Network Status Monitor (NSM, statd) - Notifies NFS clients about reboots of the server for lock management.
+|===
+
++
+.. *Availability zone*: Select the availability zone and the subnet.
++
+You should select the same availability zone as where your VMware SDDC is deployed if you want to avoid charges for cross-AZ traffic.
+.. *Encryption* (Advanced create only): When using the *Advanced create* option, you can select the AWS encryption key name from the dropdown.
+.. *NFS Datastores access* (Advanced create only): When using the *Advanced create* option, you can select whether all hosts can access the datastores or whether only the EVS management host can access the datastores.
+
+. In the "File system details" section, enter the following information:
+
++
+.. *ONTAP credentials*: Enter the ONTAP user name password.
+.. *Storage VM credentials* (Advanced create only): Enter and confirm the storage VM password. The password can be specific to this file system, or you can use the same password entered for ONTAP credentials.
+
+. In the *Summary* section, you can view the FSx for ONTAP file system and datastore configuration that the VMware migration advisor has designed based on your information.
+
+. Select *Create* to deploy the FSx for ONTAP file system. This process can take up to 2 hours. 
++
+Optionally, in the Codebox window you can select *Redirect to CloudFormation* to create the file system and recommended VM configuration using a CloudFormation stack.
++
+In either case, you can you can monitor the creation progress in CloudFormation.
+
+.Result
+
+The FSx for ONTAP file system is deployed. You can now use the AWS CloudFormation template in the Codebox to deploy the recommended VM configuration to your Amazon Elastic VMware Service environment.

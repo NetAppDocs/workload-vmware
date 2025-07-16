@@ -30,8 +30,8 @@ sidebar:
       entries:
         - title: Migrate to Amazon Elastic VMware Service
           entries:
-       #   - title: Calculate potential savings
-       #     url: /calculate-evs-savings.html
+          - title: Calculate potential savings
+            url: /calculate-evs-savings.html
           - title: Create a deployment plan using the migration advisor
             url: /launch-migration-advisor-evs-manual.html
           - title: Deploy the recommended FSx for ONTAP file system

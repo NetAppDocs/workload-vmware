@@ -8,10 +8,20 @@ indexpage:
       links:
         - title: Learn about BlueXP workload factory for VMware
           url: learn-about-vmware-workloads.html
+        - title: "Quick start: Migrate to Amazon Elastic VMware Service"
+          url: quick-start-evs.html
         - title: "Quick start: Migrate to VMware Cloud on AWS"
           url: quick-start.html
         - title: "Quick start: Migrate to Amazon EC2"
           url: quick-start-native.html
+    - title: Migrate to Amazon Elastic VMware Service
+      links:
+      #  - title: Capture your current VM configurations
+      #    url: capture-vm-configurations-native.html
+        - title: Create a deployment plan using the migration advisor
+          url: launch-migration-advisor-evs-manual.adoc.html
+        - title: Deploy the recommended FSx for ONTAP file system
+          url: deploy-fsx-file-system.html
     - title: Migrate to VMware Cloud on AWS
       links:
         - title: Capture your current VM configurations

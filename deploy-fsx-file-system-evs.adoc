@@ -71,6 +71,13 @@ You should select the same availability zone as where your VMware SDDC is deploy
 .. *ONTAP credentials*: Enter the ONTAP user name password.
 .. *Storage VM credentials* (Advanced create only): Enter and confirm the storage VM password. The password can be specific to this file system, or you can use the same password entered for ONTAP credentials.
 
+. In the "EVS Cluster attachment" section, enter the following information:
+
++
+.. *Datastore mount options*: Optionally, enable the *Mount datastores to EVS cluster* option to change VMware ESXi host settings so that datastores are mounted to the Amazon EVS cluster. 
+.. *EVS Cluster vSphere console details*: Enter the IP address or FQDN of the VMware vCenter server that should connect to Amazon EVS.
+.. *vSphere administrator credentials secret ARN*: Choose the secret ARN for the vSphere administrator credentials. These credentials are used to mount datastores and configure recommended VMware settings.
+
 . In the *Summary* section, you can view the FSx for ONTAP file system and datastore configuration that the VMware migration advisor has designed based on your information.
 
 . Select *Create* to deploy the FSx for ONTAP file system. This process can take up to 2 hours. 

@@ -19,7 +19,7 @@ indexpage:
       #  - title: Capture your current VM configurations
       #    url: capture-vm-configurations-native.html
         - title: Create a deployment plan using the migration advisor
-          url: launch-migration-advisor-evs-manual.adoc.html
+          url: launch-migration-advisor-evs-manual.html
         - title: Deploy the recommended FSx for ONTAP file system
           url: deploy-fsx-file-system.html
     - title: Migrate to Amazon EC2

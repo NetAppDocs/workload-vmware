@@ -18,6 +18,8 @@ indexpage:
       links:
       #  - title: Capture your current VM configurations
       #    url: capture-vm-configurations-native.html
+        - title: Explore savings
+          url: calculate-evs-savings.html
         - title: Create a deployment plan using the migration advisor
           url: launch-migration-advisor-evs-manual.html
         - title: Deploy the recommended FSx for ONTAP file system

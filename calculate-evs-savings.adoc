@@ -15,18 +15,18 @@ Explore potential savings for migrating your VMware workloads to Amazon Elastic 
 If the savings calculator determines that the most cost-effective storage is FSx for ONTAP, you can create a detailed assessment, which provides a migration plan that you can review before using. You can then use the Codebox to generate Infrastructure-as-Code templates.
 
 == Explore savings for EVS environments
-Follow these steps to calculate savings for a planned migration to an Amazon EVS environment. 
+Follow these steps to explore potential savings for a planned migration to an Amazon EVS environment. 
 
-NOTE: Before using the savings proceeding, review the disclaimer at the bottom of the savings calculator to understand more about how the pricing estimates are calculated.
+NOTE: Before proceeding, review the disclaimer at the bottom of the savings calculator to understand more about how the pricing estimates are calculated.
 
 .Steps
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Explore EVS savings*. The TCO calculator is displayed.
+. From the VMware workloads tile, select *Explore EVS savings*. The savings calculator is displayed.
 +
 The *Environment preferences* pane provides sliders that you can adjust depending on your environment's needs.
-. Adjust the following sliders as needed to see real-time savings calculations for the values that you choose. If you are using a keyboard, you can use the arrow keys to make small adjustments:
+. Adjust the following sliders as needed to see real-time savings calculations for the values that you choose. If using a keyboard, you can make small adjustments using the arrow keys:
 .. *Required physical CPU (count)*
 .. *Required physical memory (GiB)*
 .. *Required VM storage (TiB)*

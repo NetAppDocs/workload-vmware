@@ -78,7 +78,7 @@ You should select the same availability zone as where your VMware SDDC is deploy
 .. *EVS Cluster vSphere console details*: Enter the IP address or FQDN of the VMware vCenter server that should connect to Amazon EVS.
 .. *vSphere administrator credentials secret ARN*: Choose the secret ARN for the vSphere administrator credentials. These credentials are used to mount datastores and configure recommended VMware settings.
 +
-If Amazon EVS is not available in this region, or if your account doesn't have permissions to retrieve the secret ARN in this region, you can manually enter a secret ARN value.
+If Amazon EVS is not available in this region, or if your account doesn't have permissions to retrieve the list of available secret ARNs, you can manually enter a secret ARN value.
 
 . In the *Summary* section, you can view the FSx for ONTAP file system and datastore configuration that the VMware migration advisor has designed based on your information.
 

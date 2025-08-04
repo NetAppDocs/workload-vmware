@@ -1,0 +1,12 @@
+=== Improved migration advisor support for Amazon Elastic VMWare Service
+
+The Amazon Elastic VMware Service migration advisor now supports automatic deployment and mounting of your Amazon FSx for NetApp ONTAP filesystem. This enables you to begin deploying your VMs on FSx for ONTAP filesytems when migration to the Amazon EVS environment is complete. 
+
+https://docs.netapp.com/us-en/workload-vmware/launch-migration-advisor-evs-manual.html[Create a deployment plan for Amazon EVS using the migration advisor]
+
+=== Calculate cost savings of migrating to Amazon Elastic VMware Service
+You can now explore the potential savings for migrating your VMware workloads to Amazon Elastic VMware Service (EVS). The savings calculator enables you to compare costs of using Amazon EVS with and without Amazon FSx for NetApp ONTAP as underlying storage. The calculator displays potential savings in real-time as you adjust characteristics of your environment.
+
+https://docs.netapp.com/us-en/workload-vmware/calculate-evs-savings.html[Explore savings for Amazon Elastic VMware Service with BlueXP workload factory]
+
+// Use absolute links in these files

@@ -8,10 +8,30 @@ indexpage:
       links:
         - title: Learn about BlueXP workload factory for VMware
           url: learn-about-vmware-workloads.html
+        - title: "Quick start: Migrate to Amazon Elastic VMware Service"
+          url: quick-start-evs.html
         - title: "Quick start: Migrate to VMware Cloud on AWS"
           url: quick-start.html
         - title: "Quick start: Migrate to Amazon EC2"
           url: quick-start-native.html
+    - title: Migrate to Amazon Elastic VMware Service
+      links:
+      #  - title: Capture your current VM configurations
+      #    url: capture-vm-configurations-native.html
+        - title: Explore savings
+          url: calculate-evs-savings.html
+        - title: Create a deployment plan using the migration advisor
+          url: launch-migration-advisor-evs-manual.html
+        - title: Deploy the recommended FSx for ONTAP file system
+          url: deploy-fsx-file-system.html
+    - title: Migrate to Amazon EC2
+      links:
+        - title: Capture your current VM configurations
+          url: capture-vm-configurations-native.html
+        - title: Create a deployment plan using the migration advisor
+          url: launch-onboarding-advisor-native.html
+        - title: Deploy the recommended FSx for ONTAP file system
+          url: deploy-fsx-file-system.html
     - title: Migrate to VMware Cloud on AWS
       links:
         - title: Capture your current VM configurations
@@ -24,14 +44,6 @@ indexpage:
           url: connect-sddc-to-fsx.html
         - title: Migrate your data to the new infrastructure
           url: migrate-data.html
-    - title: Migrate to Amazon EC2
-      links:
-        - title: Capture your current VM configurations
-          url: capture-vm-configurations-native.html
-        - title: Create a deployment plan using the migration advisor
-          url: launch-onboarding-advisor-native.html
-        - title: Deploy the recommended FSx for ONTAP file system
-          url: deploy-fsx-file-system.html
     - title: Blogs & community
       links:
         - title: NetApp Community 

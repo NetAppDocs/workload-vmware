@@ -23,7 +23,7 @@ NOTE: Before proceeding, review the disclaimer at the bottom of the savings calc
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Explore EVS savings*. The savings calculator is displayed.
+. From the VMware workloads tile, select *Explore savings* and then *Amazon Elastic VMware Service (EVS)*. The savings calculator is displayed.
 +
 The *Environment preferences* pane provides sliders that you can adjust depending on your environment's needs.
 . Adjust the following sliders as needed to see real-time savings calculations for the values that you choose. If using a keyboard, you can make small adjustments using the arrow keys:

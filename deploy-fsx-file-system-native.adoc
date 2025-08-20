@@ -12,7 +12,7 @@ summary: After you verify that the recommended FSx for ONTAP file system, or fil
 [.lead]
 After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
 
-Follow the instructions in link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create an FSx for ONTAP file system in BlueXP workload factory^] to deploy the FSx for ONTAP file system according to the configuration recommended by workload factory. You can use the *Advanced create* steps in the instructions to fully customize the file system.
+Follow the instructions in link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create an FSx for ONTAP file system in NetApp workload factory^] to deploy the FSx for ONTAP file system according to the configuration recommended by workload factory. You can use the *Advanced create* steps in the instructions to fully customize the file system.
 
 ////
 

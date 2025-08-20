@@ -2,19 +2,19 @@
 sidebar: sidebar
 permalink: learn-about-vmware-workloads.html
 keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: BlueXP workload factory for VMware provides tools to move your data from on-premises systems to either VMware Cloud on AWS (VMC) or Amazon EC2. 
+summary: NetApp workload factory for VMware provides tools to move your data from on-premises systems to either VMware Cloud on AWS (VMC) or Amazon EC2. 
 ---
 
-= Learn about BlueXP workload factory for VMware 
+= Learn about NetApp workload factory for VMware 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory for VMware provides tools to move your data from on-premises systems to either VMware Cloud on AWS (VMC) or Amazon EC2.
+NetApp workload factory for VMware provides tools to move your data from on-premises systems to either VMware Cloud on AWS (VMC) or Amazon EC2.
 
-== What is BlueXP workload factory for VMware?
+== What is NetApp workload factory for VMware?
 
-BlueXP workload factory for VMware provides a migration advisor that enables you to analyze your current virtual machine configurations in on-premises vSphere environments. The migration advisor then generates a plan to deploy recommended VM layouts to Amazon EC2 or VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores. 
+NetApp workload factory for VMware provides a migration advisor that enables you to analyze your current virtual machine configurations in on-premises vSphere environments. The migration advisor then generates a plan to deploy recommended VM layouts to Amazon EC2 or VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores. 
 
 Amazon FSx for NetApp ONTAP is an external NFS datastore built on NetApp's ONTAP file system that can be attached to Amazon EC2 instances or VMware Cloud on AWS vSphere clusters. There is no need to add more hosts to increase available storage; instead, just use FSx for ONTAP volumes as external datastores to complement vSAN datastores. This provides you with a flexible, high-performance, virtualized storage infrastructure that scales independently of compute resources.
 

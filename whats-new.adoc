@@ -5,7 +5,7 @@ keywords: what's new, features, new, release notes, enhancements, fixes
 summary: "Learn what's new with the VMware migration advisor component of workload factory."
 ---
 
-= What's new with BlueXP workload factory for VMware
+= What's new with NetApp workload factory for VMware
 :icons: font
 :imagesdir: ./media/
 

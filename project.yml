@@ -26,10 +26,12 @@ sidebar:
           url: /quick-start-native.html
         - title: Quick start for migrating to VMware Cloud on AWS
           url: /quick-start.html
-        - title: Upload your VM inventory
-          url: /upload-vm-inventory.html
-    - title: Use the VMware migration advisor
+        - title: Explore the VMware planning center
+          url: /explore-planning-center.html
+    - title: Use the VMware planning center
       entries:
+        - title: Upload your VM inventory data
+          url: /upload-vm-inventory.html
         - title: Migrate to Amazon Elastic VMware Service
           entries:
           - title: Explore savings

@@ -1,0 +1,59 @@
+---
+sidebar: sidebar
+permalink: explore-planning-center.html
+keywords: vm workloads, netapp workload factory
+summary: You can use the VMware planning center to manage uploaded inventory data and migration plans that you have created.
+---
+
+= Explore the VMware planning center
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+The VMware planning center enables you to upload new VM inventory data and create new migration plans, as well as manage the VM inventory data and migration plans that you have already saved with NetApp Workload Factory.
+
+
+== Manage VM inventory data
+Use the planning center to create and manage VM inventory data.
+
+.Steps
+
+=== Upload VM inventory data
+You can upload VM inventory data when you are ready to use Workload Factory to explore migration options to Amazon AWS environments. (This is covered in another topic)
+
+.Steps
+
+=== Rename a dataset
+You can change the name of a saved dataset.
+
+.Steps
+
+=== Delete a dataset
+When a dataset is no longer needed, you can delete it at any time.
+
+.Steps
+
+== Manage migration plans
+Use the migration center to create and manage migration plans.
+
+.Steps
+
+=== Provision a migration plan
+You can select a migraton plan and provision it so that the VMs are migrated to the Amazon AWS environment of your choice.
+
+.Steps
+
+=== Edit a migration plan
+If you need to change details about a migration plan edit the settings from within the planning center.
+
+.Steps
+
+=== Create a migration plan PDF
+Create a PDF report of the details of a migration plan.
+
+.Steps
+
+=== Delete a migration plan
+When a migration plan is no longer needed, you can delete it at any time.
+
+.Steps

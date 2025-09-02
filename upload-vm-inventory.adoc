@@ -1,18 +1,27 @@
 ---
 sidebar: sidebar
-permalink: capture-vm-configurations-native.html
+permalink: upload-vm-inventory.html
 keywords: vm workloads, capture vm details
-summary: You can use the Migration advisor VM collector script or RVTools to capture your current VM configurations. We recommend that you use the Migration advisor VM collector script because it gathers both VM configuration and performance data for the most accurate plan.
+summary: You can use the Planning Center to upload information about your current VMware environment.
 ---
 
-= Capture your VM configurations before migrating to Amazon EC2 with VMware workloads
+= Upload your VM inventory data to NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-You can use the Migration advisor VM data collector script, RVTools, or NetApp Data Infrastructure Insights to capture your current VM configurations. We recommend that you use the Migration advisor VM collector script or Data Infrastructure Insights because these options gather both VM configuration and performance data for the most accurate plan.
+Before you can create a migration plan, you need to upload your VM inventory data.
 
-//If you plan to deploy a new system based on an existing deployment plan that you previously saved locally, you can skip this step and select the existing deployment plan. link:launch-onboarding-advisor.html#create-a-deployment-plan-based-on-an-existing-plan[Learn how to use an existing plan to build a new plan].
+
+.Steps
+
+. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+
+. From the VMware workloads tile, select *VMware planning center*.
++
+From the planning center, you can upload your VM inventory data, see previous inventory data uploads, and plan a migration using any of the VM inventory datasets. 
+. Select *Upload VM inventory*.
+. Choose which data collection method to use:
 
 // start tabbed area
 
@@ -27,22 +36,27 @@ https://www.robware.net/home[Learn more about RVTools^]
 
 .Steps
 
+. Select the *RVTools* tile, and select *Next*.
++
+The *Prepare for AWS Cloud onboarding* page is displayed.
+. Enter a name for the VM inventory dataset you will create.
 . Download and install RVTools 4.4.2 or greater from https://www.robware.net/download[RVTools website^]
-
 . Launch RVTools and log in to the target VCenter Server.
 +
 This will capture information about that VCenter Server.
-
 . Export your VMware information to an xlsx or xls file. 
 +
 See the chapter on "commandline parameters" in the https://resources.robware.net/resources/prod/RVTools.pdf[RVTools documentation^] for details.
+. Select image:button-upload-file.png[the upload button] and choose the RVTools file you exported.
+. Select *Upload*.
+. Select *Finish*.
 
-.Result
+//.Result
 
-The xlsx or xls file that contains your results is saved to your working directory.
+//The xlsx or xls file that contains your results is saved to your working directory.
 --
 
-.Use the Migration advisor VM collector script (detailed planning)
+.Use the Data collector (detailed planning)
 --
 The NetApp Migration advisor VM collector script gathers VM configuration information from your vCenter similar to what RVTools collects, however, it captures current VM performance data to provide actual read and write IOPS and throughput statistics. You can use the script in one of two modes:
 
@@ -64,16 +78,7 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-
-. From the VMware workloads tile, select *VMware planning center*.
-+
-From the planning center, you can upload your VM inventory data, see previous inventory data uploads, and plan a migration using any of the VM inventory datasets. and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
-+
-Review the information to learn about the benefits of the migration advisor.
-. When ready, select *Let's start*.
-
-. Select the *Detailed planning* tile, and select *Next*.
+. Select the *Data collector* tile, and select *Next*.
 +
 The Codebox window appears on the right side of the page.
 
@@ -104,11 +109,11 @@ where:
 
 +
 Optionally, you can run the data collector script without specifying any options; this enables you to select the data collection period from the interactive menu.
-
-
-.Result
-
++
 The script outputs a compressed file with a timestamp in the name in the current working directory. The .zip file contains a list of all VMs and their properties, along with their IOPS and throughput data.
+. Select *Upload*.
+
+
 --
 
 .Use NetApp Data Infrastructure Insights (detailed planning)
@@ -118,25 +123,18 @@ NetApp Data Infrastructure Insights is a cloud infrastructure monitoring tool th
 https://docs.netapp.com/us-en/data-infrastructure-insights/[Learn more about Data Infrastructure Insights^]
 
 .Steps
-
-. Log in to your Data Infrastructure Insights account.
-. In the side navigation menu, select *Admin*.
-. In the resulting menu, select *API Access*.
-. In the *API Access Tokens* tab, select *+ API Access Token*.
+. Select the *Data Infrastructure Insights* tile and select *Next*.
 +
-The Create an API Access Token dialog appears.
-. Provide a name and description for the API token.
-. Under *What type of APIs will this token be used to call* select one of the following:
+The *Prepare for AWS Cloud onboarding* page is displayed.
+. Enter a name for the VM inventory dataset you will create.
+. Enter the tenant endpoint for Data Infrastructure Insights.
 +
-* Acquisition Unit
-* Assets
-* Data Collection
-. Under *Permissions* select *Read Only*.
-. Under *Token expires in*, choose the length of time that you need the API token to be valid.   
-. Uncheck *Automatically rotate tokens for Kubernetes*. 
-. Select *Save*.
-. Select *Copy API Access Token*.
-. Save this token in preparation to use with the workload factory migration advisor.
+This should be the URL you use to access Data Infrastructure Insights.
+. If you have not yet generated an API access token for Data Infrastructure Insights, follow the instructions on the page to create one. Otherwise, paste your API access token in the *Enter API Access Token* text box.
+. Select *Connect*.
+. Select *Upload*.
++
+Workload Factory gathers information from Data Infrastructure Insights.
 --
 
 ====

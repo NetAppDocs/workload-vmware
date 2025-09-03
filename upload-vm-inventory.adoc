@@ -16,7 +16,6 @@ Before you can create a migration plan, you need to upload your VM inventory dat
 .Steps
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-
 . From the VMware workloads tile, select *VMware planning center*.
 +
 From the planning center, you can upload your VM inventory data, see previous inventory data uploads, and plan a migration using any of the VM inventory datasets. 
@@ -36,6 +35,7 @@ https://www.robware.net/home[Learn more about RVTools^]
 
 .Steps
 
+[start=5]
 . Select the *RVTools* tile, and select *Next*.
 +
 The *Prepare for AWS Cloud onboarding* page is displayed.
@@ -78,6 +78,7 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 .Steps
 
+[start=5]
 . Select the *Data collector* tile, and select *Next*.
 +
 The Codebox window appears on the right side of the page.
@@ -123,6 +124,8 @@ NetApp Data Infrastructure Insights is a cloud infrastructure monitoring tool th
 https://docs.netapp.com/us-en/data-infrastructure-insights/[Learn more about Data Infrastructure Insights^]
 
 .Steps
+
+[start=5]
 . Select the *Data Infrastructure Insights* tile and select *Next*.
 +
 The *Prepare for AWS Cloud onboarding* page is displayed.
@@ -131,7 +134,6 @@ The *Prepare for AWS Cloud onboarding* page is displayed.
 +
 This should be the URL you use to access Data Infrastructure Insights.
 . If you have not yet generated an API access token for Data Infrastructure Insights, follow the instructions on the page to create one. Otherwise, paste your API access token in the *Enter API Access Token* text box.
-. Select *Connect*.
 . Select *Upload*.
 +
 Workload Factory gathers information from Data Infrastructure Insights.

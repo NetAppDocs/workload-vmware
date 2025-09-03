@@ -21,34 +21,37 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 .Requirements
 
-* You must have created the inventory file from your existing systems by using the migration advisor VM collector (.zip file) or by using RVTools (.xlsx file).
-* You must have access to the inventory file from the system on which you are logging in to workload factory.
+* You must have link:upload-vm-inventory.html[uploaded a VM inventory].
+//* You must have access to the inventory file from the system on which you are logging in to workload factory.
 
 .Steps
 
 . Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Assess and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
+. From the VMware workloads tile, select *VMware planning center*.
 +
-Review the information to learn about the benefits of the migration advisor.
-. When ready, select *Let's start*.
+The planning center is displayed.
+. If you have not yet uploaded a VM inventory, select *Upload VM inventory* and follow the instructions in link:upload-vm-inventory.html[Upload VM inventory data].
+. Choose a VM inventory dataset from the list, and open the *Start planning* menu for the dataset.
+. Select *AWS native compute*.
 
-. Choose the level of detail and method you prefer during the process of creating a deployment plan:
-+
-* *Quick assessment*: This option uses an RVtools inventory file to retrieve information about your VMs during an accelerated process, resulting in a design blueprint for your cloud migration.
-* *Detailed planning*: These options use either the migration advisor data collector inventory file or direct API access to NetApp Data Infrastructure Insights to collect detailed information, resulting in a deployment-ready design.
+
+//. Choose the level of detail and method you prefer during the process of creating a deployment plan:
+//+
+//* *Quick assessment*: This option uses an RVtools inventory file to retrieve information about your VMs during an accelerated process, resulting in a design blueprint for your cloud migration.
+//* *Detailed planning*: These options use either the migration advisor data collector inventory file or direct API access to NetApp Data Infrastructure Insights to collect detailed information, resulting in a deployment-ready design.
 
 // start tabbed area
 
-[role="tabbed-block"]
-====
+//[role="tabbed-block"]
+//====
 
-.RVTools (quick assessment)
---
+//.RVTools (quick assessment)
+//--
 .Steps
 
-[start=5]
-. Select the *RVTools* tile and select *Next*.
+//[start=5]
+//. Select the *RVTools* tile and select *Next*.
 +
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .xlsx file created by RVTools.
@@ -87,6 +90,8 @@ NOTE: If a volume has capacity or performance requirements that exceed the capab
 +
 The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
 
+
+////
 --
 
 .Migration advisor data collector (detailed planning)
@@ -176,14 +181,17 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 
 // end tabbed area
 
+////
++
+The migration plan is automatically saved in the list of plans in the planning center by default.
++
 When you are satisfied with the migration plan, you have a few options:
 
-* Select *Manage plan > Save a plan* to save the deployment plan data to your account, enabling you to import the plan at a later time to use as a template when deploying systems with similar requirements. You can name the plan before you save it (the username and timestamp are added to the name you provide).
-* Select *Manage plan > Export a plan* to save the migration plan as a template in a .json format on your computer. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
-* Select *Manage plan > Download a report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
-* Select *Manage plan > Download instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
-
-You can select *Done* to return to the VMware migration advisors page.
+//* Select *Download plan > Save a plan* to save the deployment plan data to your account, enabling you to import the plan at a later time to use as a template when deploying systems with similar requirements. You can name the plan before you save it (the username and timestamp are added to the name you provide).
+//* Select *Download plan > Export a plan* to save the migration plan as a template in a .json format on your computer. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
+* Select *Download plan > Download a report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
+* Select *Download plan > Download instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
+* Select *Provision* to begin deploying the recommended Amazon FSx for NetApp ONTAP file system.
 
 ////
 
@@ -228,6 +236,8 @@ The bottom of the page shows the source VM (or multiple VMs) for which this new 
 //* Select *Use the migration advisor VMware data collector* to use the file that you created using the VMware data collector.
 //* Select *Use RVTools* to use the .xlsx file that you created using RVTools.
 
+////
+
 == Create a deployment plan based on an existing plan
 
 If you are planning a new deployment that is similar to an existing deployment plan that you've used in the past, you can import that plan, make changes, and then save it as a new deployment plan.
@@ -254,3 +264,5 @@ You must have access to the .json file for the existing deployment plan from the
 The *Review plan* page is displayed.
 . You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
 . After you have customized the plan to your requirements, you can save the plan or download the plan report as a PDF file.
+
+////

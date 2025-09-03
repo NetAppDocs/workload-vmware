@@ -27,13 +27,13 @@ You can use Workload Factory in _Basic_ mode without adding credentials to acces
 [role="quick-margin-para"]
 https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Capture your current VM configurations in your vSphere environment
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Upload your VM inventoroy data
 
 [role="quick-margin-para"]
-You can use the Migration advisor VM collector script or RVTools to capture your current VM configurations in order to create a deployment plan. You can also import an existing deployment plan as a template and then modify any required attributes.
+You can use the planning center to upload inventory details about your current VM environment. Use the data collector script, RVTools, or NetApp Data Infrastructure Insights to capture your current VM configuration and upload the data to the planning center.
 
 [role="quick-margin-para"]
-link:capture-vm-configurations.html[Learn how to capture your current VM configurations].
+link:upload-vm-inventory.html[Learn how to upload VM inventory data^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Create a deployment plan using the VMware migration advisor 
 

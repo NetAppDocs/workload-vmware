@@ -15,7 +15,7 @@ Before you can create a migration plan, you need to upload your VM inventory dat
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . From the VMware workloads tile, select *VMware planning center*.
 +
 From the planning center, you can upload your VM inventory data, see previous inventory data uploads, and plan a migration using any of the VM inventory datasets. 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: explore-planning-center.html
-keywords: vm workloads, netapp workload factory
+keywords: vm workloads, netapp Workload Factory
 summary: You can use the VMware planning center to manage uploaded inventory data and migration plans that you have created.
 ---
 

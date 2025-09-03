@@ -1,12 +1,12 @@
 indexpage:
-  title: NetApp workload factory for VMware documentation
+  title: NetApp Workload Factory for VMware documentation
   lead: "Streamline migrations from on-premises vSphere environments to VMware Cloud on AWS and implement customized FSx for ONTAP file systems as external datastores."
   summary: "Streamline migrations from on-premises vSphere environments to VMware Cloud on AWS and implement customized FSx for ONTAP file systems as external datastores."
   keywords: VMware, FSx, VMs, VMC, VMware Cloud on AWS, FSx for ONTAP
   tiles:
     - title: Get started
       links:
-        - title: Learn about NetApp workload factory for VMware
+        - title: Learn about NetApp Workload Factory for VMware
           url: learn-about-vmware-workloads.html
         - title: "Quick start: Migrate to Amazon Elastic VMware Service"
           url: quick-start-evs.html

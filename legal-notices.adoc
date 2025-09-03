@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: # no keywords
 summary: # no summary
 ---
-= Legal notices for NetApp workload factory for VMware
+= Legal notices for NetApp Workload Factory for VMware
 :icons: font
 :imagesdir: ./media/
 

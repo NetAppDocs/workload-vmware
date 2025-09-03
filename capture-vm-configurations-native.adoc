@@ -64,7 +64,7 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . From the VMware workloads tile, select *VMware planning center*.
 +
@@ -136,7 +136,7 @@ The Create an API Access Token dialog appears.
 . Uncheck *Automatically rotate tokens for Kubernetes*. 
 . Select *Save*.
 . Select *Copy API Access Token*.
-. Save this token in preparation to use with the workload factory migration advisor.
+. Save this token in preparation to use with the Workload Factory migration advisor.
 --
 
 ====

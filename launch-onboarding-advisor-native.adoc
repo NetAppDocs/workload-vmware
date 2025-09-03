@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: launch-onboarding-advisor-native.html
-keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+keywords: overview, concepts, features, use case, workloads, how Workload Factory works
+summary: Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
 = Create a deployment plan for Amazon EC2 using the VMware workloads migration advisor
@@ -10,10 +10,10 @@ summary: Log in to the NetApp workload factory to access the VMware migration ad
 :imagesdir: ./media/
 
 [.lead]
-Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
 
-Note that you must have a user name and password to access workload factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
+Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
 == Create a deployment plan based on an on-premises vSphere environment
 
@@ -22,11 +22,11 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 .Requirements
 
 * You must have link:upload-vm-inventory.html[uploaded a VM inventory].
-//* You must have access to the inventory file from the system on which you are logging in to workload factory.
+//* You must have access to the inventory file from the system on which you are logging in to Workload Factory.
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . From the VMware workloads tile, select *VMware planning center*.
 +
@@ -231,7 +231,7 @@ The bottom of the page shows the source VM (or multiple VMs) for which this new 
 .. Once you understand how your datastores will be deployed, select *Next*.
 ////
 
-// . Select the type of inventory file you'll be using to populate workload factory with your current VM configuration and select *Next*.
+// . Select the type of inventory file you'll be using to populate Workload Factory with your current VM configuration and select *Next*.
 // +
 //* Select *Use the migration advisor VMware data collector* to use the file that you created using the VMware data collector.
 //* Select *Use RVTools* to use the .xlsx file that you created using RVTools.
@@ -244,11 +244,11 @@ If you are planning a new deployment that is similar to an existing deployment p
 
 .Requirements
 
-You must have access to the .json file for the existing deployment plan from the system on which you are logging in to workload factory.
+You must have access to the .json file for the existing deployment plan from the system on which you are logging in to Workload Factory.
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . From the VMware workloads tile, select *Assess and plan* and then select *Migration to AWS native compute*. 
 

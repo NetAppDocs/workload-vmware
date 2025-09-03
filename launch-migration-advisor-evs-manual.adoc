@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: launch-migration-advisor-evs-manual.html
-keywords: overview, concepts, features, use case, workloads, how workload factory works, migration, advisor, manual, specification, deploy, deployment, plan
-summary: Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+keywords: overview, concepts, features, use case, workloads, how Workload Factory works, migration, advisor, manual, specification, deploy, deployment, plan
+summary: Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
 = Create a deployment plan for Amazon EVS using the VMware workloads migration advisor
@@ -10,9 +10,9 @@ summary: Log in to the NetApp workload factory to access the VMware migration ad
 :imagesdir: ./media/
 
 [.lead]
-Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
-Note that you must have a user name and password to access workload factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
+Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
 == Create a deployment plan by manually specifying environment requirements
 
@@ -24,9 +24,9 @@ You can manually specify your requirements for virtual machines in Amazon Elasti
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. Optionally, if you accessed workload factory from the Workload Factory console, from the VMware workloads tile, select *Plan and create* and then select *Amazon Elastic VMware service*. The VMware migration advisor splash screen is displayed.
+. Optionally, if you accessed Workload Factory from the Workload Factory console, from the VMware workloads tile, select *Plan and create* and then select *Amazon Elastic VMware service*. The VMware migration advisor splash screen is displayed.
 . Select the *Amazon Elastic VMware service* tile.
 . When ready, select *Let's start*.
 . Enter the requirements for your VM environment.

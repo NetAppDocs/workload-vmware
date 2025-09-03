@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: launch-onboarding-advisor.html
-keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+keywords: overview, concepts, features, use case, workloads, how Workload Factory works
+summary: Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
 = Create a deployment plan for VMware Cloud on AWS using the VMware workloads migration advisor
@@ -10,14 +10,14 @@ summary: Log in to the NetApp workload factory to access the VMware migration ad
 :imagesdir: ./media/
 
 [.lead]
-Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
 When migrating to VMware Cloud, you can use the migration advisor to create a deployment plan for the following scenarios:
 
 * <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to VMWare cloud.>>
 * <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
 
-Note that you must have a user name and password to access workload factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
+Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
 == Create a deployment plan based on an on-premises vSphere environment
 
@@ -26,11 +26,11 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 .Requirements
 
 * You must have created the inventory file from your existing systems by using the migration advisor VM collector (.csv file) or by using RVTools (.xlsx file).
-* You must have access to the inventory file from the system on which you are logging in to workload factory.
+* You must have access to the inventory file from the system on which you are logging in to Workload Factory.
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . From the VMware workloads tile, select *VMware planning center*.
 +
@@ -38,7 +38,7 @@ The planning center is displayed.
 
 . Select *Plan and create VMC*.
 
-. Select the type of inventory file you'll be using to populate workload factory with your current VM configuration and select *Next*.
+. Select the type of inventory file you'll be using to populate Workload Factory with your current VM configuration and select *Next*.
 +
 * Select *Use the migration advisor VMware data collector* to use the .csv file that you created using the VMware data collector.
 * Select *Use RVTools* to use the .xlsx file that you created using RVTools.
@@ -125,17 +125,18 @@ The top of the page describes the monthly cost for all deployed VMs and FSx for 
 * Select *Download plan > Plan report* to download the migration plan in a .pdf format so you can distribute the plan for review.
 * Select *Export plan* to save the migration plan as a template in a .json format. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
 
+////
 == Create a deployment plan based on an existing plan
 
 If you are planning a new deployment that is similar to an existing deployment plan that you've used in the past, you can import that plan, make edits, and then save it as a new deployment plan.
 
 .Requirements
 
-You must have access to the .json file for the existing deployment plan from the system on which you are logging in to workload factory.
+You must have access to the .json file for the existing deployment plan from the system on which you are logging in to Workload Factory.
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
 . From the VMware workloads tile, select *Assess and plan* and then select *Migration to VMware Cloud on AWS*. The VMware migration advisor main page is displayed.
 
@@ -148,3 +149,4 @@ You must have access to the .json file for the existing deployment plan from the
 . You can select *Previous* to access the _Prepare for VMware Cloud onboarding_ page and the _Select VMs_ page to modify the settings for the plan as described in the previous section.
 
 . After you have customized the plan to your requirements, you can save the plan or begin the deployment process for your datastores on FSx for ONTAP file systems.
+////

@@ -30,7 +30,7 @@ sidebar:
           url: /explore-planning-center.html
     - title: Use the VMware planning center
       entries:
-        - title: Upload your VM inventory data
+        - title: Upload VM inventory data
           url: /upload-vm-inventory.html
         - title: Migrate to Amazon Elastic VMware Service
           entries:

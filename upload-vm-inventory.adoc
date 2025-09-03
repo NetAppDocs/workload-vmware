@@ -5,7 +5,7 @@ keywords: vm workloads, capture vm details
 summary: You can use the Planning Center to upload information about your current VMware environment.
 ---
 
-= Upload your VM inventory data to NetApp Workload Factory
+= Upload VM inventory data to NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

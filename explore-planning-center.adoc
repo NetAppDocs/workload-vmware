@@ -52,7 +52,7 @@ You can select a migraton plan and provision it so that the VMs are migrated to 
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* tab.
+. Select the *Migration plans* menu.
 . Select the Actions menu (...) for the migration plan you want to provision, and select *Provision*.
 . Depending on the migration plan, refer to the instructions to deploy the file system:
 +
@@ -67,7 +67,7 @@ If you need to change comment details for a migration plan, edit the comment fro
 .Steps
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* tab.
+. Select the *Migration plans* .
 . Select the Actions menu (...) for the migration plan you want to edit, and select *Edit comment*.
 . Enter a comment and select *Save*.
 
@@ -78,7 +78,7 @@ Create a PDF report of the details of a migration plan.
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* tab.
+. Select the *Migration plans* .
 . Select the Actions menu (...) for the migration plan for which to create a PDF report, and select *Create report*.
 . Enter a name for the report PDF and select *Save*.
 
@@ -89,6 +89,6 @@ When a migration plan is no longer needed, you can delete it at any time.
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* tab.
+. Select the *Migration plans* .
 . Select the Actions menu (...) for the migration plan you want to delete, and select *Delete*.
 . Confirm the action by selecting *Delete*.

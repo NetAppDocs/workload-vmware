@@ -14,6 +14,8 @@ indexpage:
           url: quick-start.html
         - title: "Quick start: Migrate to Amazon EC2"
           url: quick-start-native.html
+        - title: Explore the VMware planning center
+          url: explore-planning-center.html
     - title: Migrate to Amazon Elastic VMware Service
       links:
       #  - title: Capture your current VM configurations
@@ -26,16 +28,16 @@ indexpage:
           url: deploy-fsx-file-system.html
     - title: Migrate to Amazon EC2
       links:
-        - title: Capture your current VM configurations
-          url: capture-vm-configurations-native.html
+#        - title: Capture your current VM configurations
+#          url: capture-vm-configurations-native.html
         - title: Create a deployment plan using the migration advisor
           url: launch-onboarding-advisor-native.html
         - title: Deploy the recommended FSx for ONTAP file system
           url: deploy-fsx-file-system.html
     - title: Migrate to VMware Cloud on AWS
       links:
-        - title: Capture your current VM configurations
-          url: capture-vm-configurations.html
+#        - title: Capture your current VM configurations
+#          url: capture-vm-configurations.html
         - title: Create a deployment plan using the migration advisor
           url: launch-onboarding-advisor.html
         - title: Deploy the recommended FSx for ONTAP file system

@@ -146,6 +146,7 @@ Workload Factory gathers information from Data Infrastructure Insights.
 .What's next?
 
 Manage your uploaded VM inventory data from the planning center, or create a deployment plan.
+
 * link:explore-planning-center.html[Explore the VMware workloads planning center]
 * link:launch-onboarding-advisor.html[Create an Amazon VMware Cloud deployment plan]
 * link:launch-migration-advisor-evs-manual.html[Create an Amazon Elastic VMware Service deployment plan]

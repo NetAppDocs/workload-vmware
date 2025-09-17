@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: launch-migration-advisor-evs-.html
+permalink: launch-migration-advisor-evs.html
 keywords: overview, concepts, features, use case, workloads, how Workload Factory works, migration, manual, specification, deploy, deployment, plan
 summary: From the VMware planning center, you can launch the Amazon EVS migration advisor to help create a migration plan that is customized for your needs.
 ---

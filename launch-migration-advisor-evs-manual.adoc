@@ -45,4 +45,4 @@ By default, Workload Factory saves the migration plan to the planning center. Yo
 . Optionally, when you are satisfied with the migration plan, you can download the plan details as a PDF document by selecting *Export plan (PDF)*.
 . When you are ready to provision the deployment plan, select *Provision*.
 
-. link:deploy-fsx-file-system-evs.html[Deploy the VMware workloads recommended FSx for ONTAP file system].
+link:deploy-fsx-file-system-evs.html[Deploy the VMware workloads recommended FSx for ONTAP file system].

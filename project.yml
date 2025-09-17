@@ -36,14 +36,16 @@ sidebar:
           entries:
           - title: Explore savings
             url: /calculate-evs-savings.html
-          - title: Create a deployment plan using the migration advisor
+          - title: Manually create a deployment plan
             url: /launch-migration-advisor-evs-manual.html
+          - title: Create a deployment plan using the migration advisor
+            url: /launch-migration-advisor-evs.html
           - title: Deploy the recommended FSx for ONTAP file system
             url: /deploy-fsx-file-system-evs.html
         - title: Migrate to Amazon EC2
           entries:
-          - title: Capture your current VM configurations
-            url: /capture-vm-configurations-native.html
+#          - title: Capture your current VM configurations
+#            url: /capture-vm-configurations-native.html
           - title: Create a deployment plan using the migration advisor
             url: /launch-onboarding-advisor-native.html
           - title: Deploy the recommended FSx for ONTAP file system
@@ -54,8 +56,8 @@ sidebar:
          #   url: /migrate-data-native.html
         - title: Migrate to VMware Cloud on AWS
           entries:
-          - title: Capture your current VM configurations
-            url: /capture-vm-configurations.html
+#          - title: Capture your current VM configurations
+#            url: /capture-vm-configurations.html
           - title: Create a deployment plan using the migration advisor
             url: /launch-onboarding-advisor.html
           - title: Deploy the recommended FSx for ONTAP file system

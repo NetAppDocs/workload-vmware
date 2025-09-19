@@ -84,3 +84,5 @@ The top of the page estimates the monthly savings for FSx for ONTAP file systems
 +
 The migration plan is automatically saved in the list of plans in the planning center by default.
 . When you are ready to proceed with the plan, select *Provision* to begin deploying the recommended Amazon FSx for NetApp ONTAP file system.
+
+link:deploy-fsx-file-system-evs.html[Deploy the VMware workloads recommended FSx for ONTAP file system].

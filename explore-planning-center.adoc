@@ -1,0 +1,94 @@
+---
+sidebar: sidebar
+permalink: explore-planning-center.html
+keywords: vm workloads, netapp Workload Factory
+summary: You can use the VMware planning center to manage uploaded inventory data and migration plans that you have created.
+---
+
+= Explore the VMware planning center
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+The VMware planning center enables you to upload new VM inventory data and create new migration plans, as well as manage the VM inventory data and migration plans that you have already saved with NetApp Workload Factory.
+
+
+== Manage VM inventory data
+Use the planning center to create and manage VM inventory data.
+
+
+
+=== Upload VM inventory data
+You can upload VM inventory data when you are ready to use Workload Factory to explore migration options to Amazon AWS environments. Refer to link:upload-vm-inventory.html[Upload VM inventory data] for instructions.
+
+=== Rename a dataset
+You can change the name of a saved dataset.
+
+.Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the Actions menu (...) for the dataset you want to rename, and select *Rename*.
+. Enter a new name for the dataset and select *Save*.
+
+
+=== Delete a dataset
+When a dataset is no longer needed, you can delete it at any time.
+
+.Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the Actions menu (...) for the dataset you want to delete, and select *Delete*.
+. Select *Delete* to confirm the action.
+
+== Manage migration plans
+Use the migration center to create and manage migration plans.
+
+=== Provision a migration plan
+You can select a migraton plan and provision it so that the VMs are migrated to the Amazon AWS environment of your choice.
+
+.Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the *Migration plans* menu.
+. Select the Actions menu (...) for the migration plan you want to provision, and select *Provision*.
+. Depending on the migration plan, refer to the instructions to deploy the file system:
++
+* link:deploy-fsx-file-system.html[Deploy the file system for Amazon VMware Cloud plans]
+* link:deploy-fsx-file-system-native.html[Deploy the file system for Amazon EC2 plans]
+* link:deploy-fsx-file-system-evs.html[Deploy the file system for Amazon Elastic VMware Service plans]
+
+
+=== Edit the comment for a migration plan
+If you need to change comment details for a migration plan, edit the comment from within the planning center.
+
+.Steps
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the *Migration plans* .
+. Select the Actions menu (...) for the migration plan you want to edit, and select *Edit comment*.
+. Enter a comment and select *Save*.
+
+=== Create a PDF report of a migration plan
+Create a PDF report of the details of a migration plan.
+
+.Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the *Migration plans* .
+. Select the Actions menu (...) for the migration plan for which to create a PDF report, and select *Create report*.
+. Enter a name for the report PDF and select *Save*.
+
+=== Delete a migration plan
+When a migration plan is no longer needed, you can delete it at any time.
+
+.Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the *Migration plans* .
+. Select the Actions menu (...) for the migration plan you want to delete, and select *Delete*.
+. Confirm the action by selecting *Delete*.

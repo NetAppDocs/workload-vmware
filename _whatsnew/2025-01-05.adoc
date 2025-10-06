@@ -1,9 +1,9 @@
 === Amazon EC2 migration advisor improvements
 
-This release of BlueXP workload factory for VMware features several improvements to the migration advisor experience:
+This release of BlueXP Workload Factory for VMware features several improvements to the migration advisor experience:
 
-* *Save or download a migration plan*: You can now save or download a migration plan, and load the migration plan to populate the migration advisor. When you save a migration plan, the plan is saved with your workload factory account.
-* *Improved VM selection*: BlueXP workload factory for VMware now supports filtering and searching the list of VMs that you want to include in your migration deployment.
+* *Save or download a migration plan*: You can now save or download a migration plan, and load the migration plan to populate the migration advisor. When you save a migration plan, the plan is saved with your Workload Factory account.
+* *Improved VM selection*: BlueXP Workload Factory for VMware now supports filtering and searching the list of VMs that you want to include in your migration deployment.
 
 
 https://docs.netapp.com/us-en/workload-vmware/launch-onboarding-advisor-native.html[Create a deployment plan for Amazon EC2 using the migration advisor]

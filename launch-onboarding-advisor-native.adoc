@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: launch-onboarding-advisor-native.html
-keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+keywords: overview, concepts, features, use case, workloads, how Workload Factory works
+summary: Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 ---
 
 = Create a deployment plan for Amazon EC2 using the VMware workloads migration advisor
@@ -10,10 +10,10 @@ summary: Log in to the NetApp workload factory to access the VMware migration ad
 :imagesdir: ./media/
 
 [.lead]
-Log in to the NetApp workload factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
+Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
 
-Note that you must have a user name and password to access workload factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
+Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 
 == Create a deployment plan based on an on-premises vSphere environment
 
@@ -21,34 +21,19 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 .Requirements
 
-* You must have created the inventory file from your existing systems by using the migration advisor VM collector (.zip file) or by using RVTools (.xlsx file).
-* You must have access to the inventory file from the system on which you are logging in to workload factory.
+* You must have link:upload-vm-inventory.html[uploaded a VM inventory].
+//* You must have access to the inventory file from the system on which you are logging in to Workload Factory.
 
 .Steps
 
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *Assess and plan* and then select *Migration to AWS native compute*. The VMware migration advisor splash screen is displayed.
+. From the VMware workloads tile, select *VMware planning center*.
 +
-Review the information to learn about the benefits of the migration advisor.
-. When ready, select *Let's start*.
-
-. Choose the level of detail and method you prefer during the process of creating a deployment plan:
-+
-* *Quick assessment*: This option uses an RVtools inventory file to retrieve information about your VMs during an accelerated process, resulting in a design blueprint for your cloud migration.
-* *Detailed planning*: These options use either the migration advisor data collector inventory file or direct API access to NetApp Data Infrastructure Insights to collect detailed information, resulting in a deployment-ready design.
-
-// start tabbed area
-
-[role="tabbed-block"]
-====
-
-.RVTools (quick assessment)
---
-.Steps
-
-[start=5]
-. Select the *RVTools* tile and select *Next*.
+The planning center is displayed.
+. If you have not yet uploaded a VM inventory, select *Upload VM inventory* and follow the instructions in link:upload-vm-inventory.html[Upload VM inventory data].
+. Choose a VM inventory dataset from the list, and open the *Start planning* menu for the dataset.
+. Select *AWS native compute*.
 +
 The *Prepare for AWS Cloud onboarding* page is displayed.
 . In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .xlsx file created by RVTools.
@@ -86,171 +71,11 @@ NOTE: If a volume has capacity or performance requirements that exceed the capab
 . On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
 +
 The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
-
---
-
-.Migration advisor data collector (detailed planning)
---
-.Steps
-
-[start=5]
-. Select the *Migration advisor data collector* tile and select *Next*.
 +
-The *Prepare for AWS Cloud onboarding* page is displayed.
-. In the _VM configuration upload_ section, select image:button-upload-file.png[the upload button] and select the .zip file created by the migration advisor data collector.
+The migration plan is automatically saved in the list of plans in the planning center by default.
 +
-The *Data collection details* section provides the date range and number of hours of data that was collected using the Onboarding Advisor data collector. 
-+
-The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
-. In the _VM inventory considerations_ section, select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
-. In the _Target capacity and protection considerations_ section, select from a few storage options.
-.. *VM Storage to consider*: Select whether the datastores created for each onboarded VM are sized based on their currently utilized size (recommended) or their provisioned size. 
-+
-The external datastores will be implemented using Amazon FSx for NetApp ONTAP file system volumes.
-.. *Average data reduction ratio*: Choose from among the three common data reduction ratios. Select "1:1 - No reduction", "1:1.25 - 20% reduction", or "1:1.5 - 33% reduction".
-+
-Select *Help me decide* if you're unsure which ratio to choose. The _Data reduction ratio assistant_ dialog appears. Select any statements that apply to your VM inventory and storage estate. The assistant will recommend an appropriate data reduction rate. Select *Apply* to use the recommended ratio.  
-.. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems.
-+
-Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.
-.. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
-. Select *Next*. 
-. On the *Scope* page, select the VMs from the list that you want to include in the AWS migration. You can filter the list by the power state of each VM, and which data center and cluster the VM resides in.
-+
-In the VM list, you can select which types of VM information to display as columns. For example, selecting _Estimated instance type_ displays a column with the estimated Amazon EC2 instance type for each VM, based on the VM resource requirements.
-. Select *Next*.
-. On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
-+
-NOTE: If a volume has capacity or performance requirements that exceed the capabilities of an Amazon FSx for NetApp ONTAP filesystem in a specific region, migration advisor recommends that the volume be deployed on an Amazon EBS filesystem.
-. On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters, and then select *Next*.
-. On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
-+
-The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
-
---
-
-.NetApp Data Infrastructure Insights (detailed planning)
---
-.Steps
-
-[start=5]
-. Select the *NetApp Data Infrastructure Insights* tile and select *Next*.
-+
-The *Prepare for AWS Cloud onboarding* page is displayed.
-. In the _NetApp Data Infrastructure Insights connection configuration_ section, enter the tenant endpoint for Data Infrastructure Insights.
-+
-This should be the URL you use to access Data Infrastructure Insights.
-. If you have not yet generated an API access token for Data Infrastructure Insights, follow the instructions on the page to create one. Otherwise, paste your API access token in the *Enter API Access Token* text box.
-. Select *Connect*.
-+
-Workload factory gathers information from Data Infrastructure Insights.
-+
-The *VM inventory summary* section is populated from the gathered information to reflect the number of VMs and the total storage capacity.
-. In the _VM inventory considerations_ section, select the region where Amazon FSx for NetApp ONTAP file systems will be deployed. For optimal performance and cost efficiency, this is typically the same region as where your existing Amazon EC2 SDDC is deployed.
-. In the _Target capacity and protection considerations_ section, select from a few storage options.
-.. *VM Storage to consider*: Select whether the datastores created for each onboarded VM are sized based on their currently utilized size (recommended) or their provisioned size. 
-+
-The external datastores will be implemented using Amazon FSx for NetApp ONTAP file system volumes.
-.. *Average data reduction ratio*: Choose from among the three common data reduction ratios. Select "1:1 - No reduction", "1:1.25 - 20% reduction", or "1:1.5 - 33% reduction".
-+
-Select *Help me decide* if you're unsure which ratio to choose. The _Data reduction ratio assistant_ dialog appears. Select any statements that apply to your VM inventory and storage estate. The assistant will recommend an appropriate data reduction rate. Select *Apply* to use the recommended ratio.  
-.. *Headroom percentage*: Enter the percentage of capacity growth that is added to the capacity for your FSx for ONTAP file systems.
-+
-Note that if you select an amount less than 20% you won't be able to create volume snapshots for protection and long-term backups.
-.. *VM snapshot protection*: Enable this option to protect the VMs with snapshots.
-. Select *Next*. 
-. On the *Scope* page, select the VMs from the list that you want to include in the AWS migration. You can filter the list by the power state of each VM, and which data center and cluster the VM resides in.
-+
-In the VM list, you can select which types of VM information to display as columns. For example, selecting _Estimated instance type_ displays a column with the estimated Amazon EC2 instance type for each VM, based on the VM resource requirements.
-. Select *Next*.
-. On the *Classify* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
-+
-NOTE: If a volume has capacity or performance requirements that exceed the capabilities of an Amazon FSx for NetApp ONTAP filesystem in a specific region, migration advisor recommends that the volume be deployed on an Amazon EBS filesystem.
-. On the *Package* page, review the EC2 instances and the volumes assigned to different FSx for ONTAP clusters, and then select *Next*.
-. On the *Review plan* page, review the estimated monthly savings and cost estimates for all the VMs that you plan to migrate.
-+
-The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
---
-
-====
-
-// end tabbed area
-
 When you are satisfied with the migration plan, you have a few options:
 
-* Select *Manage plan > Save a plan* to save the deployment plan data to your account, enabling you to import the plan at a later time to use as a template when deploying systems with similar requirements. You can name the plan before you save it (the username and timestamp are added to the name you provide).
-* Select *Manage plan > Export a plan* to save the migration plan as a template in a .json format on your computer. You can import the plan at a later time to use as a template when deploying systems with similar requirements.
-* Select *Manage plan > Download a report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
-* Select *Manage plan > Download instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
-
-You can select *Done* to return to the VMware migration advisors page.
-
-////
-
-//.. *VM Memory to consider*: Select whether the memory allocated for each onboarded VM is sized based on their currently utilized size (recommended) or their provisioned size.
-// and the "VMware cloud on AWS node configuration" page is displayed. 
-//+
-//This page enables you to define the VMware cloud on AWS cluster configuration using an estimated savings analysis and the recommended node type. You can configure the following:
-//+
-.. *vSAN architecture*: Select whether you want to use vSAN Express Storage Architecture (ESA) or vSAN Original Storage Architecture (OSA) architecture.
-.. *vSAN Fault Tolerance*: Select the level of fault tolerance that is required for the VMs. You can choose "Auto", which is recommended, or from among a variety of RAID levels.
-* RAID-1 (FTT 1): consists of an exact copy (or mirror) of a set of data on 2 or more disks.
-* RAID-5 (FTT 1): consists of block-level striping with distributed parity - parity information is distributed among 3 or more drives, and it can survive a single disk failures.
-* RAID-5 (FTT 2): consists of block-level striping with distributed parity - parity information is distributed among 4 or more drives, and it can survive any two concurrent disk failures.
-* RAID-6 (FTT 2): extends RAID 5 by adding another parity block; thus, it uses block-level striping with two parity blocks distributed across all member disks. It requires 4 or more drives, and it can survive any two concurrent disk failures.
-.. *Nodes configuration selection list*: Select an EC2 instance type for the nodes.
-
-. Select *Next* and the "Select virtual machines" page displays the VMs that match the criteria you provided in the previous page.
-
-.. In the _Selection criteria_ section, select the criteria for the VMs that you plan to deploy:
-+
-* Based on cost and performance optimization
-* Based on the ability to easily restore your data with local snapshots for recovery scenarios
-* Based on both sets of criteria: the lowest cost while still providing good recovery options
-
-.. In the _Virtual machines_ section, the VMs that matched the criteria you provided in the previous page are selected (checked). Select or deselect VMs if you want to onboard/migrate fewer or more VMs on this page. 
-+
-The *Recommended deployment* section will be updated if you make any changes. Note that by selecting the checkbox in the heading row you can select all VMs on this page.
-
-.. Select *Next*.
-
-. On the *Datastore deployment plan* page, review the total number of VMs and datastores that have been recommended for the migration.
-
-.. Select each Datastore listed across the top of the page to see how the datastores and VMs will be provisioned. 
-+
-The bottom of the page shows the source VM (or multiple VMs) for which this new VM and datastore will be provisioned.
-
-.. Once you understand how your datastores will be deployed, select *Next*.
-////
-
-// . Select the type of inventory file you'll be using to populate workload factory with your current VM configuration and select *Next*.
-// +
-//* Select *Use the migration advisor VMware data collector* to use the file that you created using the VMware data collector.
-//* Select *Use RVTools* to use the .xlsx file that you created using RVTools.
-
-== Create a deployment plan based on an existing plan
-
-If you are planning a new deployment that is similar to an existing deployment plan that you've used in the past, you can import that plan, make changes, and then save it as a new deployment plan.
-
-.Requirements
-
-You must have access to the .json file for the existing deployment plan from the system on which you are logging in to workload factory.
-
-.Steps
-
-. Log in to workload factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-
-. From the VMware workloads tile, select *Assess and plan* and then select *Migration to AWS native compute*. 
-
-. Select *Import plan*.
-. Do one of the following:
-+
-* Select *Load saved plan*.
-.. From the list, select the plan you want to import.
-.. Select *Load*.
-* Select *From my computer*.
-.. Select the existing .json plan file that you want to import in the migration advisor, and then select *Open*.
-+
-The *Review plan* page is displayed.
-. You can select *Previous* to access previous pages and modify the settings for the plan as described in the preceding section.
-. After you have customized the plan to your requirements, you can save the plan or download the plan report as a PDF file.
+* Select *Download plan > Download a report* to download the deployment plan in a .pdf format so you can distribute the plan for review.
+* Select *Download plan > Download instance storage deployment* to download the external datastore deployment plan in a .csv format so you can use it to create your new cloud-based intelligent data infrastructure.
+* Select *Provision* to begin deploying the recommended Amazon FSx for NetApp ONTAP file system.

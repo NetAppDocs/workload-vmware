@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: deploy-fsx-file-system-evs.html
 keywords: vm workloads, deploy fsx, deploy storage for vms, evs, elastic vmware service
-summary: After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
+summary: After you verify that the recommended FSx for ONTAP file system, or file systems in some cases, meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
 ---
 
 = Deploy the recommended FSx for ONTAP file system
@@ -10,9 +10,9 @@ summary: After you verify that the recommended FSx for ONTAP file system, or fil
 :imagesdir: ./media/
 
 [.lead]
-After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use workload factory to deploy the system in your AWS environment.
+After you verify that the recommended FSx for ONTAP file system (or multiple file systems in some cases) meets your exact requirements, you can use Workload Factory to deploy the system in your AWS environment.
 
-Depending on the policy and permissions that you added to your workload factory account, you can deploy the FSx for ONTAP file system completely using workload factory (using read/write mode). If you have fewer permissions (read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation template from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the FSx for ONTAP file system completely using Workload Factory (using read/write mode). If you have fewer permissions (read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation template from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 //After you configure the FSx for ONTAP file system, you can deploy it using the CloudFormation template from the Codebox.
 
 .Requirements for deployments to Amazon Elastic VMware Service
@@ -30,7 +30,7 @@ You can use the Quick create or Advanced create option. Advanced create offers a
 
 . In the "File system general configuration" section, enter the following information:
 
-.. *AWS credentials*: Select or add credentials that will give workload factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP file system yourself in AWS.
+.. *AWS credentials*: Select or add credentials that will give Workload Factory the permissions necessary to create your FSx for ONTAP file system directly. You can also select the CloudFormation code from Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 
 .. *File system name*: Enter the name that you want to use for this FSx for ONTAP file system.
 
@@ -42,7 +42,7 @@ You can use the Quick create or Advanced create option. Advanced create offers a
 .. *Region & VPC*: Select the region and the VPC where the FSx for ONTAP file system will be deployed.
 .. *Security group* (Advanced create only): When using the *Advanced create* option, you can select the default security group for the FSx for ONTAP VPC so that all traffic can access the FSx for ONTAP file system. You can either create a new security group or select an existing one.
 +
-If you enable the *Adjust security group configuration to EVS NFS datastores* option, workload factory configures the security group according to the settings for EVS NFS datastores.
+If you enable the *Adjust security group configuration to EVS NFS datastores* option, Workload Factory configures the security group according to the settings for EVS NFS datastores.
 +
 You can add an inbound rule to the security group that restricts what other AWS services can access the FSx for ONTAP file system. This will reduce the number of services that are open. These are the minimum ports and protocols:
 +
@@ -74,7 +74,7 @@ You should select the same availability zone as where your VMware SDDC is deploy
 . In the "EVS Cluster attachment" section, enter the following information:
 
 +
-.. *Datastore mount options*: Optionally, enable the *Mount datastores to EVS cluster* option to automatically connect the datastores to the Amazon EVS cluster. This option also causes workload factory to configure VMware ESXi host settings so that they match ONTAP best practice recommendations. Before you deploy the file system, you can review the plan details in the *Summary* section to see the settings that were changed.
+.. *Datastore mount options*: Optionally, enable the *Mount datastores to EVS cluster* option to automatically connect the datastores to the Amazon EVS cluster. This option also causes Workload Factory to configure VMware ESXi host settings so that they match ONTAP best practice recommendations. Before you deploy the file system, you can review the plan details in the *Summary* section to see the settings that were changed.
 .. *EVS Cluster vSphere console details*: Enter the IP address or FQDN of the VMware vCenter server that should connect to Amazon EVS.
 .. *vSphere administrator credentials secret ARN*: Choose the secret ARN for the vSphere administrator credentials. These credentials are used to mount datastores and configure recommended VMware settings.
 +

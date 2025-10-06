@@ -1,49 +1,49 @@
 ---
 sidebar: sidebar
 permalink: learn-about-vmware-workloads.html
-keywords: overview, concepts, features, use case, workloads, how workload factory works
-summary: BlueXP workload factory for VMware provides tools to move your data from on-premises systems to either VMware Cloud on AWS (VMC) or Amazon EC2. 
+keywords: overview, concepts, features, use case, workloads, how Workload Factory works
+summary: NetApp Workload Factory for VMware provides tools to move your data from on-premises systems to Amazon EVS, VMware Cloud on AWS (VMC), or Amazon EC2. 
 ---
 
-= Learn about BlueXP workload factory for VMware 
+= Learn about NetApp Workload Factory for VMware 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory for VMware provides tools to move your data from on-premises systems to either VMware Cloud on AWS (VMC) or Amazon EC2.
+NetApp Workload Factory for VMware provides tools to move your data from on-premises systems to Amazon Elastic VMware Service (EVS), VMware Cloud on AWS (VMC) or Amazon EC2.
 
-== What is BlueXP workload factory for VMware?
+== What is NetApp Workload Factory for VMware?
 
-BlueXP workload factory for VMware provides a migration advisor that enables you to analyze your current virtual machine configurations in on-premises vSphere environments. The migration advisor then generates a plan to deploy recommended VM layouts to Amazon EC2 or VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores. 
+NetApp Workload Factory for VMware provides a planning center and migration advisors that enable you to analyze your current virtual machine configurations in on-premises vSphere environments.  The migration advisors then generate a plan to deploy recommended VM layouts to Amazon EVS, Amazon EC2, or VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores. The planning center, acting as the Workload Factory for VMware dashboard, enables you to manage saved VM inventory datasets, and saved migration plans and provision any of the migration plans that you have saved.
 
-Amazon FSx for NetApp ONTAP is an external NFS datastore built on NetApp's ONTAP file system that can be attached to Amazon EC2 instances or VMware Cloud on AWS vSphere clusters. There is no need to add more hosts to increase available storage; instead, just use FSx for ONTAP volumes as external datastores to complement vSAN datastores. This provides you with a flexible, high-performance, virtualized storage infrastructure that scales independently of compute resources.
+Amazon FSx for NetApp ONTAP is an external NFS datastore built on NetApp's ONTAP file system that can be attached to Amazon EVS or Amazon EC2 instances or VMware Cloud on AWS vSphere clusters. There is no need to add more hosts to increase available storage; instead, just use FSx for ONTAP volumes as external datastores to complement vSAN datastores. This provides you with a flexible, high-performance, virtualized storage infrastructure that scales independently of compute resources.
 
-image:diagram-vmware-fsx-overview.png[A diagram showing the architecture.]
+//image:diagram-vmware-fsx-overview.png[A diagram showing the architecture.]
 
-For more information about workload factory, refer to the https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[workload factory overview^].
+For more information about Workload Factory, refer to the https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[Workload Factory overview^].
 
-== How the VMware migration advisor works
+== How the VMware migration advisors work
 
-The migration advisor can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to either Amazon EC2 or VMware Cloud datastores, which includes supplemental NFS datastores on an FSx for ONTAP file system.
+The migration advisors can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to Amazon EVS, Amazon EC2, or VMware Cloud datastores, which includes supplemental NFS datastores on an FSx for ONTAP file system.
 
-image:diagram-vmware-fsx-old-new.png[A diagram showing an example old architecture and new architecture after migration.]
+//image:diagram-vmware-fsx-old-new.png[A diagram showing an example old architecture and new architecture after migration.]
 
 Note that you can attach up to four (4) FSx for ONTAP volumes to a single vSphere cluster on VMware Cloud on AWS.
 // How many FSx volumes can you attach to an EC2 instance?
 
-== What you can do with the migration advisor
+== What you can do with the migration advisors
 
-The migration advisor provides the following functionality:
+The migration advisors provide the following functionality:
 
 * Analyze current on-premises VM configurations
-* Determine which VMs to migrate to Amazon EC2 or VMware Cloud on AWS
+* Determine which VMs to migrate to Amazon EC2, Amazon EVS, or VMware Cloud on AWS
 * Identify the space required on FSx for ONTAP volumes to be used as VM external datastores
 * Review resulting report to understand the deployment steps
 * Perform the actual deployment
 
-The migration advisor supports configuration planning for a single Amazon EC2 instance or VMware Cloud on AWS cluster connected to a single FSx for ONTAP file system.
+The migration advisor supports configuration planning for a single Amazon EVS or Amazon EC2 instance or VMware Cloud on AWS cluster connected to a single FSx for ONTAP file system.
 
-== Benefits of using the migration advisor
+== Benefits of using the migration advisors
 
 Transitioning parts of your current infrastructure to Amazon EC2 or VMware Cloud on AWS using Amazon FSx for ONTAP as external NFS datastores provides the following benefits: 
 
@@ -60,10 +60,20 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_incl
 
 == Cost
 
-There is no cost for using the VMware migration advisor.
+There is no cost for using Workload Factory for VMware.
 
-You'll need to pay for AWS resources that you deploy based on the recommendations from the migration advisor.
+You'll need to pay for AWS resources that you deploy based on the recommendations from the migration advisors.
 
 == Licensing
 
-No special licenses are needed from NetApp to use the migration advisor.
+No special licenses are needed from NetApp to use Workload Factory for VMware.
+
+== Regions
+Workload Factory is supported in all commercial regions where FSx for ONTAP is supported. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
+ 
+The following AWS regions aren't supported:
+ 
+* China regions
+* GovCloud (US) regions
+* Secret Cloud
+* Top Secret Cloud

@@ -1,6 +1,6 @@
 === Improved migration advisor support for Amazon Elastic VMWare Service
 
-The Amazon Elastic VMware Service migration advisor now supports automatic deployment and mounting of your Amazon FSx for NetApp ONTAP filesystem. This enables you to begin deploying your VMs on FSx for ONTAP filesytems when migration to the Amazon EVS environment is complete. 
+NetApp Workload Factory now supports automatic deployment and mounting of your Amazon FSx for NetApp ONTAP filesystem. This enables you to begin deploying your VMs on FSx for ONTAP filesystems when migration to the Amazon EVS environment is complete. 
 
 https://docs.netapp.com/us-en/workload-vmware/launch-migration-advisor-evs-manual.html[Create a deployment plan for Amazon EVS using the migration advisor]
 

@@ -2,10 +2,16 @@
  
 BlueXP has been renamed and redesigned to better reflect the role it has in managing your data infrastructure. As a result, BlueXP workload factory has been renamed to NetApp Workload Factory.
 
-=== Introducing the VMware workloads Planning Center
+=== Introducing the VMware workloads planning center
 
 The VMware workloads planning center enables you to view and manage your VM inventory and migration plans from one place. You can upload and save multiple VM inventories from different environments, and start planning a migration to AWS EC2 or Amazon Elastic VMware service for any of them. You can also create and save AWS EC2 or EVS migration plans.
 
 https://docs.netapp.com/us-en/workload-vmware/explore-planning-center.html[Explore the VMware workloads planning center]
+
+=== Introducing migration advisor support for Amazon Elastic VMWare Service
+
+BlueXP Workload Factory for VMware now enables you to use the Amazon Elastic VMware Service migration advisor to rapidly migrate your on-premises VMware workloads to Amazon Elastic VMware Service. After you create a migration plan using the migration advisor, it is automatically saved in the list of migration plans in the planning center.
+
+https://docs.netapp.com/us-en/workload-vmware/launch-migration-advisor-evs.html[Create a deployment plan for Amazon EVS using the migration advisor]
 
 // Use absolute links in these files

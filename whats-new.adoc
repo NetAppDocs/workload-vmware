@@ -2,17 +2,21 @@
 sidebar: sidebar
 permalink: whats-new.html
 keywords: what's new, features, new, release notes, enhancements, fixes
-summary: "Learn what's new with the VMware migration advisor component of workload factory."
+summary: "Learn what's new with the VMware migration advisor component of Workload Factory."
 ---
 
-= What's new with BlueXP workload factory for VMware
+= What's new with NetApp Workload Factory for VMware
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new with the VMware migration advisor component of workload factory.
+Learn what's new with the VMware migration advisor component of Workload Factory.
 
 //tag::whats-new[]
+== 5 October 2025
+
+include::_whatsnew/2025-10-05.adoc[]
+
 == 3 August 2025
 
 include::_whatsnew/2025-08-03.adoc[]

@@ -15,18 +15,21 @@ After you verify that the recommended FSx for ONTAP file system (or multiple fil
 Depending on the policy and permissions that you added to your Workload Factory account, you can deploy the FSx for ONTAP file system completely using Workload Factory (using read/write mode). If you have fewer permissions (read-only mode), or no permissions (Basic mode), you'll need to use the CloudFormation template from the Codebox and deploy the FSx for ONTAP file system yourself in AWS.
 //After you configure the FSx for ONTAP file system, you can deploy it using the CloudFormation template from the Codebox.
 
-.Requirements for deployments to Amazon Elastic VMware Service
+== Requirements
 
 * You must have an Amazon Elastic VMware Service subscription.
 * You must have the necessary permissions to create an FSx for ONTAP file system in your AWS account.
 
-.Steps
+== Considerations
+* You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[See what these two options offer]. 
+
+* In the "Amazon Elastic WMware Service preferences" section, you can choose the EVS virtualization environment to connect to the external datastores. This auto-populates some of the fields with the best-practice options for the deployment. You can change these options as required.
+
+== Steps
 
 . At the bottom of the *Review plan* page, select *Deploy* and the Create an FSx for ONTAP file system page is displayed.
 +
 Most of the fields that define your FSx for ONTAP file system are completed based on the information you provided, but there are a few fields that you need to complete in this page.
-+
-You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[See what these two options offer]. 
 
 . In the "File system general configuration" section, enter the following information:
 
@@ -35,6 +38,17 @@ You can use the Quick create or Advanced create option. Advanced create offers a
 .. *File system name*: Enter the name that you want to use for this FSx for ONTAP file system.
 
 .. *Tags*: Optionally, you can add tags to categorize this FSx for ONTAP file system.
+
+. In the "Amazon Elastic WMware Service preferences" section, from the "Environment ID" list, select the EVS environment where the datastores will be connected. 
++
+This auto-populates the following fields:
+
++
+** *VPC*
+** *Availability Zone*
+** *Subnet*
+** In the *NFS Datastores access* section, if you have selected the *EVS host management only* option the *EVS host management (CIDR)* field is auto-populated.
+** In the *Datastore mount options* section, if you have chosen to mount datastores to the EVS cluster, the *EVS Cluster VMware vCenter address* and the *vSphere administrator credentials secret ARN* fields are auto-populated.
 
 . In the "Network & security" section, enter the following information:
 
@@ -88,6 +102,6 @@ Optionally, in the Codebox window you can select *Redirect to CloudFormation* to
 +
 In either case, you can you can monitor the creation progress in CloudFormation.
 
-.Result
+== Result
 
 The FSx for ONTAP file system is deployed. You can now use the AWS CloudFormation template in the Codebox to deploy the recommended VM configuration to your Amazon Elastic VMware Service environment.

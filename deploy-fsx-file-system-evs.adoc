@@ -23,7 +23,7 @@ Depending on the policy and permissions that you added to your Workload Factory 
 == Considerations
 * You can use the Quick create or Advanced create option. Advanced create offers a few additional storage parameters that you can customize. https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[See what these two options offer]. 
 
-* In the "Amazon Elastic WMware Service preferences" section, you can choose the EVS virtualization environment to connect to the external datastores. This auto-populates some of the fields with the best-practice options for the deployment. You can change these options as required.
+* In the "Amazon Elastic VMware Service preferences" section, you can choose the EVS virtualization environment to connect to the external datastores. This auto-populates some of the fields with the best-practice options for the deployment. You can change these options as required.
 
 == Steps
 
@@ -39,7 +39,7 @@ Most of the fields that define your FSx for ONTAP file system are completed base
 
 .. *Tags*: Optionally, you can add tags to categorize this FSx for ONTAP file system.
 
-. In the "Amazon Elastic WMware Service preferences" section, from the "Environment ID" list, select the EVS environment where the datastores will be connected. 
+. In the "Amazon Elastic VMware Service preferences" section, from the "Environment ID" list, select the EVS environment where the datastores will be connected. 
 +
 This auto-populates the following fields:
 
@@ -100,7 +100,7 @@ If Amazon EVS is not available in this region, or if your account doesn't have p
 +
 Optionally, in the Codebox window you can select *Redirect to CloudFormation* to create the file system and recommended VM configuration using a CloudFormation stack.
 +
-In either case, you can you can monitor the creation progress in CloudFormation.
+In either case, you can monitor the creation progress in CloudFormation.
 
 == Result
 

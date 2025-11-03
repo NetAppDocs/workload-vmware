@@ -46,7 +46,7 @@ When a dataset is no longer needed, you can delete it at any time.
 Use the migration center to create and manage migration plans.
 
 === Provision a migration plan
-You can select a migraton plan and provision it so that the VMs are migrated to the Amazon AWS environment of your choice.
+You can select a migration plan and provision it so that the VMs are migrated to the Amazon AWS environment of your choice.
 
 .Steps
 

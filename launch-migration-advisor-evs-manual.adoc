@@ -12,17 +12,14 @@ summary: Log in to the NetApp Workload Factory to access the VMware planning cen
 [.lead]
 Log in to the NetApp Workload Factory to access the VMware planning center. From there, you can manually create a deployment plan or migration plan for Amazon EVS that is customized for your needs.
 
-Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
-
-== Create a deployment plan by manually specifying environment requirements
-
 You can manually specify your requirements for virtual machines in Amazon Elastic VMware Service and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
 
-.Requirements
+== Requirements
 
+* You must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 * You must have an Amazon Elastic VMware Service subscription.
 
-.Steps
+== Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
@@ -42,7 +39,9 @@ Keep in mind the following VM migration performance requirements and recommendat
 . Review the plan. Expand each section to view the plan details.
 +
 By default, Workload Factory saves the migration plan to the planning center. You can deselect this option near the top of the page.
-. Optionally, when you are satisfied with the migration plan, you can download the plan details as a PDF document by selecting *Export plan (PDF)*.
+. Optionally, you can export the migration plan as a PDF or CSV file by selecting  *Manage plan* at the top right of the page and then selecting *Download a report (.pdf)* or *Download VM storage deployment (.csv)*.
++
+The .csv file creates a map of all the VMs included in the migration plan, along with their assigned storage volumes.
 . When you are ready to provision the deployment plan, select *Provision*.
 
 link:deploy-fsx-file-system-evs.html[Deploy the VMware workloads recommended FSx for ONTAP file system].

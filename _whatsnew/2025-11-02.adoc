@@ -1,0 +1,24 @@
+=== Introducing the Amazon Elastic VMware Service preferences in the FSx for ONTAP file system deployment wizard
+
+When you deploy an FSx for ONTAP file system to be used as external NFS datastores for Amazon Elastic VMware Service, you can now select the EVS environment where the datastores will be connected. This auto-populates several fields in the deployment wizard to simplify the deployment process.
+
+https://docs.netapp.com/us-en/workload-vmware/deploy-fsx-file-system-evs.html[Deploy the recommended FSx for ONTAP file system]
+
+=== Permissions changes for VMware workloads
+ 
+VMware workloads provides more clarity about the permissions it requires for specific actions and granularity for selecting only the permissions you need. When you add credentials, you'll have two permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permission policies as follows:
+ 
+* _View, planning, and analysis_: View the inventory of EVS virtualization environments, get the well-architected analysis for your systems, and explore savings.
+* _Datastore deployment and connectivity_: Deploy recommended VM layouts to Amazon EVS, Amazon EC2, or VMware Cloud on AWS vSphere clusters and use customized Amazon FSx for NetApp ONTAP file systems as external datastores.
+ 
+When adding credentials, you can select one or more of these permission policies based on the level of access you want to provide to VMware workloads.
+ 
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Workload Factory permissions reference^]
+
+=== Amazon EC2 migration advisor improvements
+
+This release of NetApp Workload Factory for VMware features several improvements to the migration advisor experience:
+
+* *Save or download a migration plan*: You can now save or download a migration plan as either a PDF or CSV file. When you save a migration plan, the plan is saved with your Workload Factory account.
+
+// Use absolute links in these files

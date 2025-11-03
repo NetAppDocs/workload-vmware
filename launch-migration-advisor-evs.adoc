@@ -12,17 +12,14 @@ summary: From the VMware planning center, you can launch the Amazon EVS migratio
 [.lead]
 From the VMware planning center, you can launch the Amazon EVS migration advisor to help create a migration plan that is customized for your needs.
 
-Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
-
-== Create a deployment plan using the migration advisor
-
 You can create a deployment plan to migrate virtual machines to Amazon Elastic VMware Service and use customized Amazon FSx for NetApp ONTAP file systems as external datastores. The options in the migration advisor might differ depending on the tool used to collect the VM inventory data.
 
-.Requirements
+== Requirements
 
+* You must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 * You must have an Amazon Elastic VMware Service subscription.
 
-.Steps
+== Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
@@ -72,7 +69,7 @@ In the VM list, you can select which types of VM information to display as colum
 [discrete]
 ===== Design
 
-. On the *ClassReview instance storage assignment* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
+* On the *ClassReview instance storage assignment* page, review the VM information, volume classification rules, volume assignments, and list of volumes that will be migrated as part of deployment, and then select *Next*.
 
 
 [discrete]
@@ -83,6 +80,9 @@ In the VM list, you can select which types of VM information to display as colum
 The top of the page estimates the monthly savings for FSx for ONTAP file systems and EBS volumes. You can expand each section to view details for the suggested filesystem configuration, estimated savings breakdown, assumptions, and technical disclaimers.
 +
 The migration plan is automatically saved in the list of plans in the planning center by default.
+. Optionally, you can export the migration plan as a PDF or CSV file by selecting  *Manage plan* at the top right of the page and then selecting *Download a report (.pdf)* or *Download VM storage deployment (.csv)*.
++
+The .csv file creates a map of all the VMs included in the migration plan, along with their assigned storage volumes.
 . When you are ready to proceed with the plan, select *Provision* to begin deploying the recommended Amazon FSx for NetApp ONTAP file system.
 
 link:deploy-fsx-file-system-evs.html[Deploy the VMware workloads recommended FSx for ONTAP file system].

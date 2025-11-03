@@ -46,7 +46,7 @@ When a dataset is no longer needed, you can delete it at any time.
 Use the migration center to create and manage migration plans.
 
 === Provision a migration plan
-You can select a migraton plan and provision it so that the VMs are migrated to the Amazon AWS environment of your choice.
+You can select a migration plan and provision it so that the VMs are migrated to the Amazon AWS environment of your choice.
 
 .Steps
 
@@ -71,16 +71,16 @@ If you need to change comment details for a migration plan, edit the comment fro
 . Select the Actions menu (...) for the migration plan you want to edit, and select *Edit comment*.
 . Enter a comment and select *Save*.
 
-=== Create a PDF report of a migration plan
-Create a PDF report of the details of a migration plan.
+=== Create a PDF or CSV report of a migration plan
+Create a PDF or CSV report of the details of a migration plan.
 
 .Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* .
-. Select the Actions menu (...) for the migration plan for which to create a PDF report, and select *Create report*.
-. Enter a name for the report PDF and select *Save*.
+. Select *Migration plans*.
+. Select the Actions menu (...) for the migration plan for which to create a PDF or CSV report, and select *Download plan (PDF)* or *Download VM report (CSV)*.
+. Enter a name for the report and select *Save*.
 
 === Delete a migration plan
 When a migration plan is no longer needed, you can delete it at any time.

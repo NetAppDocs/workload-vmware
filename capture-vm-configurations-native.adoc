@@ -23,11 +23,11 @@ You can use the Migration advisor VM data collector script, RVTools, or NetApp D
 --
 RVTools is a Windows application that interacts with VCenter and ESX server (5.x to 8.0) to capture information about your VMware virtual environments. It gathers information about VMs, CPU, memory, disks, clusters, ESX hosts, datastores, and more. You can export this information to an xlsx file to use with the migration advisor.
 
-https://www.robware.net/home[Learn more about RVTools^]
+https://www.dell.com/en-us/shop/vmware/sl/rvtools[Learn more about RVTools^]
 
 .Steps
 
-. Download and install RVTools 4.4.2 or greater from https://www.robware.net/download[RVTools website^]
+. Download and install RVTools 4.4.2 or greater from https://www.dell.com/en-us/shop/vmware/sl/rvtools[RVTools website^]
 
 . Launch RVTools and log in to the target VCenter Server.
 +
@@ -35,7 +35,7 @@ This will capture information about that VCenter Server.
 
 . Export your VMware information to an xlsx or xls file. 
 +
-See the chapter on "commandline parameters" in the https://resources.robware.net/resources/prod/RVTools.pdf[RVTools documentation^] for details.
+See the chapter on "commandline parameters" in the https://www.dell.com/en-us/shop/vmware/sl/rvtools[RVTools documentation^] for details.
 
 .Result
 

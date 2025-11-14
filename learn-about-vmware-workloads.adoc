@@ -18,15 +18,11 @@ NetApp Workload Factory for VMware provides a planning center and migration advi
 
 Amazon FSx for NetApp ONTAP is an external NFS datastore built on NetApp's ONTAP file system that can be attached to Amazon EVS or Amazon EC2 instances or VMware Cloud on AWS vSphere clusters. There is no need to add more hosts to increase available storage; instead, just use FSx for ONTAP volumes as external datastores to complement vSAN datastores. This provides you with a flexible, high-performance, virtualized storage infrastructure that scales independently of compute resources.
 
-//image:diagram-vmware-fsx-overview.png[A diagram showing the architecture.]
-
 For more information about Workload Factory, refer to the https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html[Workload Factory overview^].
 
 == How the VMware migration advisors work
 
 The migration advisors can help you move on-premises virtual machines (VMs) and their data, running on any VMware supported datastores, to Amazon EVS, Amazon EC2, or VMware Cloud datastores, which includes supplemental NFS datastores on an FSx for ONTAP file system.
-
-//image:diagram-vmware-fsx-old-new.png[A diagram showing an example old architecture and new architecture after migration.]
 
 Note that you can attach up to four (4) FSx for ONTAP volumes to a single vSphere cluster on VMware Cloud on AWS.
 // How many FSx volumes can you attach to an EC2 instance?

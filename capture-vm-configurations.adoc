@@ -43,8 +43,6 @@ Note that if you plan to capture long-term statistics from your VMs (daily stati
 . From the VMware workloads tile, select *Assess and plan* and then select *Migration to VMware Cloud on AWS*.
 +
 The VMware migration advisor main page is displayed.
-//+
-//image:screenshot-choose-method.png[A screenshot of the different methods you can use to collect your current VM configuration information.]
 
 . Select *Create a new deployment plan*, select the option for *Use the migration advisor VMware data collector*, and select *Next*.
 +

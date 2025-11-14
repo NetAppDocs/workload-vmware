@@ -12,10 +12,7 @@ summary: Log in to the NetApp Workload Factory to access the VMware migration ad
 [.lead]
 Log in to the NetApp Workload Factory to access the VMware migration advisor. You'll follow the steps in the wizard to create a deployment plan or migration plan that is customized for your needs.
 
-When migrating to VMware Cloud, you can use the migration advisor to create a deployment plan for the following scenarios:
-
-* <<Create a deployment plan based on an on-premises vSphere environment,To migrate your current on-premises vSphere environment to VMWare cloud.>>
-* <<Create a deployment plan based on an existing plan,To deploy a system in the cloud based on an existing deployment plan that has similar requirements.>>
+When migrating to VMware Cloud, you can use the migration advisor to to migrate your current on-premises vSphere environment to VMWare cloud.
 
 Note that you must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here].
 

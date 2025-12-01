@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: calculate-evs-savings.html
-keywords: vm workloads, deploy fsx, deploy storage for vms, evs, savings, calculate, tco
+keywords: vm workloads, deploy fsx, deploy storage for vms, evs, savings, calculate, tco, regions
 summary: Calculate how much you can save by using Amazon EVS with FSx for ONTAP.
 ---
 
@@ -25,12 +25,13 @@ NOTE: Before proceeding, review the disclaimer at the bottom of the savings calc
 
 . From the VMware workloads tile, select *Explore savings* and then *Amazon Elastic VMware Service (EVS)*. The savings calculator is displayed.
 +
-The *Environment preferences* pane provides sliders that you can adjust depending on your environment's needs.
+In the *Environment preferences* pane, you can select your EVS deployment region and adjust TCO and savings predictions accordingly. 
+. From the *Region* drop-down list, select the EVS deployment region to calculate savings.
 . Adjust the following sliders as needed to see real-time savings calculations for the values that you choose. If using a keyboard, you can make small adjustments using the arrow keys:
-.. *Required physical CPU (count)*
-.. *Required physical memory (GiB)*
-.. *Required VM storage (TiB)*
-.. *EVS billing plan*
+* *Required physical CPU (count)*
+* *Required physical memory (GiB)*
+* *Required VM storage (TiB)*
+. Under *EVS billing plan*, select the plan you are on.
 . Do one of the following:
-* To use the migration advisor to link:launch-migration-advisor-evs-manual.html[create a deployment plan] for an Amazon EVS environment, select *Create a detailed assessment*.
+* To use the migration advisor to link:launch-migration-advisor-evs-manual.html[create a deployment plan] for an Amazon EVS environment, select *Plan EVS migration*.
 * Select *Close* to close the TCO calculator.

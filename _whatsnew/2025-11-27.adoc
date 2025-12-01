@@ -1,0 +1,9 @@
+=== Calculate cost savings of migrating to Amazon Elastic VMware Service for specific regions
+
+You can now explore the value of different deployment options for your cloud migration, optimize the efforts invested in solution evaluation, and deep dive into solutions that have the potential to deliver value and savings in the cloud.
+
+You can also review the vCPU core savings that can be achieved by using FSx for ONTAP for an EVS deployment.
+
+https://docs.netapp.com/us-en/workload-vmware/calculate-evs-savings.html[Explore savings for Amazon Elastic VMware Service with NetApp Workload Factory]
+
+// Use absolute links in these files

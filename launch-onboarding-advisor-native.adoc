@@ -28,7 +28,7 @@ You can migrate your current virtual machine configurations in on-premises vSphe
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 
-. From the VMware workloads tile, select *VMware planning center*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*.
 +
 The planning center is displayed.
 . If you have not yet uploaded a VM inventory, select *Upload VM inventory* and follow the instructions in link:upload-vm-inventory.html[Upload VM inventory data].

@@ -27,7 +27,9 @@ You can change the name of a saved dataset.
 .Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
 . Select the Actions menu (...) for the dataset you want to rename, and select *Rename*.
 . Enter a new name for the dataset and select *Save*.
 
@@ -38,7 +40,9 @@ When a dataset is no longer needed, you can delete it at any time.
 .Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
 . Select the Actions menu (...) for the dataset you want to delete, and select *Delete*.
 . Select *Delete* to confirm the action.
 
@@ -51,8 +55,10 @@ You can select a migration plan and provision it so that the VMs are migrated to
 .Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* menu.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
+. Select *Migration plans*.
 . Select the Actions menu (...) for the migration plan you want to provision, and select *Provision*.
 . Depending on the migration plan, refer to the instructions to deploy the file system:
 +
@@ -66,8 +72,10 @@ If you need to change comment details for a migration plan, edit the comment fro
 
 .Steps
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* .
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
+. Select *Migration plans*.
 . Select the Actions menu (...) for the migration plan you want to edit, and select *Edit comment*.
 . Enter a comment and select *Save*.
 
@@ -77,7 +85,9 @@ Create a PDF or CSV report of the details of a migration plan.
 .Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
 . Select *Migration plans*.
 . Select the Actions menu (...) for the migration plan for which to create a PDF or CSV report, and select *Download plan (PDF)* or *Download VM report (CSV)*.
 . Enter a name for the report and select *Save*.
@@ -88,7 +98,9 @@ When a migration plan is no longer needed, you can delete it at any time.
 .Steps
 
 . Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. From the VMware workloads tile, select *VMware planning center*. The planning center appears.
-. Select the *Migration plans* .
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
+. Select *Migration plans*.
 . Select the Actions menu (...) for the migration plan you want to delete, and select *Delete*.
 . Confirm the action by selecting *Delete*.

@@ -1,0 +1,182 @@
+---
+sidebar: sidebar
+permalink: view-evs-well-architected.html
+keywords: evs, well-architected, wad, best practices, recommendations, security, resiliency
+summary: View the Well-Architected Dashboard to assess your Amazon Elastic VMware Service environment against AWS and NetApp best practices and get detailed remediation recommendations.
+---
+
+= View Well-Architected Dashboard for EVS environments
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+The Well-Architected Dashboard provides automated analysis of your Amazon Elastic VMware Service (EVS) environments to ensure alignment with AWS and NetApp best practices. The dashboard identifies configuration issues and provides detailed remediation guidance to help you maintain optimal operations, security, and cost efficiency.
+
+== Overview
+
+The Well-Architected Dashboard performs automatic daily scans of all discovered EVS environments using AWS APIs. These scans analyze your EVS configuration and identify potential issues that could impact availability, resiliency, security, or cost optimization.
+
+Key features include:
+
+* *Automatic daily scans*: All discovered EVS environments are automatically scanned once per day to ensure insights remain current.
+* *AWS API-based scanning*: Scans use only AWS APIs and do not require vSphere credentials or connectivity to your vCenter.
+* *Detailed remediation guidance*: Each identified issue includes a clear explanation, severity level, and step-by-step remediation procedures.
+* *View-only insights*: The MVP release provides detailed findings and recommendations without automated remediation options.
+
+.Before you begin
+
+* You must have https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[added AWS credentials^] with _View, planning, and analysis_ permissions for VMware workloads.
+* You must have at least one discovered Amazon Elastic VMware Service environment in your AWS account.
+
+== Access the Well-Architected Dashboard
+
+.Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
+
+. Navigate to your EVS environment details view.
+
+. Select the *Well architected status* tab.
++
+The Well-Architected Dashboard displays with the following elements:
+
+* *Automatic daily analysis timestamp*: Shows when the last scan was performed for this environment.
+* *Well-architected subcategories*: Organizes findings by configuration area.
+* *Topic cards*: Displays individual well-architected topics with their status and details.
+
+== Understanding Well-Architected insights
+
+The Well-Architected Dashboard organizes findings into categories, subcategories, and topics:
+
+* *Category*: The broad area of focus (for example, EVS Environment)
+* *Subcategory*: A specific configuration area within the category (for example, EVS environment configuration)
+* *Topic*: A specific best practice check within the subcategory (for example, Cluster node management)
+
+Each topic card displays:
+
+* *Subcategory*: The configuration area being assessed
+* *Status*: Either "Optimized" (no issues found) or "Not optimized" (issues detected)
+* *Severity*: The importance level of the finding (for example, Warning)
+* *Resource type*: The type of AWS resource being assessed
+* *Impacted resources count*: The number of resources affected by the issue
+* *Tags*: Labels indicating the areas of impact (such as Availability, Resiliency, Security)
+
+== View Well-Architected topics
+
+=== EVS environment configuration
+
+This subcategory includes topics related to the configuration of your EVS environment and its resources.
+
+==== Cluster node management
+
+This topic assesses whether your EVS cluster nodes have appropriate EC2 stop and termination protection configured.
+
+*Status*:
+
+* *Optimized*: All EVS nodes have both EC2 stop protection and termination protection configured.
+* *Not optimized*: At least one EVS node does not have EC2 stop protection or termination protection configured.
+
+*Why this matters*:
+
+EVS ESXi nodes should be managed exclusively using vCenter or other VMware-level management tools. Without proper EC2-level protections, nodes could be accidentally stopped or terminated from the EC2 console, which can lead to virtual machine data unavailability or data loss.
+
+*To view detailed findings*:
+
+. In the Well-Architected Dashboard, locate the *Cluster node management* topic card under *EVS environment configuration*.
+
+. Select *View* to open the findings dialog.
+
+The dialog displays:
+
+* *Findings summary*: Detailed explanation of the issue discovered in your environment
+* *Resource grid*: A table showing all EVS nodes and their protection status, including:
+** Node identifier
+** EC2 stop protection status
+** EC2 termination protection status
+* *Action required*: Step-by-step remediation procedures
+* *Recommendation*: Best practice guidance
+
+*Remediation*:
+
+To remediate this issue, enable stop and termination protection for your EVS nodes:
+
+. Follow the procedure specified in https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html[AWS documentation for enabling stop protection^].
+
+. Follow the procedure specified in https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingDisableAPITermination.html[AWS documentation for enabling termination protection^].
+
+==== EVS environment resiliency
+
+This topic assesses whether your EVS cluster nodes are properly distributed across partition placement groups.
+
+*Status*:
+
+* *Optimized*: All nodes are members of a single partition placement group configured with 4 or more partitions.
+* *Not optimized* if any of the following is true:
+** Nodes are members of more than one placement group
+** At least one node is a member of a non-partitioned placement group
+** All nodes are members of a partitioned placement group with fewer than 4 partitions
+
+*Why this matters*:
+
+Proper partition placement ensures that your EVS cluster nodes are distributed across multiple fault-isolated hardware partitions within an AWS availability zone. Misalignment can result in significant loss of processing power or downtime if a partition fails.
+
+*To view detailed findings*:
+
+. In the Well-Architected Dashboard, locate the *EVS environment resiliency* topic card under *EVS environment configuration*.
+
+. Select *View* to open the findings dialog.
+
+The dialog displays:
+
+* *Findings summary*: Detailed explanation of the partitioning misalignment
+* *Resource grid*: A table showing EVS environment nodes with:
+** Node identifier
+** Placement group name
+** Placement group type
+** Placement group partition count
+* *Action required*: Step-by-step remediation procedures
+* *Recommendation*: Best practice guidance
+
+*Remediation*:
+
+To remediate partition placement issues:
+
+. When adding new nodes to the EVS environment, provision the new nodes using a partitioned placement group with at least 4 partitions.
+
+. If cluster nodes are being replaced, ensure that the replacement nodes are provisioned using a partitioned placement group with at least 4 partitions.
+
+. Try to consolidate all EVS nodes to a single placement group aligned with the above recommendations.
+
+*Best practice recommendation*:
+
+When creating or expanding an EVS environment, provision all cluster nodes using a single partitioned placement group configured with 4 partitions or higher.
+
+== Scan frequency and currency
+
+Well-Architected scans are performed automatically for all discovered EVS environments. Key details about scan scheduling:
+
+* Scans occur once per day for each EVS environment
+* Scans for different environments may occur at different times
+* If a scan fails for one environment, scans for other environments in the same account will still be attempted
+* The timestamp card on the Well-Architected Dashboard shows when the last scan was completed for the current environment
+
+NOTE: The MVP release does not support on-demand execution of well-architected scans. All scans are performed automatically on the daily schedule.
+
+== What's next
+
+After reviewing your Well-Architected insights and implementing recommended changes:
+
+* Monitor the Well-Architected Dashboard daily to stay informed about your environment's status
+* Follow the remediation procedures for any "Not optimized" findings
+* Review AWS and NetApp documentation for additional best practices
+* Consider implementing the recommendations before expanding your EVS environment
+
+.Related links
+
+* https://docs.netapp.com/us-en/workload-vmware/launch-migration-advisor-evs.html[Create a deployment plan for Amazon EVS using the migration advisor]
+* https://docs.netapp.com/us-en/workload-vmware/deploy-fsx-file-system-evs.html[Deploy the recommended FSx for ONTAP file system]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html[AWS placement groups documentation^]

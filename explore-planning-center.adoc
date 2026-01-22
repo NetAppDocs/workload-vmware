@@ -46,6 +46,31 @@ The planning center is displayed.
 . Select the Actions menu (...) for the dataset you want to delete, and select *Delete*.
 . Select *Delete* to confirm the action.
 
+== View EVS environment Well-Architected insights
+
+For discovered EVS virtualization environments, Workload Factory automatically performs daily well-architected scans to identify potential configuration issues and provide remediation guidance.
+
+.Before you begin
+
+* You must have https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[added AWS credentials^] with _View, planning, and analysis_ permissions for VMware workloads.
+* You must have at least one discovered Amazon Elastic VMware Service environment in your AWS account.
+
+.Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
+. Navigate to your EVS environment details.
+. Select the *Well architected status* tab to view insights and recommendations.
++
+The Well-Architected Dashboard displays the last scan timestamp and any configuration issues found.
+. To view detailed findings for a topic, select *View* on the topic card.
++
+A dialog displays the findings summary, impacted resources grid, action required, and recommendations.
+
+For more information, refer to link:view-evs-well-architected.html[View Well-Architected Dashboard for EVS environments].
+
 == Manage migration plans
 Use the migration center to create and manage migration plans.
 

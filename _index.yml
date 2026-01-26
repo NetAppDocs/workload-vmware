@@ -22,7 +22,7 @@ indexpage:
       #    url: capture-vm-configurations-native.html
         - title: Explore savings
           url: calculate-evs-savings.html
-        - title: View Well-Architected Dashboard for EVS
+        - title: View Well-architected dashboard for EVS
           url: view-evs-well-architected.html
         - title: Manually create a deployment plan
           url: launch-migration-advisor-evs-manual.html

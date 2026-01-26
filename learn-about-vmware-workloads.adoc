@@ -39,14 +39,6 @@ The migration advisors provide the following functionality:
 
 The migration advisor supports configuration planning for a single Amazon EVS or Amazon EC2 instance or VMware Cloud on AWS cluster connected to a single FSx for ONTAP file system.
 
-== Well-Architected Dashboard for EVS environments
-
-The Well-Architected Dashboard provides automated daily analysis of your Amazon Elastic VMware Service (EVS) environments to ensure alignment with AWS and NetApp best practices. The dashboard identifies configuration issues and provides detailed remediation guidance to help you maintain optimal operations, security, and cost efficiency.
-
-The dashboard performs automatic scans using AWS APIs without requiring vSphere credentials, and presents findings organized by category, subcategory, and topic. Each finding includes severity levels, impacted resource details, and step-by-step remediation procedures.
-
-link:view-evs-well-architected.html[Learn more about the Well-Architected Dashboard for EVS environments].
-
 == Benefits of using the migration advisors
 
 Transitioning parts of your current infrastructure to Amazon EC2 or VMware Cloud on AWS using Amazon FSx for ONTAP as external NFS datastores provides the following benefits: 
@@ -61,6 +53,14 @@ Transitioning parts of your current infrastructure to Amazon EC2 or VMware Cloud
 
 //Cross-repo include for Tools section
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
+
+== Well-architected dashboard for EVS environments
+
+The Well-architected dashboard provides automated daily analysis of your Amazon Elastic VMware Service (EVS) environments to ensure alignment with AWS and NetApp best practices. The dashboard identifies configuration issues and provides detailed remediation guidance to help you maintain optimal operations, security, and cost efficiency.
+
+Automatic scans are performed using AWS APIs—no vSphere credentials are required. Findings are organized by configuration area, with each finding including status, severity levels, impacted resource details, and step-by-step remediation procedures. 
+
+link:view-evs-well-architected.html[Learn more about the Well-architected dashboard for EVS environments].
 
 == Cost
 

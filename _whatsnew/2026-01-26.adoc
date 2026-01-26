@@ -1,8 +1,8 @@
-=== Well-Architected Dashboard for Amazon Elastic VMware Service
+=== Well-architected dashboard for Amazon Elastic VMware Service
 
-Workload Factory now provides automated well-architected analysis for your Amazon Elastic VMware Service (EVS) environments. The Well-Architected Dashboard performs daily scans to identify configuration misalignments and provides detailed remediation recommendations to help you maintain optimal operations, security, and cost efficiency.
+Workload Factory now provides automated well-architected analysis for your Amazon Elastic VMware Service (EVS) environments. The Well-architected dashboard performs daily scans to identify configuration misalignments and provides detailed remediation recommendations to help you maintain optimal operations, security, and cost efficiency.
 
-The Well-Architected Dashboard performs automatic scans using AWS APIs without requiring vSphere credentials or connectivity to your vCenter. All discovered EVS environments are scanned once per day, and you can view the results in the new *Well architected status* tab within your EVS environment details.
+The Well-architected dashboard performs automatic scans using AWS APIs without requiring vSphere credentials or connectivity to your vCenter. All discovered EVS environments are scanned once per day, and you can view the results in the new *Well-architected status* tab within your EVS environment details.
 
 The MVP release includes insights for:
 
@@ -12,6 +12,6 @@ The MVP release includes insights for:
 
 Each insight includes severity levels, detailed findings with impacted resource information, and step-by-step remediation procedures based on AWS best practices.
 
-https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html[View Well-Architected Dashboard for EVS environments]
+https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html[View Well-architected dashboard for EVS environments]
 
 // Use absolute links in these files

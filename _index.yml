@@ -22,8 +22,6 @@ indexpage:
       #    url: capture-vm-configurations-native.html
         - title: Explore savings
           url: calculate-evs-savings.html
-        - title: View Well-architected dashboard for EVS
-          url: view-evs-well-architected.html
         - title: Manually create a deployment plan
           url: launch-migration-advisor-evs-manual.html
         - title: Create a deployment plan using the migration advisor
@@ -50,6 +48,10 @@ indexpage:
           url: connect-sddc-to-fsx.html
         - title: Migrate your data to the new infrastructure
           url: migrate-data.html
+    - title: Administer and monitor
+      links:
+        - title: Implement well-architected file system configurations
+          url: view-evs-well-architected.html
     - title: Blogs & community
       links:
         - title: NetApp Console

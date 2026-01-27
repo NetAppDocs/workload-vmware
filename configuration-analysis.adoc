@@ -5,12 +5,12 @@ keywords: evs, well-architected, configuration analysis, best practices, recomme
 summary: Learn how Workload Factory analyzes Amazon Elastic VMware Service configurations to identify issues and provide best practice recommendations.
 ---
 
-= Configuration analysis for EVS file systems
+= Configuration analysis for EVS configurations in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Workload Factory analyzes Amazon Elastic VMware Service (EVS) configurations regularly to determine if there are any issues. When issues are found, Workload Factory shows you what the issues are and explains what needs to change to ensure your environment achieves peak performance, cost efficiency, and compliance with best practices.
+Workload Factory analyzes Amazon Elastic VMware Service (EVS) configurations regularly to identify misalignments with best practices. Use the results to improve performance, cost efficiency, and compliance.
 
 Key capabilities include:
 
@@ -21,16 +21,15 @@ Key capabilities include:
 
 == Well-architected status
 
-In the Workload Factory console, well-architected status is listed for all discovered EVS virtualization environments. Well-architected statuses are categorized as "Optimized" or "Not optimized". Selecting Inventory directs you to the Well-architected status tab within the environment where you can find all configurations for the environment.
+In the Workload Factory console, well-architected status is listed for all discovered EVS virtualization environments. Well-architected statuses are categorized as "Optimized" or "Not optimized". Selecting *Inventory* directs you to the Well-architected status tab within the environment where you can find all configurations for the environment.
 
-* *Configuration categories*
-+
-The environment configurations display labels indicating the areas of impact. The categories include:
-+
-** Availability: How accessible and operational the EVS configuration is expected to be.
-** Security: How well the EVS configuration protects data and controls access. An example configuration is EC2 stop and termination protection.
-** Resiliency: The ability of the EVS configuration to recover from failures or disruptions.
+== Configuration categories
+Workload Factory evaluates EVS configurations across multiple categories to ensure alignment with AWS and NetApp best practices. Each category focuses on specific aspects of your EVS environment:
+
+Availability:: How accessible and operational the EVS configuration is expected to be.
+Security:: How well the EVS configuration protects data and controls access (for example, EC2 stop and termination protection).
+Resiliency:: The ability of the EVS configuration to recover from failures or disruptions.
 
 .What's next
 
-link:view-evs-well-architected.html[Implement well-architected file system configurations]
+link:view-evs-well-architected.html[Implement well-architected configurations]

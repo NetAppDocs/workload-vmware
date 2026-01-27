@@ -64,4 +64,4 @@ link:deploy-fsx-file-system-evs.html[Learn how to deploy your new FSx for ONTAP 
 When your EVS environment is discovered, Workload Factory automatically performs daily well-architected scans to identify configuration issues and provide remediation recommendations.
 
 [role="quick-margin-para"]
-link:view-evs-well-architected.html[Learn how to implement well-architected file system configurations^].
+link:view-evs-well-architected.html[Learn how to implement well-architected configurations^].

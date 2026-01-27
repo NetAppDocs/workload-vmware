@@ -12,6 +12,6 @@ The release includes insights for:
 
 Each insight includes severity levels, detailed findings with impacted resource information, and step-by-step remediation procedures based on AWS best practices.
 
-link:view-evs-well-architected.html[View the Well-architected dashboard for EVS environments]
+link:view-evs-well-architected.html[Implement well-architected configurations]
 
 // Use absolute links in these files

@@ -68,9 +68,9 @@ sidebar:
             url: /migrate-data.html
     - title: Administer and monitor
       entries:
-        - title: Configuration analysis for EVS file systems
+        - title: Configuration analysis for EVS configurations
           url: /configuration-analysis.html
-        - title: Implement well-architected file system configurations
+        - title: Implement well-architected EVS configurations
           url: /view-evs-well-architected.html
     - title: Knowledge and support
       entries:

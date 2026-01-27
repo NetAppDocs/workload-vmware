@@ -50,6 +50,8 @@ indexpage:
           url: migrate-data.html
     - title: Administer and monitor
       links:
+        - title: Configuration analysis for EVS file systems
+          url: configuration-analysis.html
         - title: Implement well-architected file system configurations
           url: view-evs-well-architected.html
     - title: Blogs & community

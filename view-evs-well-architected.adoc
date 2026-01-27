@@ -10,7 +10,7 @@ summary: View the Well-architected dashboard to assess your Amazon Elastic VMwar
 :imagesdir: ./media/
 
 [.lead]
-The Well-architected status tab provides automated analysis of your Amazon Elastic VMware Service (EVS) environments to ensure alignment with AWS and NetApp best practices. You can identify configuration issues and receive detailed guidance on issue resolution to help you maintain optimal operations, security, and cost efficiency.
+Using configuration analysis insights and recommendations, leverage Workload Factory to implement best practices for your Amazon Elastic VMware Service (EVS) environments. You can easily review the well-architected status, learn about issues with your configurations, take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 == About this task
 
@@ -27,7 +27,7 @@ Key features include:
 
 The Well-architected tab displays the following:
 
-* *Configuation name*: The configuration area being assessed.
+* *Configuration name*: The configuration area being assessed.
 * *Tags*: Labels indicating the areas of impact (such as Availability, Resiliency, Security).
 * *Status*: Either "Optimized" (no issues found) or "Not optimized" (issues detected).
 * *Severity*: The importance level of the finding (for example, Warning).
@@ -71,7 +71,7 @@ The following elements are displayed:
 * *Automatic daily analysis timestamp*: Shows when the last scan was performed for this environment.
 * *Configurations*: Organizes findings by configuration area and displays their status and details.
 
-== View well-architected assesments
+== View well-architected assessments
 
 === Cluster node management
 

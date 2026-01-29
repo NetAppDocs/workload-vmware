@@ -5,7 +5,7 @@ keywords: evs, well-architected, configuration analysis, best practices, recomme
 summary: Learn how Workload Factory analyzes Amazon Elastic VMware Service configurations to identify issues and provide best practice recommendations.
 ---
 
-= Configuration analysis for EVS configurations in Workload Factory
+= Configuration analysis for EVS configurations
 :icons: font
 :imagesdir: ./media/
 

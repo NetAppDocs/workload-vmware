@@ -5,7 +5,7 @@ keywords: evs, well-architected, wad, best practices, recommendations, security,
 summary: Review well-architected status for EVS configurations in Workload Factory and follow remediation guidance based on AWS and NetApp best practices.
 ---
 
-= Implement well-architected EVS configurations in Workload Factory
+= Implement well-architected EVS configurations
 :icons: font
 :imagesdir: ./media/
 

@@ -57,3 +57,11 @@ Deploy the new FSx for ONTAP file system that will provide the datastores for yo
 
 [role="quick-margin-para"]
 link:deploy-fsx-file-system-evs.html[Learn how to deploy your new FSx for ONTAP file system].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Review well-architected insights for your EVS environment
+
+[role="quick-margin-para"]
+When your EVS environment is discovered, Workload Factory automatically performs daily well-architected scans to identify configuration issues and provide remediation recommendations.
+
+[role="quick-margin-para"]
+link:view-evs-well-architected.html[Learn how to implement well-architected configurations^].

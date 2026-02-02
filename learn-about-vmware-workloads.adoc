@@ -54,6 +54,13 @@ Transitioning parts of your current infrastructure to Amazon EC2 or VMware Cloud
 //Cross-repo include for Tools section
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
+== Well-architected analysis for EVS environments
+
+The Well-architected tab provides automated daily analysis of your Amazon Elastic VMware Service (EVS) environments to ensure alignment with AWS and NetApp best practices. The tab identifies configuration issues and provides detailed remediation guidance to help you maintain optimal operations, security, and cost efficiency.
+
+Automatic scans are performed using AWS APIs—no vSphere credentials are required. Findings are organized by configuration area, with each finding including status, severity levels, impacted resource details, and step-by-step remediation procedures. 
+
+link:view-evs-well-architected.html[Implement well-architected EVS configurations in Workload Factory].
 == Cost
 
 There is no cost for using Workload Factory for VMware.

@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: quick-start-gcve.html
+keywords: quick start, gcve, google cloud vmware engine, gcnv, google cloud netapp volumes
+summary: Get started with the VMware migration advisor to move your current infrastructure to Google Cloud VMware Engine using Google Cloud NetApp Volumes as external NFS datastores.
+---
+
+= Quick start for migrating to Google Cloud VMware Engine using the VMware workloads migration advisor
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Get started with the VMware migration advisor to move your current infrastructure to Google Cloud VMware Engine using Google Cloud NetApp Volumes as external NFS datastores.
+
+Before you get started, you should have an understanding of the https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[permissions for NetApp Workload Factory^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to Workload Factory
+
+[role="quick-margin-para"]
+You'll need to https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with Workload Factory^] and log in using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
+
+[role="quick-margin-para"]
+Choose the https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[permission policies] to meet your needs.
+
+[role="quick-margin-para"]
+If you choose not to grant permissions, you can start using Workload Factory for VMware to copy partially completed code samples.
+
+[role="quick-margin-para"]
+If you choose to grant permissions, you'll need to https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually] that includes providing a GCP service account with the necessary permissions for viewing and managing Google Cloud NetApp Volumes resources, VPC configuration, and Google Cloud VMware Engine datastore connectivity.
+
+[role="quick-margin-para"]
+https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to add credentials and permissions^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Upload VM inventory data
+
+[role="quick-margin-para"]
+You can use the planning center to upload inventory details about your current VM environment. Use the data collector script, RVTools, or NetApp Data Infrastructure Insights to capture your current VM configuration and upload the data to the planning center.
+
+[role="quick-margin-para"]
+link:upload-vm-inventory.html[Learn how to upload VM inventory data^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Create a deployment plan using the VMware migration advisor 
+
+[role="quick-margin-para"]
+Launch the VMware migration advisor and configure the VM environment you want to create on Google Cloud VMware Engine infrastructure using Google Cloud NetApp Volumes as external NFS datastores.
+
+[role="quick-margin-para"]
+link:launch-migration-advisor-gcve.html[Learn how to use the VMware migration advisor to create a deployment plan].
+
+////
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Deploy the recommended Google Cloud NetApp Volumes NFS datastores
+
+[role="quick-margin-para"]
+Deploy the new Google Cloud NetApp Volumes storage pools and volumes that will provide the external NFS datastores for your VMs in your Google Cloud VMware Engine environment.
+
+[role="quick-margin-para"]
+link:deploy-gcnv-datastores.html[Learn how to deploy your Google Cloud NetApp Volumes NFS datastores].
+////
+
+////
+.What's next
+
+After you deploy the Google Cloud NetApp Volumes datastores, you can migrate your VMs from your on-premises environment to your Google Cloud VMware Engine cluster and begin taking advantage of the cost savings and flexibility provided by decoupling storage from compute.
+////

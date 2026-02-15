@@ -26,6 +26,8 @@ sidebar:
           url: /quick-start-native.html
         - title: Quick start for migrating to VMware Cloud on AWS
           url: /quick-start.html
+        - title: Quick start for migrating to Google Cloud VMware Engine
+          url: /quick-start-gcve.html
         - title: Explore the VMware planning center
           url: /explore-planning-center.html
     - title: Use the VMware planning center
@@ -42,6 +44,12 @@ sidebar:
             url: /launch-migration-advisor-evs.html
           - title: Deploy the recommended FSx for ONTAP file system
             url: /deploy-fsx-file-system-evs.html
+        - title: Migrate to Google Cloud VMware Engine
+          entries:
+          - title: Create a deployment plan using the migration advisor
+            url: /launch-migration-advisor-gcve.html
+#          - title: Deploy Google Cloud NetApp Volumes NFS datastores
+#            url: /deploy-gcnv-datastores.html
         - title: Migrate to Amazon EC2
           entries:
 #          - title: Capture your current VM configurations

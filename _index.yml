@@ -28,6 +28,12 @@ indexpage:
           url: launch-migration-advisor-evs.html          
         - title: Deploy the recommended FSx for ONTAP file system
           url: deploy-fsx-file-system.html
+    - title: Migrate to Google Cloud VMware Engine
+      links:
+        - title: Create a deployment plan using the migration advisor
+          url: launch-migration-advisor-gcve.html
+#        - title: Deploy Google Cloud NetApp Volumes NFS datastores
+#          url: deploy-gcnv-datastores.html
     - title: Migrate to Amazon EC2
       links:
 #        - title: Capture your current VM configurations

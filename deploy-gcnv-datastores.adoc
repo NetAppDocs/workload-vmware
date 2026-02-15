@@ -1,0 +1,151 @@
+---
+sidebar: sidebar
+permalink: deploy-gcnv-datastores.html
+keywords: vm workloads, deploy gcnv, deploy storage for vms, gcve, google cloud vmware engine, google cloud netapp volumes
+summary: After you verify that the recommended Google Cloud NetApp Volumes storage pools and volumes meet your exact requirements, you can use Workload Factory to generate Terraform code to deploy the datastores in your Google Cloud environment.
+---
+
+= Deploy Google Cloud NetApp Volumes NFS datastores for Google Cloud VMware Engine
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+After you verify that the recommended Google Cloud NetApp Volumes storage pools and volumes meet your exact requirements, you can use Workload Factory to generate Terraform code to deploy the datastores in your Google Cloud environment.
+
+This feature provides Infrastructure-as-Code (IaC) templates that you can use to automate the deployment and configuration of Google Cloud NetApp Volumes storage pools, volumes, and optionally the connectivity to your Google Cloud VMware Engine environment.
+
+== Requirements
+
+* You must have created a Google Cloud VMware Engine migration plan using the migration advisor.
+* You must have a Google Cloud NetApp Volumes working environment configured in Workload Factory with appropriate permissions.
+* You must have a GCP service account with the necessary permissions to create and manage Google Cloud NetApp Volumes resources, VPC configuration, and (optionally) Google Cloud VMware Engine datastore connectivity.
+
+== Deploy Google Cloud NetApp Volumes datastores using Terraform
+
+.Steps
+
+. From the VMware planning center, select the Google Cloud VMware Engine migration plan you want to deploy.
+
+. Select the Actions menu (...) for the migration plan and select *Deploy*.
++
+The *Deploy and connect Google Cloud NetApp Volumes NFS datastores* page is displayed.
+
+. In the *General configuration* section, configure the Google Cloud NetApp Volumes working environment and labels:
+
+.. Expand the *Working environment* accordion.
++
+... Review the helper text: "Choose a Google Cloud NetApp Volumes working environment. Select a Google Cloud NetApp Volumes working environment to be used for the NFS datastore deployment. Ensure the selected environment has the necessary permissions to generate the automation Terraform code."
++
+... From the working environment dropdown, select the Google Cloud NetApp Volumes working environment you want to use for deployment.
++
+If no working environments are available, you'll be prompted to create one. Follow the link to the Canvas to create a new Google Cloud NetApp Volumes working environment.
++
+... The *Project name* field displays the GCP project associated with the selected working environment. This field is read-only.
++
+.. Expand the *Labels* accordion.
++
+... Optionally, define up to 50 key-value pair labels that will be assigned to the storage pools and volumes.
++
+Labels help you organize and identify your Google Cloud resources. Enter a key and value for each label, and select *Add label* to add more.
+
+. In the *Network & security* section, configure the network settings:
+
+.. Expand the *Location* accordion.
++
+... *Region*: The region is pre-populated from your migration plan and cannot be changed. This ensures the Google Cloud NetApp Volumes datastores are deployed in the same region as your planned Google Cloud VMware Engine environment.
++
+... *Primary zone*: Select the primary availability zone for your Google Cloud NetApp Volumes storage pool deployment. The first available zone in the region is selected by default.
++
+... *Replica zone*: Select the replica availability zone for regional availability. The first available zone that differs from the primary zone is selected by default.
++
+.. Expand the *VPC & Subnet* accordion.
++
+... *VPC*: Select the Virtual Private Cloud where the Google Cloud NetApp Volumes storage pools will be deployed. The first VPC retrieved from the project is selected by default.
++
+... *Subnet*: Select a regional subnet from the selected VPC. The subnet selection updates based on your VPC selection. The first regional subnet retrieved from the VPC is selected by default.
+
+. Optionally, in the *Google Cloud VMware Engine connectivity* section, configure automatic connectivity to your Google Cloud VMware Engine environment:
+
+.. Expand the *Google Cloud VMware Engine connectivity* accordion.
++
+... Enable the *Connect NFS datastores to Google Cloud VMware Engine* checkbox to include VPC peering and datastore mounting configuration in the Terraform code.
++
+When this option is disabled (default), the Terraform code only creates the Google Cloud NetApp Volumes storage pools and volumes. You'll need to manually configure the connectivity to Google Cloud VMware Engine.
++
+When this option is enabled, the Terraform code includes all necessary configuration to:
++
+* Establish VPC peering between the Google Cloud NetApp Volumes VPC and Google Cloud VMware Engine VPC
+* Configure required firewall rules
+* Mount the Google Cloud NetApp Volumes volumes as NFS datastores to your Google Cloud VMware Engine cluster
++
+... If you enabled Google Cloud VMware Engine connectivity, configure the service subnet and other connection parameters as needed.
+
+. In the *Summary* section, review the complete deployment configuration:
+
+.. Expand the *Plan configuration* accordion to view:
++
+... *Storage pool count*: Total number of Google Cloud NetApp Volumes storage pools to be created
+... *Storage pool types*: Service levels used (Standard, Premium, Extreme)
+... *Aggregated storage pool capacity*: Total capacity across all pools
+... *Aggregated datastore count*: Total number of volumes (datastores) to be created
++
+.. For each storage pool, review:
++
+... *Name*: Automatically generated as "SP-Google-Cloud-VMware-Engine-datastores-<Type>"
+... *Type*: Service level (Standard, Premium, or Extreme)
+... *Capacity*: Total capacity for the pool
+... *Volumes (datastores) count*: Number of volumes in this pool
+... *Volume details* for each volume:
++
+* *Name*: Automatically generated as "Datastore<x>-<type>"
+* *Capacity*: Volume size
+* *Type*: Always NFSv3
+* *Availability*: Always Regional
+* *Snapshot policy*: "default" or "none"
+* *Tiering*: Always disabled
+* *Deletion protection*: Always "Yes"
+
+. In the *Codebox* section, review, copy, or download the Terraform deployment code:
++
+The Terraform code is dynamically generated based on your configuration and performs the following operations:
++
+* Creates Google Cloud NetApp Volumes storage pools according to your plan specifications
+* Creates Google Cloud NetApp Volumes volumes (datastores) with the configured settings
+* Associates the storage pools and volumes with your GCP project
+* Applies the labels you specified
+* (If enabled) Configures VPC peering between Google Cloud NetApp Volumes and Google Cloud VMware Engine
+* (If enabled) Mounts Google Cloud NetApp Volumes volumes as NFS datastores to your Google Cloud VMware Engine cluster
++
+You can:
++
+.. Select *Copy code* to copy the Terraform code to your clipboard.
+.. Select *Download* to save the Terraform code as a .tf file to your local system.
++
+NOTE: The Terraform code is designed to be fully self-contained with no nested modules, making it easy to copy and use in your Terraform workflow.
+
+. Deploy the Terraform code using your preferred Terraform workflow:
++
+.. Save the Terraform code to a .tf file in your Terraform working directory (if you haven't already downloaded it).
+.. Initialize Terraform:
++
+ terraform init
+
+.. Review the planned changes:
++
+ terraform plan
+
+.. Apply the configuration to create the Google Cloud NetApp Volumes resources:
++
+ terraform apply
+
+. After the Terraform deployment completes:
++
+.. Verify that the Google Cloud NetApp Volumes storage pools and volumes were created successfully in the Google Cloud Console.
+.. If you enabled Google Cloud VMware Engine connectivity, verify that the datastores appear in your Google Cloud VMware Engine vCenter.
+.. Begin migrating your VMs to the Google Cloud VMware Engine environment using the newly created Google Cloud NetApp Volumes NFS datastores.
+
+== What's next
+
+After deploying the Google Cloud NetApp Volumes datastores, you can begin migrating your VMs from your on-premises environment to your Google Cloud VMware Engine cluster. The Google Cloud NetApp Volumes external NFS datastores provide flexible, high-performance storage that scales independently of your Google Cloud VMware Engine compute resources.
+
+For information about managing your Google Cloud NetApp Volumes volumes and storage pools, see the https://docs.netapp.com/us-en/workload-gcnv/index.html[Google Cloud NetApp Volumes documentation^].

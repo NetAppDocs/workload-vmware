@@ -249,6 +249,8 @@ NOTE: The pricing displayed throughout the review page adjusts based on your sel
 . Select *Provision* to provision the Google Cloud NetApp Volumes NFS datastores using Terraform Infrastructure-as-Code.
 . Select *Create* to create the Google Cloud NetApp Volumes NFS datastores.
 
+////
 .What's next
 
 You can link:deploy-gcnv-datastores.html[deploy the Google Cloud NetApp Volumes NFS datastores] using the plan details and Terraform automation code.
+////

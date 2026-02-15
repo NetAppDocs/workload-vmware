@@ -152,3 +152,4 @@ Manage your uploaded VM inventory data from the planning center, or create a dep
 * link:launch-onboarding-advisor.html[Create an Amazon VMware Cloud deployment plan]
 * link:launch-migration-advisor-evs.html[Create an Amazon Elastic VMware Service deployment plan]
 * link:launch-onboarding-advisor-native.html[Create an Amazon EC2 deployment plan]
+* link:launch-migration-advisor-gcve.html[Create a Google Cloud VMware Engine deployment plan]

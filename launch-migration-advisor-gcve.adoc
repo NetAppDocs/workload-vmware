@@ -32,8 +32,7 @@ The planning center is displayed.
 The *Prepare for Google Cloud onboarding* wizard appears.
 . Enter the required information.
 
-[discrete]
-===== Migration preferences
+=== Migration preferences
 
 . In the _VM configuration upload_ section, review information about the dataset you are using to create a migration plan. The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
 
@@ -76,8 +75,7 @@ NOTE: If you select less than 20% headroom, snapshot protection is automatically
 
 . Select *Next*.
 
-[discrete]
-===== Cluster configuration
+=== Cluster configuration
 
 . On the *Select preferred Google Cloud VMware Engine cluster configuration* page, configure your Google Cloud VMware Engine cluster preferences and review the recommended configurations.
 
@@ -105,8 +103,7 @@ The first (lowest cost) configuration is selected by default.
 
 . Select *Next*.
 
-[discrete]
-===== VM layout
+=== VM layout
 
 . On the *Automatic VM selection* page, review the optimal virtual machine layout automatically selected based on your required external storage capacity and preferences.
 
@@ -146,8 +143,7 @@ NOTE: If you manually modify the VM selection, you can revert to the automatic s
 
 . Select *Next*.
 
-[discrete]
-===== NFS datastores assignment
+=== NFS datastores assignment
 
 . On the *Review instance store assignment* page, review the detailed datastore layout and VM assignments.
 
@@ -197,8 +193,7 @@ NOTE: If you manually modify the VM selection, you can revert to the automatic s
 
 . Select *Next*.
 
-[discrete]
-===== Review deployment plan
+=== Review deployment plan
 
 . On the *Review your migration plan* page, review and customize your deployment plan before saving it.
 
@@ -249,6 +244,8 @@ NOTE: The pricing displayed throughout the review page adjusts based on your sel
 . Select *Provision* to provision the Google Cloud NetApp Volumes NFS datastores using Terraform Infrastructure-as-Code.
 . Select *Create* to create the Google Cloud NetApp Volumes NFS datastores.
 
+////
 .What's next
 
 You can link:deploy-gcnv-datastores.html[deploy the Google Cloud NetApp Volumes NFS datastores] using the plan details and Terraform automation code.
+////

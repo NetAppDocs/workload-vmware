@@ -10,6 +10,4 @@ The Google Cloud VMware Engine migration advisor provides:
 * Support for Standard, Premium, and Extreme Google Cloud NetApp Volumes service levels.
 * Infrastructure-as-Code deployment with Terraform for automated provisioning.
 
-https://docs.netapp.com/us-en/workload-vmware/launch-migration-advisor-gcve.html[Create a deployment plan for Google Cloud VMware Engine using the migration advisor]
-
 // Use absolute links in these files

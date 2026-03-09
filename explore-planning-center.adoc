@@ -65,6 +65,7 @@ The planning center is displayed.
 * link:deploy-fsx-file-system.html[Deploy the file system for Amazon VMware Cloud plans]
 * link:deploy-fsx-file-system-native.html[Deploy the file system for Amazon EC2 plans]
 * link:deploy-fsx-file-system-evs.html[Deploy the file system for Amazon Elastic VMware Service plans]
+* link:deploy-gcnv-datastores.html[Deploy Google Cloud NetApp Volumes datastores for Google Cloud VMware Engine plans]
 
 
 === Edit the comment for a migration plan

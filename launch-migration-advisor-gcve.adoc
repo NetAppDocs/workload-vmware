@@ -1,0 +1,252 @@
+---
+sidebar: sidebar
+permalink: launch-migration-advisor-gcve.html
+keywords: overview, concepts, features, use case, workloads, how Workload Factory works, migration, gcve, google cloud vmware engine, gcnv, deployment, plan
+summary: From the VMware planning center, you can launch the Google Cloud VMware Engine migration advisor to help create a migration plan that is customized for your needs.
+---
+
+= Create a deployment plan for Google Cloud VMware Engine using the migration advisor
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+From the VMware planning center, you can launch the Google Cloud VMware Engine migration advisor to help create a migration plan that is customized for your needs.
+
+You can create a deployment plan to migrate virtual machines to Google Cloud VMware Engine and use customized Google Cloud NetApp Volumes as external NFS datastores. The options in the migration advisor might differ depending on the tool used to collect the VM inventory data.
+
+== Requirements
+
+* You must have link:upload-vm-inventory.html[uploaded a VM inventory].
+* You must have a user name and password to access Workload Factory. If you don't have access, create an account now. See the instructions https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html[here^].
+* You must have a Google Cloud VMware Engine subscription in a region where both Google Cloud VMware Engine and Google Cloud NetApp Volumes services are available.
+
+== Steps
+
+. Log in to Workload Factory using one of the https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *VMware*. 
++
+The planning center is displayed.
+. Select *Google Cloud* from the drop-down menu.
+. From the VM inventory table, select *Start planning* next to the inventory that you want to use to make a deployment plan.
++
+The *Prepare for Google Cloud onboarding* wizard appears.
+. Enter the required information.
+
+=== Configure migration preferences
+
+. In the _VM configuration upload_ section, review information about the dataset you are using to create a migration plan. The *VM inventory summary* section is populated from the inventory file to reflect the number of VMs and the total storage capacity.
+
+. In the _VM inventory considerations_ section, select the options to filter the list of VMs and configure how the migration plan is designed:
+
+.. *VM inventory considerations*: Select which VMs to include based on their power state:
++
+* *Powered on* (selected by default)
+* *Powered off*
+* *Suspended*
+
+.. *VM storage to consider*: Choose how to size the Google Cloud NetApp Volumes datastores:
++
+* *Utilized*: Size datastores based on the actual used capacity of VMs.
+* *Provisioned* (default): Size datastores based on the total provisioned capacity of VMs.
+
+
+.. *VM memory to consider*: Choose how to calculate the required Google Cloud VMware Engine cluster compute resources:
++
+* *Utilized*: Calculate based on actual memory usage by VMs.
+* *Provisioned* (default): Calculate based on total memory allocated to VMs.
+
+.. *Virtual machines performance estimation*: This option appears only when using RVTools as your data source. Select the expected performance level:
++
+* *Low*: 50 IOPS on average per VM.
+* *Standard*: 200 IOPS on average per VM (selected by default).
+* *High*: 800 IOPS on average per VM.
+
+. In the _Google Cloud VMware Engine deployment region_ section:
+
+.. *Region*: Select the Google Cloud region where Google Cloud VMware Engine and Google Cloud NetApp Volumes will be deployed. Only regions where both services are available appear in the list.
+
+. In the _VM storage capacity and protection considerations_ section:
+
+.. *Capacity headroom percentage*: Enter the percentage of additional capacity to add for growth. The default value is 20%, which is also the recommended minimum.
++
+NOTE: If you select less than 20% headroom, snapshot protection is automatically disabled.
+
+.. *VM snapshot protection*: Enable this option (enabled by default) to protect VMs with snapshots using the ONTAP default snapshot policy.
+
+. Select *Next*.
+
+=== Select a cluster configuration
+
+. On the *Select preferred Google Cloud VMware Engine cluster configuration* page, configure your Google Cloud VMware Engine cluster preferences and review the recommended configurations.
+
+. In the _Architecture preferences_ section:
+
+.. *Allow Google Cloud VMware Engine VE2 node types*: When enabled (default), both VE1 and VE2 node types are considered. Disable this option to limit configurations to VE1 nodes only.
+
+.. *Allow Google Cloud NetApp Volumes standard volumes*: When disabled (default), only Premium and Extreme service levels are used in the configuration design, which is the recommended best practice. Premium and Extreme volumes provide regional availability, making them resilient to availability zone failures. Standard volumes provide only zonal availability and are not protected against AZ failures. Enable this option to include Standard service level volumes, which could reduce costs for lower-performance workloads where AZ-level resiliency is not required.
+
+. In the _Cluster configuration_ section, review the available Google Cloud VMware Engine cluster configurations:
++
+The configurations are sorted by estimated overall cost (lowest to highest) and show different combinations of:
++
+* Google Cloud VMware Engine node types (VE1 or VE2)
+* Estimated overall cost
+* Estimated savings
+* Node count
+* VSAN fault tolerance settings: FTT (Fault Tolerance Type) and FTM (Fault Tolerance Method)
+* Excess storage capacity in TiB
+* Storage-only node type
+
+. Select your preferred cluster configuration by clicking the radio button next to it.
++
+The first (lowest cost) configuration is selected by default.
+
+. Select *Next*.
+
+=== Select a VM layout
+
+. On the *Automatic VM selection* page, review the optimal virtual machine layout automatically selected based on your required external storage capacity and preferences.
+
+. Review the _VM inventory_ section, which displays:
++
+* Overall VM count
+* Overall capacity (provisioned or utilized based on your earlier selection)
++
+You can expand the section to view the following details:
+* Aggregated average IOPS
+* Aggregated throughput (MB/s)
+* Aggregated peak IOPS
+* Aggregated peak throughput (MB/s)
+
+. In the _VM selection preferences_ section, choose the optimization method:
++
+* *Cost* (default): Assigns VMs with the highest I/O density to vSAN storage, which helps minimize Google Cloud NetApp Volumes costs while meeting performance requirements.
+* *Protection*: Assigns VMs with the highest storage capacity to Google Cloud NetApp Volumes external datastores, which provides better recoverability through Google Cloud NetApp Volumes snapshot and replication capabilities.
+
+. Review the _External datastore configuration_ section, which shows how VMs and capacity are distributed between Google Cloud NetApp Volumes and vSAN storage.
++
+You can expand the section to view the following details:
+* Aggregated average IOPS
+* Aggregated throughput (MB/s)
+* Aggregated peak IOPS
+* Aggregated peak throughput (MB/s)
+
+. In the _VMs selected for Google Cloud NetApp Volumes NFS datastores_ table, you can:
++
+* View the automatically selected VMs based on your chosen optimization method.
+* Manually select or deselect individual VMs by using the checkboxes.
+* Filter VMs by cluster, operating system, or datacenter.
+* Sort VMs by any visible column (such as VM name, provisioned capacity, average read IOPS).
+* Show or hide additional columns by clicking image:icon-table-columns.png[the column selector icon].
++
+NOTE: If you manually modify the VM selection, you can revert to the automatic selection based on your optimization preference by selecting *Reset*.
+
+. Select *Next*.
+
+=== Review NFS datastore assignments
+
+. On the *Review instance store assignment* page, review the detailed datastore layout and VM assignments.
+
+. Use the *Total* and *Per datastore* tabs to switch between an aggregate view and per-datastore details.
+
+. In the *Total* tab:
++
+.. Review the _Storage Capacity analysis_ chart that displays:
++
+**** Google Cloud NetApp Volumes logical capacity
+**** VM provisioned capacity
+**** VM level free space (if provisioned capacity was selected)
+**** Overall capacity headroom
+**** Snapshots buffer capacity (if snapshot protection is enabled)
++
+.. Review the _Detailed information_ section showing:
++
+*** Overall VMs provisioned capacity
+*** Overall capacity headroom
+*** Free space (if provisioned capacity was selected)
+*** Overall logical capacity for all Google Cloud NetApp Volumes storage pools
+*** Google Cloud NetApp Volumes storage pool count and types
+*** Overall VMs count and provisioned capacity
+*** Aggregated VM average IOPS (when available)
+*** Average I/O density (with tooltip explaining calculation)
+*** Aggregated VM average throughput (when available)
+
+. In the *Per datastore* tabs:
++
+.. Select a datastore tab to view its details.
++
+.. Review the details for that datastore, which includes:
++
+*** Capacity breakdown chart
+*** Datastore properties:
+**** Overall VMs utilized capacity
+**** Overall capacity headroom
+**** Free space (if provisioned capacity was selected)
+**** Datastore logical capacity
+**** Datastore service level (Standard, Premium, Extreme)
+**** Overall VMs count and provisioned capacity
+**** Aggregated VM average IOPS (when available)
+**** Average datastore I/O density (when available)
+**** Aggregated VM average throughput (when available)
++
+.. Review the _Virtual machines_ table showing all VMs assigned to this datastore with columns for VM name, capacity, cluster, operating system, IOPS, throughput, and other properties.
+
+. Select *Next*.
+
+=== Review and save your deployment plan
+
+. On the *Review your migration plan* page, review and customize your deployment plan before saving it.
+
+. From the drop-down, choose your pricing plan:
++
+* *On-demand* (default): Pay-as-you-go pricing
+// * *1-year commitment*: Monthly payments with reduced rates
+// * *3-year commitment*: Monthly payments with the lowest rates
++
+NOTE: The pricing displayed throughout the review page adjusts based on your selected plan.
+
+. Review the _Estimated savings_ section:
++
+.. The _Google Cloud VMware Engine configuration alternatives comparison_ charts compare:
++
+*** Google Cloud VMware Engine vSAN-only configuration estimated monthly cost (compute nodes + storage-only nodes)
+*** Google Cloud VMware Engine vSAN + external datastore estimated monthly cost (compute nodes + Google Cloud NetApp Volumes external datastores)
+*** Savings percentage and dollar amount
++
+.. The _Estimated savings breakdown_ table compares the two configurations with details on node counts, storage capacity, Google Cloud NetApp Volumes pool information, and monthly and yearly cost savings.
+
+. Review the _Google Cloud NetApp Volumes suggested configuration_ section. It highlights:
++
+*** Storage pool count and types
+*** Overall storage pool capacity
+*** Datastores (volumes) count
+*** Datastores aggregated throughput
+*** Estimated monthly cost
++
+.. The _Suggested configuration details_ section provides a breakdown by service level (Standard, Premium, Extreme) with storage pool counts, capacities, datastore counts, throughput details, capacity headroom, snapshot buffer, and total estimated monthly cost.
++
+.. The _Estimated cost analysis_ section breaks down costs by service level (Standard, Premium, Extreme) including capacity costs, cold capacity, replicated data, backup usage and capacity, with a total estimated monthly cost.
++
+.. The _Volume configuration_ table lists each planned Google Cloud NetApp Volumes volume with details such as name, pool type, protocol (NFSv3), capacity, headroom, snapshot policy, and tiering policy.
+
+. Review the _Solution design assumptions_ and _Disclaimer_ sections.
+
+. When you are satisfied with the migration plan, you have a few options::
++
+.. Select *Manage plan* at the top of the page.
+.. Choose to download:
++
+*** *Download a report*: A comprehensive PDF document with all plan details
+*** *Download instance storage deployment*: A CSV file mapping VMs to their assigned datastores
+
+. Select *Provision* to provision the Google Cloud NetApp Volumes NFS datastores using Terraform Infrastructure-as-Code.
++
+A codebox displays the generated Terraform code. You can copy the code to your clipboard or download it as a file to execute in your own Terraform environment.
+
+. Select *Create* to create the Google Cloud NetApp Volumes NFS datastores.
+
+////
+.What's next
+
+You can link:deploy-gcnv-datastores.html[deploy the Google Cloud NetApp Volumes NFS datastores] using the plan details and Terraform automation code.
+////

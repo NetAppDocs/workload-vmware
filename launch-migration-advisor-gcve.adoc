@@ -83,7 +83,7 @@ NOTE: If you select less than 20% headroom, snapshot protection is automatically
 
 .. *Allow Google Cloud VMware Engine VE2 node types*: When enabled (default), both VE1 and VE2 node types are considered. Disable this option to limit configurations to VE1 nodes only.
 
-.. *Allow Google Cloud NetApp Volumes standard volumes*: When disabled (default), only Premium and Extreme service levels are used in the configuration design. Enable this option to include Standard service level volumes, which could reduce costs for lower-performance workloads.
+.. *Allow Google Cloud NetApp Volumes standard volumes*: When disabled (default), only Premium and Extreme service levels are used in the configuration design, which is the recommended best practice. Premium and Extreme volumes provide regional availability, making them resilient to availability zone failures. Standard volumes provide only zonal availability and are not protected against AZ failures. Enable this option to include Standard service level volumes, which could reduce costs for lower-performance workloads where AZ-level resiliency is not required.
 
 . In the _Cluster configuration_ section, review the available Google Cloud VMware Engine cluster configurations:
 +
@@ -200,10 +200,8 @@ NOTE: If you manually modify the VM selection, you can revert to the automatic s
 . From the drop-down, choose your pricing plan:
 +
 * *On-demand* (default): Pay-as-you-go pricing
-* *1-year commitment*: Monthly payments with reduced rates
-// is this in scope or no?
-* *3-year commitment*: Monthly payments with the lowest rates
-// is this in scope or no?
+// * *1-year commitment*: Monthly payments with reduced rates
+// * *3-year commitment*: Monthly payments with the lowest rates
 +
 NOTE: The pricing displayed throughout the review page adjusts based on your selected plan.
 
@@ -242,6 +240,9 @@ NOTE: The pricing displayed throughout the review page adjusts based on your sel
 *** *Download instance storage deployment*: A CSV file mapping VMs to their assigned datastores
 
 . Select *Provision* to provision the Google Cloud NetApp Volumes NFS datastores using Terraform Infrastructure-as-Code.
++
+A codebox displays the generated Terraform code. You can copy the code to your clipboard or download it as a file to execute in your own Terraform environment.
+
 . Select *Create* to create the Google Cloud NetApp Volumes NFS datastores.
 
 ////

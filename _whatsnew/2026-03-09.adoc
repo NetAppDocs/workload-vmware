@@ -1,0 +1,13 @@
+=== Introducing migration advisor support for Google Cloud VMware Engine
+
+NetApp Workload Factory now supports Google Cloud VMware Engine. You can migrate your on-premises VMware workloads to Google Cloud VMware Engine using Google Cloud NetApp Volumes as external NFS datastores, optimizing cost and enabling more control over your VMware environment without needing to refactor or re-platform your applications.
+
+The Google Cloud VMware Engine migration advisor provides:
+
+* Automated Google Cloud VMware Engine cluster sizing and design with VE1 and VE2 node type support
+* VM layout optimization between vSAN internal datastores and Google Cloud NetApp Volumes external NFS datastores.  
+* Detailed cost comparison and TCO analysis between vSAN-only and Google Cloud NetApp Volumes-enhanced configurations.
+* Support for Standard, Premium, and Extreme Google Cloud NetApp Volumes service levels.
+* Infrastructure-as-Code deployment with Terraform for automated provisioning.
+
+// Use absolute links in these files

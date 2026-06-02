@@ -1,0 +1,5 @@
+=== Support for AWS GovCloud (US) in NetApp Workload Factory
+
+NetApp Workload Factory supports AWS GovCloud (US) accounts. Using a GovCloud account, you can deploy and manage storage workloads in the AWS GovCloud (US) regions.
+
+// Use absolute links in these files

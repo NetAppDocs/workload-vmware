@@ -61,6 +61,7 @@ The Well-architected tab provides automated daily analysis of your Amazon Elasti
 Automatic scans are performed using AWS APIs—no vSphere credentials are required. Findings are organized by configuration area, with each finding including status, severity levels, impacted resource details, and step-by-step remediation procedures. 
 
 link:view-evs-well-architected.html[Implement well-architected EVS configurations in Workload Factory].
+
 == Cost
 
 There is no cost for using Workload Factory for VMware.
@@ -77,6 +78,5 @@ Workload Factory is supported in all commercial regions where FSx for ONTAP is s
 The following AWS regions aren't supported:
  
 * China regions
-* GovCloud (US) regions
 * Secret Cloud
 * Top Secret Cloud

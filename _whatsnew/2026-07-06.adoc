@@ -1,0 +1,9 @@
+=== i7i.metal-24xl instance support in EVS TCO calculator
+
+The EVS TCO calculator now supports AWS i7i.metal-24xl EC2 instances as cluster hosts. Compared to i4i.metal configurations, these instances lower the EVS starting cost by about 33% for compute and 25% for vSAN storage.
+
+The calculator automatically compares both instance types and selects the most cost-efficient option. A new comparison section shows EVS host configurations side by side, making it easier to find the best setup for your needs.
+
+link:calculate-evs-savings.html[Calculate estimated savings for EVS]
+
+// Use absolute links in these files

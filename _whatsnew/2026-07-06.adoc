@@ -4,6 +4,6 @@ The EVS TCO calculator now supports AWS i7i.metal-24xl EC2 instances as cluster 
 
 The calculator automatically compares both instance types and selects the most cost-efficient option. A new comparison section shows EVS host configurations side by side, making it easier to find the best setup for your needs.
 
-link:calculate-evs-savings.html[Calculate estimated savings for EVS]
+link:https://docs.netapp.com/us-en/workload-vmware/calculate-evs-savings.html[Calculate estimated savings for EVS]
 
 // Use absolute links in these files

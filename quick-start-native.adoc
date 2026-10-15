@@ -5,7 +5,7 @@ keywords: quick start
 summary: Get started with the VMware migration advisor to move your current infrastructure to Amazon EC2 using Amazon FSx for ONTAP as external NFS datastores.
 ---
 
-= Quick start for migrating to Amazon EC2 using the VMware workloads migration advisor
+= Quick start for Amazon EC2 migration
 :icons: font
 :imagesdir: ./media/
 

@@ -5,7 +5,7 @@ keywords: quick start, gcve, google cloud vmware engine, gcnv, google cloud neta
 summary: Get started with the VMware migration advisor to move your current infrastructure to Google Cloud VMware Engine using Google Cloud NetApp Volumes as external NFS datastores.
 ---
 
-= Quick start for migrating to Google Cloud VMware Engine using the VMware workloads migration advisor
+= Quick start for Google Cloud VMware Engine migration
 :icons: font
 :imagesdir: ./media/
 

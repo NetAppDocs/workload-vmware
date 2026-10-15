@@ -5,7 +5,7 @@ keywords: overview, concepts, features, use case, workloads, how Workload Factor
 summary: From the VMware planning center, you can launch the Google Cloud VMware Engine migration advisor to help create a migration plan that is customized for your needs.
 ---
 
-= Create a deployment plan for Google Cloud VMware Engine using the migration advisor
+= Create a deployment plan for Google Cloud VMware Engine
 :icons: font
 :imagesdir: ./media/
 

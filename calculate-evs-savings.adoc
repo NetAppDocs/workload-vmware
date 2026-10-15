@@ -5,7 +5,7 @@ keywords: vm workloads, deploy fsx, deploy storage for vms, evs, savings, calcul
 summary: Calculate how much you can save by using Amazon EVS with FSx for ONTAP.
 ---
 
-= Explore savings for Amazon Elastic VMware Service with NetApp Workload Factory
+= Explore Amazon EVS savings with Workload Factory for VMware
 :icons: font
 :imagesdir: ./media/
 
